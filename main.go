@@ -26,17 +26,18 @@ func main() {
 	if err != nil {
 		log.Error(err)
 	} else {
-		log.Infof("success to add and retrieve directory %s %d", tree.Name(), tree.Size())
+		log.Infof("success to add and retrieve directory %s %d bit", tree.Name(), tree.Size())
 	}
-	// create 1KB to 1GB files then pin and retrieve them when some nodes down
 
+	// create 1KB to 1GB files then pin and retrieve them when some nodes down
 	fs := sth.GetRandFileMultiReader()
 	for i := 0; i < len(fs); i++ {
 		err := ECAddFaultTolerantAndRetrive(fs[i])
 		if err != nil {
 			log.Error(err)
+			continue
 		}
-		log.Infof("success to add and retrieve ramdon file %s %d", fs[i].Name(), fs[i].Size())
+		log.Infof("success to add and retrieve ramdon file %s %d bit", fs[i].Name(), fs[i].Size())
 	}
 }
 
@@ -73,7 +74,7 @@ func ECAddFaultTolerantAndRetrive(f utils.ECFile) error {
 func StartDocker() error {
 	cmd := exec.Command("/bin/zsh", "start.sh")
 	err := cmd.Run()
-	time.Sleep(10 * time.Second) // wait for cluster peers set up
+	time.Sleep(20 * time.Second) // wait for cluster peers set up
 	return err
 }
 

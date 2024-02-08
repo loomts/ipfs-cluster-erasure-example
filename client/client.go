@@ -23,9 +23,11 @@ var ECAddParams api.AddParams
 
 func init() {
 	ECAddParams = api.DefaultAddParams()
-	ECAddParams.ReplicationFactorMin = -1
-	ECAddParams.ReplicationFactorMax = -1
+	ECAddParams.ReplicationFactorMin = 1
+	ECAddParams.ReplicationFactorMax = 1
 	ECAddParams.Erasure = true // automatically enable shard and raw-leaves
+	ECAddParams.Shard = true
+	ECAddParams.RawLeaves = true
 	ECAddParams.Name = utils.Tree
 	ECAddParams.DataShards = 6
 	ECAddParams.ParityShards = 4

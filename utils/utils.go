@@ -93,8 +93,8 @@ func (sth *fileHelper) GetTreeSerialFile() files.Directory {
 // a testing random file of the given size (in kbs). The random
 // file is different every time.
 func (sth *fileHelper) GetRandFileMultiReader() []ECFile {
-	fs := make([]ECFile, 17)
-	for i := 0; i <= 16; i++ {
+	fs := make([]ECFile, 21)
+	for i := 0; i <= 20; i++ {
 		kbs := 1 << i
 		slf, sf := sth.GetRandFileReader(kbs, GetFileName(i))
 		fs[i] = ECFile{slf, sf, GetFileName(i), uint64(kbs * 1024)}
@@ -247,7 +247,17 @@ func (sth *fileHelper) randFile(w io.Writer, kbs int) {
 func (sth *fileHelper) makeRandFile(kbs int, name string) os.FileInfo {
 	sth.makeTestFolder()
 	path := sth.path(name)
-	f, err := os.Create(path)
+	f, err := os.Open(path)
+	if err == nil {
+		// file exist
+		st, err := f.Stat()
+		if err != nil {
+			log.Error(err)
+			return nil
+		}
+		return st
+	}
+	f, err = os.Create(path)
 	if err != nil {
 		log.Error(err)
 	}
