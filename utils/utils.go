@@ -3,15 +3,12 @@ package utils
 // copy from https://github.com/ipfs-cluster/ipfs-cluster/test/sharding.go
 
 import (
-	"archive/tar"
 	"bytes"
-	"compress/gzip"
-	"crypto/sha256"
-	"encoding/binary"
 	"fmt"
 	"io"
 	"math/rand"
 	"os"
+	"os/exec"
 	"path/filepath"
 
 	files "github.com/ipfs/boxo/files"
@@ -271,44 +268,16 @@ func (sth *fileHelper) makeRandFile(kbs int, name string) os.FileInfo {
 	return st
 }
 
-func HashDirectory(dir string) (hash uint64, err error) {
-	var buf bytes.Buffer
-	// Tar the directory.
-	err = filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-		if info.IsDir() {
-			return nil
-		}
-		file, err := os.Open(path)
-		if err != nil {
-			return err
-		}
-		defer file.Close()
-
-		// Create a new tar.gz writer.
-		gw := gzip.NewWriter(&buf)
-		defer gw.Close()
-		tw := tar.NewWriter(gw)
-		defer tw.Close()
-
-		// Write file header
-		if err := tw.WriteHeader(&tar.Header{
-			Size: info.Size(),
-		}); err != nil {
-			return err
-		}
-
-		if _, err := io.Copy(tw, file); err != nil {
-			return err
-		}
-		return nil
-	})
+func Diff(path1, path2 string) error {
+	cmd := exec.Command("diff", "-r", path1, path2)
+	var out bytes.Buffer
+	cmd.Stdout = &out
+	err := cmd.Run()
 	if err != nil {
-		return 0, err
+		if _, ok := err.(*exec.ExitError); ok {
+			return fmt.Errorf("%s and %s verify failed, not same", path1, path2)
+		}
+		return fmt.Errorf("%s and %s verify failed, something error:%s", path1, path2, err)
 	}
-	hashByte := sha256.Sum256(buf.Bytes())
-	// Sum the hash and return it.
-	return binary.BigEndian.Uint64(hashByte[:]), nil
+	return nil
 }

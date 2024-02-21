@@ -9,7 +9,6 @@ import (
 	"github.com/ipfs-cluster/ipfs-cluster/api/rest/client"
 	files "github.com/ipfs/boxo/files"
 	logging "github.com/ipfs/go-log/v2"
-	"github.com/loomts/ipfs-cluster-erasure-example/utils"
 	ma "github.com/multiformats/go-multiaddr"
 )
 
@@ -26,12 +25,8 @@ func init() {
 	ECAddParams.ReplicationFactorMin = 1
 	ECAddParams.ReplicationFactorMax = 1
 	ECAddParams.Erasure = true // automatically enable shard and raw-leaves
-	ECAddParams.Shard = true
-	ECAddParams.RawLeaves = true
-	ECAddParams.Name = utils.Tree
 	ECAddParams.DataShards = 6
 	ECAddParams.ParityShards = 4
-	ECAddParams.ShardSize = 1024 * 1024 * 25
 }
 
 func NewClient() (Client, error) {
