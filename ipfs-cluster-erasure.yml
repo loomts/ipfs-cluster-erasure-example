@@ -64,7 +64,6 @@ services:
       # - "9096:9096" # Cluster swarm endpoint
     volumes:
       - ./compose/cluster0:/data/ipfs-cluster
-      - ./cluster0.log:/var/log/cluster.log
 
   ##################################################################################
   ## Cluster PEER 1 ################################################################

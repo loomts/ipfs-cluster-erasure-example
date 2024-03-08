@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"math/rand"
+	"os"
 	"os/exec"
 	"path"
 	"time"
@@ -20,31 +21,31 @@ import (
 var log = logging.Logger("cluster")
 
 func main() {
-	// TestAllAndFaultToler()
+	TestAllAndFaultToler()
 
-	// fmt.Println("ecadd_diff")
-	// TestAddECFile_DiffSize()
-	// fmt.Println("ecadd_same")
-	// TestAddECFile_LargeSameSize()
+	fmt.Println("ecadd_diff")
+	TestAddECFile_DiffSize()
+	fmt.Println("ecadd_same")
+	TestAddECFile_LargeSameSize()
 
-	// fmt.Println("add_diff")
-	// TestAddFile_DiffSize()
+	fmt.Println("add_diff")
+	TestAddFile_DiffSize()
 
-	// fmt.Println("add_same")
-	// TestAddFile_LargeSameSize()
+	fmt.Println("add_same")
+	TestAddFile_LargeSameSize()
 
-	// fmt.Println("get_diff")
-	// TestGetFile_DiffSize()
-	// fmt.Println("get_same")
-	// TestGetFile_LargeSameSize()
-	// fmt.Println("ecget_diff")
-	// TestECGetFile_DiffSize()
-	// fmt.Println("ecget_same")
-	// TestECGetFile_LargeSameSize()
+	fmt.Println("get_diff")
+	TestGetFile_DiffSize()
+	fmt.Println("get_same")
+	TestGetFile_LargeSameSize()
+	fmt.Println("ecget_diff")
+	TestECGetFile_DiffSize()
+	fmt.Println("ecget_same")
+	TestECGetFile_LargeSameSize()
 
-	//fmt.Println("ecget_recovery")
-	//TestECRecovery()
-	utils.Draw()
+	fmt.Println("ecget_recovery")
+	TestECRecovery()
+	// utils.Draw()
 }
 
 func start() {
@@ -79,7 +80,7 @@ func TestAllAndFaultToler() {
 	}
 	sth := utils.NewFileHelper()
 	tree := sth.GetTreeMultiReader()
-	err = ECAddFaultTolerantAndRetrive(c, tree)
+	err = AddFaultTolerantAndRetrieve(AddECFile, c, tree)
 	if err != nil {
 		log.Error(err)
 	} else {
@@ -89,7 +90,7 @@ func TestAllAndFaultToler() {
 	// create 1KB to 1GB files then pin and retrieve them when some nodes down
 	fs := sth.GetRandFileMultiReader()
 	for i := 0; i < len(fs); i++ {
-		err := ECAddFaultTolerantAndRetrive(c, fs[i])
+		err := AddFaultTolerantAndRetrieve(AddECFile, c, fs[i])
 		if err != nil {
 			log.Error(err)
 			continue
@@ -100,8 +101,8 @@ func TestAllAndFaultToler() {
 	sth.Clean()
 }
 
-func AddFaultTolerantAndRetrive(c client.Client, f utils.ECFile) error {
-	ci, err := AddECFile(f)
+func AddFaultTolerantAndRetrieve(add func(f utils.ECFile) (api.Cid, error), c *client.Client, f utils.ECFile) error {
+	ci, err := add(f)
 	if err != nil {
 		return err
 	}
@@ -121,6 +122,15 @@ func AddFaultTolerantAndRetrive(c client.Client, f utils.ECFile) error {
 	}()
 	start := time.Now()
 
+	fmt.Println("ecget", f.Name)
+	_, err = os.Stat(utils.RetrieveDir)
+	if os.IsNotExist(err) {
+		err = os.Mkdir(utils.RetrieveDir, os.ModePerm)
+		if err != nil {
+			return err
+		}
+	}
+	// alternative method is utils.IPFSGet(ci.Cid)
 	err = c.ECGet(context.Background(), ci, utils.RetrieveDir)
 	if err != nil {
 		return fmt.Errorf("%s ERROR:%s", ci, err)
@@ -131,37 +141,6 @@ func AddFaultTolerantAndRetrive(c client.Client, f utils.ECFile) error {
 		return err
 	}
 	// log.Infof("%s successfully AddFaultTolerantAndRetrive", f.Name())
-	return nil
-}
-
-func ECAddFaultTolerantAndRetrive(c client.Client, f utils.ECFile) error {
-	ci, err := AddECFile(f)
-	if err != nil {
-		return err
-	}
-	nodes, err := CloseContainers()
-	if err != nil {
-		return err
-	}
-	defer func() {
-		err = ReStartContainers(nodes)
-		if err != nil {
-			log.Error(err)
-		}
-		_, err = c.RepoGC(context.Background(), false)
-		if err != nil {
-			log.Error(err)
-		}
-	}()
-	err = c.ECGet(context.Background(), ci, utils.RetrieveDir)
-	if err != nil {
-		return fmt.Errorf("%s ERROR:%s", ci, err)
-	}
-	err = utils.Diff(path.Join(utils.SourceDir, f.Name), path.Join(utils.RetrieveDir, ci.String()))
-	if err != nil {
-		return err
-	}
-	// log.Infof("%s successfully ECAddFaultTolerantAndRetrive", f.Name())
 	return nil
 }
 
@@ -330,7 +309,7 @@ func TestGetFile_DiffSize() {
 		log.Error(err)
 	}
 	for _, f := range files {
-		err = AddFaultTolerantAndRetrive(c, f)
+		err = AddFaultTolerantAndRetrieve(AddFile, c, f)
 		if err != nil {
 			log.Error(err)
 		}
@@ -350,7 +329,7 @@ func TestGetFile_LargeSameSize() {
 		log.Error(err)
 	}
 	for _, f := range files {
-		err = AddFaultTolerantAndRetrive(c, f)
+		err = AddFaultTolerantAndRetrieve(AddFile, c, f)
 		if err != nil {
 			log.Error(err)
 		}
@@ -370,7 +349,7 @@ func TestECGetFile_DiffSize() {
 		log.Error(err)
 	}
 	for _, f := range files {
-		err = ECAddFaultTolerantAndRetrive(c, f)
+		err = AddFaultTolerantAndRetrieve(AddECFile, c, f)
 		if err != nil {
 			log.Error(err)
 		}
@@ -390,7 +369,7 @@ func TestECGetFile_LargeSameSize() {
 		log.Error(err)
 	}
 	for _, f := range files {
-		err = ECAddFaultTolerantAndRetrive(c, f)
+		err = AddFaultTolerantAndRetrieve(AddECFile, c, f)
 		if err != nil {
 			log.Error(err)
 		}
@@ -398,10 +377,10 @@ func TestECGetFile_LargeSameSize() {
 }
 
 func TestECRecovery() {
-	// start()
-	// defer func() {
-	// 	stopAndRemoveDockerContainers()
-	// }()
+	start()
+	defer func() {
+		stopAndRemoveDockerContainers()
+	}()
 	sth := utils.NewFileHelper()
 	files := sth.GetRandFileMultiReader()
 	defer sth.Clean()

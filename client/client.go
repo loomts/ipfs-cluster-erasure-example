@@ -27,26 +27,29 @@ func init() {
 	ECAddParams.Erasure = true // automatically enable shard and raw-leaves
 	ECAddParams.DataShards = 4
 	ECAddParams.ParityShards = 2
+	ECAddParams.Recursive = true
 
 	DefaultAddParams = api.DefaultAddParams()
 	DefaultAddParams.Shard = true
 	DefaultAddParams.RawLeaves = true
 	DefaultAddParams.ReplicationFactorMin = 3
 	DefaultAddParams.ReplicationFactorMax = 3
+	// when adding folders, Recursive must be true
+	DefaultAddParams.Recursive = true
 }
 
-func NewClient() (Client, error) {
+func NewClient() (*Client, error) {
 	addr := "/ip4/127.0.0.1/tcp/9094"
 	maddr, err := ma.NewMultiaddr(addr)
 	if err != nil {
-		return Client{}, err
+		return &Client{}, err
 	}
 	cfg := client.Config{APIAddr: maddr}
 	c, err := client.NewLBClient(&client.Failover{}, []*client.Config{&cfg}, 1)
 	if err != nil {
-		return Client{}, err
+		return &Client{}, err
 	}
-	return Client{c}, nil
+	return &Client{c}, nil
 }
 
 func (c *Client) AddMultiFile(ctx context.Context, multiFileR *files.MultiFileReader, params api.AddParams) (api.AddedOutput, error) {
