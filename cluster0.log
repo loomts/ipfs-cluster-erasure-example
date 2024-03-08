@@ -1,0 +1,2908 @@
+Changing user to ipfs
+
+ipfs-cluster-service version 1.0.7+git43ce0fdf24d1b07d8733c461d8ed4e1721d0861d
+
+This container only runs ipfs-cluster-service. ipfs needs to be run separately!
+
+Initializing default configuration...
+
+2024-03-06T16:10:10.318Z	INFO	config	config/config.go:482	Saving configuration
+
+configuration written to /data/ipfs-cluster/service.json.
+
+2024-03-06T16:10:10.320Z	INFO	config	config/identity.go:73	Saving identity
+
+new identity written to /data/ipfs-cluster/identity.json
+
+new empty peerstore written to /data/ipfs-cluster/peerstore.
+
+2024-03-06T16:10:11.334Z	INFO	service	ipfs-cluster-service/daemon.go:50	Initializing. For verbose output run with "-l debug". Please wait...
+
+2024-03-06T16:10:11.399Z	INFO	service	ipfs-cluster-service/daemon.go:276	Datastore backend: pebble
+
+2024-03-06T16:10:11.424Z	INFO	cluster	ipfs-cluster/cluster.go:143	IPFS Cluster v1.0.7+git43ce0fdf24d1b07d8733c461d8ed4e1721d0861d listening on:
+
+        /ip4/127.0.0.1/tcp/9096/p2p/12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku
+
+        /ip4/172.18.0.8/tcp/9096/p2p/12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku
+
+
+
+
+
+2024-03-06T16:10:11.426Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/id": dial tcp 172.18.0.4:5001: connect: connection refused
+
+2024-03-06T16:10:11.427Z	INFO	pinsvcapi	common/api.go:453	PINSVCAPI (HTTP): /ip4/127.0.0.1/tcp/9097
+
+2024-03-06T16:10:11.427Z	INFO	ipfsproxy	ipfsproxy/ipfsproxy.go:330	IPFS Proxy: /ip4/127.0.0.1/tcp/9095 -> /ip4/127.0.0.1/tcp/5001
+
+2024-03-06T16:10:11.427Z	INFO	restapi	common/api.go:453	RESTAPI (HTTP): /ip4/0.0.0.0/tcp/9094
+
+2024-03-06T16:10:11.429Z	INFO	crdt	go-ds-crdt@v0.5.1/set.go:122	Tombstones have bloomed: 0 tombs. Took: 425.132µs
+
+2024-03-06T16:10:11.430Z	INFO	crdt	go-ds-crdt@v0.5.1/crdt.go:296	crdt Datastore created. Number of heads: 0. Current max-height: 0. Dirty: false
+
+2024-03-06T16:10:11.430Z	INFO	crdt	crdt/consensus.go:320	'trust all' mode enabled. Any peer in the cluster can modify the pinset.
+
+2024-03-06T16:10:11.430Z	INFO	crdt	go-ds-crdt@v0.5.1/crdt.go:505	store is marked clean. No need to repair
+
+2024-03-06T16:10:11.430Z	INFO	cluster	ipfs-cluster/cluster.go:741	Cluster Peers (without including ourselves):
+
+2024-03-06T16:10:11.430Z	INFO	cluster	ipfs-cluster/cluster.go:743	    - No other peers
+
+2024-03-06T16:10:11.430Z	INFO	cluster	ipfs-cluster/cluster.go:753	Waiting for IPFS to be ready...
+
+2024-03-06T16:10:12.428Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/id": dial tcp 172.18.0.4:5001: connect: connection refused
+
+2024-03-06T16:10:13.429Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/id": dial tcp 172.18.0.4:5001: connect: connection refused
+
+2024-03-06T16:10:14.430Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/id": dial tcp 172.18.0.4:5001: connect: connection refused
+
+2024-03-06T16:10:15.432Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/id": dial tcp 172.18.0.4:5001: connect: connection refused
+
+2024-03-06T16:10:16.435Z	INFO	cluster	ipfs-cluster/cluster.go:762	IPFS is ready. Peer ID: 12D3KooWBUWtBqJmiSYAvUYqS4p8duMjxqdy3N1zdc1v6vo2ep9V
+
+2024-03-06T16:10:16.435Z	INFO	cluster	ipfs-cluster/cluster.go:770	** IPFS Cluster is READY **
+
+2024-03-06T16:12:25.005Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File0': #0
+
+2024-03-06T16:12:25.130Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreidkajjoooxh2mc45tfktjkrnvopkotvjapgt5427k2evswjvy3rcq) completed. Total size: 1.1 kB. Links: 2
+
+2024-03-06T16:12:25.134Z	INFO	adder	adder/adder.go:186	receive parity: File0-parity-shard-0 size: 1132
+
+2024-03-06T16:12:25.135Z	WARN	adder	adder/adder.go:258	the last added CID (QmS1jKKPgWCdjdZkzeiCrcoAeEzdK62MwL3Ue57GcPPjSK) is not the IPFS data root (bafkreiee3gr3sxdw6mwtalqa7mjndit3zjafouefnkg53olzeqgnfnsdua). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:12:25.135Z	ERROR	singledags	single/dag_service.go:150	------- bafkreigdc5n4nzw536bbebfshyrbmieolrbsart4t3bbsg3aechyl6upue size: 1240
+
+2024-03-06T16:12:25.139Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:25.147Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreidkajjoooxh2mc45tfktjkrnvopkotvjapgt5427k2evswjvy3rcq
+
+2024-03-06T16:12:25.308Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster bafkreigdc5n4nzw536bbebfshyrbmieolrbsart4t3bbsg3aechyl6upue
+
+2024-03-06T16:12:25.308Z	INFO	adder	adder/adder.go:186	receive parity: File0-parity-shard-1 size: 1132
+
+2024-03-06T16:12:25.308Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihbnpooagznh36gsvrmfmp74mu2ytzdnmnens2vy3lyybytux2wh4 size: 1344
+
+2024-03-06T16:12:25.314Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreigdc5n4nzw536bbebfshyrbmieolrbsart4t3bbsg3aechyl6upue
+
+2024-03-06T16:12:25.344Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster bafkreihbnpooagznh36gsvrmfmp74mu2ytzdnmnens2vy3lyybytux2wh4
+
+2024-03-06T16:12:25.353Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihbnpooagznh36gsvrmfmp74mu2ytzdnmnens2vy3lyybytux2wh4
+
+2024-03-06T16:12:25.360Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize bafkreiee3gr3sxdw6mwtalqa7mjndit3zjafouefnkg53olzeqgnfnsdua:map[0:1132]
+
+2024-03-06T16:12:25.361Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreihx2u47zcfh2ogiwa5w7pimgwycdotbpvka5evv5fcqworr5z45mq everywhere:
+
+2024-03-06T16:12:25.362Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreihx2u47zcfh2ogiwa5w7pimgwycdotbpvka5evv5fcqworr5z45mq
+
+2024-03-06T16:12:25.363Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreiee3gr3sxdw6mwtalqa7mjndit3zjafouefnkg53olzeqgnfnsdua
+
+2024-03-06T16:12:25.364Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: bafkreiee3gr3sxdw6mwtalqa7mjndit3zjafouefnkg53olzeqgnfnsdua
+
+Name: File0
+
+ClusterDAG: bafyreihx2u47zcfh2ogiwa5w7pimgwycdotbpvka5evv5fcqworr5z45mq
+
+Total shards: 1
+
+Total size: 1132
+
+Total time: 368.194233ms
+
+Ingest Rate: ∞ B/s
+
+
+
+2024-03-06T16:12:25.364Z	INFO	adder	adder/adder.go:267	bafkreiee3gr3sxdw6mwtalqa7mjndit3zjafouefnkg53olzeqgnfnsdua successfully added to cluster
+
+2024-03-06T16:12:25.364Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:24 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File0&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=262144&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 800
+
+
+
+2024-03-06T16:12:25.367Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File1': #0
+
+2024-03-06T16:12:25.475Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreihx2u47zcfh2ogiwa5w7pimgwycdotbpvka5evv5fcqworr5z45mq
+
+2024-03-06T16:12:25.521Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreiecwqpkww7aey24ilystx4frrwib6hnfqfqhvpu67s2gcmuabliy4) completed. Total size: 2.2 kB. Links: 2
+
+2024-03-06T16:12:25.524Z	WARN	adder	adder/adder.go:258	the last added CID (QmUQnuvUjp4pKVUkYpJXyp6kvF6FEex4ZgxRChCkxHmLcb) is not the IPFS data root (bafkreibclxlrhvud7iljfkxzpbtxxjwughynehrqxgpvatw3fxk42rwyga). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:12:25.524Z	INFO	adder	adder/adder.go:186	receive parity: File1-parity-shard-0 size: 2156
+
+2024-03-06T16:12:25.525Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihqylwe75j2dprlj3ortcdjb6bq7bct3whpkkt75n3fhc77okeytq size: 2264
+
+2024-03-06T16:12:25.529Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:25.531Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiecwqpkww7aey24ilystx4frrwib6hnfqfqhvpu67s2gcmuabliy4
+
+2024-03-06T16:12:25.559Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreihqylwe75j2dprlj3ortcdjb6bq7bct3whpkkt75n3fhc77okeytq on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:12:25.560Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihqylwe75j2dprlj3ortcdjb6bq7bct3whpkkt75n3fhc77okeytq
+
+2024-03-06T16:12:25.560Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster bafkreihqylwe75j2dprlj3ortcdjb6bq7bct3whpkkt75n3fhc77okeytq
+
+2024-03-06T16:12:25.560Z	INFO	adder	adder/adder.go:186	receive parity: File1-parity-shard-1 size: 2156
+
+2024-03-06T16:12:25.560Z	ERROR	singledags	single/dag_service.go:150	------- bafkreidjlkt4gcg2ydpofsdtdax2zrwxve62qd432odguzegonfvlggpca size: 2368
+
+2024-03-06T16:12:25.581Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafkreihqylwe75j2dprlj3ortcdjb6bq7bct3whpkkt75n3fhc77okeytq
+
+2024-03-06T16:12:25.597Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster bafkreidjlkt4gcg2ydpofsdtdax2zrwxve62qd432odguzegonfvlggpca
+
+2024-03-06T16:12:25.605Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreidjlkt4gcg2ydpofsdtdax2zrwxve62qd432odguzegonfvlggpca
+
+2024-03-06T16:12:25.617Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize bafkreibclxlrhvud7iljfkxzpbtxxjwughynehrqxgpvatw3fxk42rwyga:map[0:2156]
+
+2024-03-06T16:12:25.617Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreiaunid7lulrkpzjitafj3vdjlxznroiodojpdxlfz5yjkezwgjjnq everywhere:
+
+2024-03-06T16:12:25.617Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiaunid7lulrkpzjitafj3vdjlxznroiodojpdxlfz5yjkezwgjjnq
+
+2024-03-06T16:12:25.619Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreibclxlrhvud7iljfkxzpbtxxjwughynehrqxgpvatw3fxk42rwyga
+
+2024-03-06T16:12:25.620Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: bafkreibclxlrhvud7iljfkxzpbtxxjwughynehrqxgpvatw3fxk42rwyga
+
+Name: File1
+
+ClusterDAG: bafyreiaunid7lulrkpzjitafj3vdjlxznroiodojpdxlfz5yjkezwgjjnq
+
+Total shards: 1
+
+Total size: 2156
+
+Total time: 253.937858ms
+
+Ingest Rate: ∞ B/s
+
+
+
+2024-03-06T16:12:25.620Z	INFO	adder	adder/adder.go:267	bafkreibclxlrhvud7iljfkxzpbtxxjwughynehrqxgpvatw3fxk42rwyga successfully added to cluster
+
+2024-03-06T16:12:25.620Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:25 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File1&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=262144&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 800
+
+
+
+2024-03-06T16:12:25.622Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File2': #0
+
+2024-03-06T16:12:25.667Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreiaunid7lulrkpzjitafj3vdjlxznroiodojpdxlfz5yjkezwgjjnq
+
+2024-03-06T16:12:25.723Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreibklgvxghljskvwlxqo2fhhs32wdkyp6zijz7fjpdfjph2pl7q6ce) completed. Total size: 4.2 kB. Links: 2
+
+2024-03-06T16:12:25.728Z	WARN	adder	adder/adder.go:258	the last added CID (QmS7HsdNU6JpZdsqdFKeny44SxoqETEeaNJafDHQSPET2S) is not the IPFS data root (bafkreifmwjlmofde6hm3efbhkok6iyioanzcleagjdhrtsojakwvnrkani). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:12:25.729Z	INFO	adder	adder/adder.go:186	receive parity: File2-parity-shard-0 size: 4204
+
+2024-03-06T16:12:25.731Z	ERROR	singledags	single/dag_service.go:150	------- bafkreib42yxgocizuohx6ezpd4glq2f2zoqypiwignt4dwempiohjnlomq size: 4312
+
+2024-03-06T16:12:25.743Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:25.746Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreibklgvxghljskvwlxqo2fhhs32wdkyp6zijz7fjpdfjph2pl7q6ce
+
+2024-03-06T16:12:25.802Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster bafkreib42yxgocizuohx6ezpd4glq2f2zoqypiwignt4dwempiohjnlomq
+
+2024-03-06T16:12:25.802Z	INFO	adder	adder/adder.go:186	receive parity: File2-parity-shard-1 size: 4204
+
+2024-03-06T16:12:25.803Z	ERROR	singledags	single/dag_service.go:150	------- bafkreih5iygp4y2v6jjq3plmrt2eq3gqii2rjo5ytspzylg5dwqdvnh2vu size: 4416
+
+2024-03-06T16:12:25.814Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreib42yxgocizuohx6ezpd4glq2f2zoqypiwignt4dwempiohjnlomq
+
+2024-03-06T16:12:25.871Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster bafkreih5iygp4y2v6jjq3plmrt2eq3gqii2rjo5ytspzylg5dwqdvnh2vu
+
+2024-03-06T16:12:25.885Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreih5iygp4y2v6jjq3plmrt2eq3gqii2rjo5ytspzylg5dwqdvnh2vu
+
+2024-03-06T16:12:25.904Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize bafkreifmwjlmofde6hm3efbhkok6iyioanzcleagjdhrtsojakwvnrkani:map[0:4204]
+
+2024-03-06T16:12:25.905Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreidj643xpwysjsjkj4z3qt5bz6qw27um746pctc3pwu6qfurj67qvq everywhere:
+
+2024-03-06T16:12:25.905Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreidj643xpwysjsjkj4z3qt5bz6qw27um746pctc3pwu6qfurj67qvq
+
+2024-03-06T16:12:25.906Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreifmwjlmofde6hm3efbhkok6iyioanzcleagjdhrtsojakwvnrkani
+
+2024-03-06T16:12:25.907Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: bafkreifmwjlmofde6hm3efbhkok6iyioanzcleagjdhrtsojakwvnrkani
+
+Name: File2
+
+ClusterDAG: bafyreidj643xpwysjsjkj4z3qt5bz6qw27um746pctc3pwu6qfurj67qvq
+
+Total shards: 1
+
+Total size: 4204
+
+Total time: 284.963422ms
+
+Ingest Rate: ∞ B/s
+
+
+
+2024-03-06T16:12:25.907Z	INFO	adder	adder/adder.go:267	bafkreifmwjlmofde6hm3efbhkok6iyioanzcleagjdhrtsojakwvnrkani successfully added to cluster
+
+2024-03-06T16:12:25.907Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:25 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File2&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=262144&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 800
+
+
+
+2024-03-06T16:12:25.911Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File3': #0
+
+2024-03-06T16:12:25.972Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreidj643xpwysjsjkj4z3qt5bz6qw27um746pctc3pwu6qfurj67qvq
+
+2024-03-06T16:12:26.015Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreihn4v2pdu5ohscbdye62t5g5jfk4i4tvmiymshuhszkpko4uydcpe) completed. Total size: 8.3 kB. Links: 2
+
+2024-03-06T16:12:26.019Z	WARN	adder	adder/adder.go:258	the last added CID (Qmf4HSJ5HmvwtzXSDsAFeRZJenZLVAxsuHnZpBzHEDV52X) is not the IPFS data root (bafkreibmnmphq2cf3elrhyvqepdte4q7p4hiolmrrawh7wzfvzh6m7zxyq). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:12:26.020Z	INFO	adder	adder/adder.go:186	receive parity: File3-parity-shard-0 size: 8300
+
+2024-03-06T16:12:26.021Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihaehssyzzkpjyaevixnbd67tfdjgy6lykivhfwdseyjm7gtc5xtm size: 8408
+
+2024-03-06T16:12:26.025Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:26.027Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreihn4v2pdu5ohscbdye62t5g5jfk4i4tvmiymshuhszkpko4uydcpe
+
+2024-03-06T16:12:26.071Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster bafkreihaehssyzzkpjyaevixnbd67tfdjgy6lykivhfwdseyjm7gtc5xtm
+
+2024-03-06T16:12:26.072Z	INFO	adder	adder/adder.go:186	receive parity: File3-parity-shard-1 size: 8300
+
+2024-03-06T16:12:26.072Z	ERROR	singledags	single/dag_service.go:150	------- bafkreigkpksnguz3scd62c3wc7u3ccu6xf3ffxcamld5hdd3qy27xkegvm size: 8512
+
+2024-03-06T16:12:26.080Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihaehssyzzkpjyaevixnbd67tfdjgy6lykivhfwdseyjm7gtc5xtm
+
+2024-03-06T16:12:26.123Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster bafkreigkpksnguz3scd62c3wc7u3ccu6xf3ffxcamld5hdd3qy27xkegvm
+
+2024-03-06T16:12:26.131Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreigkpksnguz3scd62c3wc7u3ccu6xf3ffxcamld5hdd3qy27xkegvm
+
+2024-03-06T16:12:26.146Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize bafkreibmnmphq2cf3elrhyvqepdte4q7p4hiolmrrawh7wzfvzh6m7zxyq:map[0:8300]
+
+2024-03-06T16:12:26.146Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreidhxpduieecbipzeutztkan3sru5ihgo63luwb7zsubv7tk5vinze everywhere:
+
+2024-03-06T16:12:26.147Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreidhxpduieecbipzeutztkan3sru5ihgo63luwb7zsubv7tk5vinze
+
+2024-03-06T16:12:26.147Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreibmnmphq2cf3elrhyvqepdte4q7p4hiolmrrawh7wzfvzh6m7zxyq
+
+2024-03-06T16:12:26.148Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: bafkreibmnmphq2cf3elrhyvqepdte4q7p4hiolmrrawh7wzfvzh6m7zxyq
+
+Name: File3
+
+ClusterDAG: bafyreidhxpduieecbipzeutztkan3sru5ihgo63luwb7zsubv7tk5vinze
+
+Total shards: 1
+
+Total size: 8300
+
+Total time: 237.679894ms
+
+Ingest Rate: ∞ B/s
+
+
+
+2024-03-06T16:12:26.148Z	INFO	adder	adder/adder.go:267	bafkreibmnmphq2cf3elrhyvqepdte4q7p4hiolmrrawh7wzfvzh6m7zxyq successfully added to cluster
+
+2024-03-06T16:12:26.148Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:25 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File3&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=262144&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 800
+
+
+
+2024-03-06T16:12:26.154Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File4': #0
+
+2024-03-06T16:12:26.205Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreidhxpduieecbipzeutztkan3sru5ihgo63luwb7zsubv7tk5vinze
+
+2024-03-06T16:12:26.244Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreieutowz5v5gi4yspnsqmj6nrwzpjfmigzcw7akzvxbsrf32g2on4q) completed. Total size: 16 kB. Links: 2
+
+2024-03-06T16:12:26.245Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafyreieutowz5v5gi4yspnsqmj6nrwzpjfmigzcw7akzvxbsrf32g2on4q on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:12:26.245Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:26.246Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreieutowz5v5gi4yspnsqmj6nrwzpjfmigzcw7akzvxbsrf32g2on4q
+
+2024-03-06T16:12:26.246Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:26.247Z	WARN	adder	adder/adder.go:258	the last added CID (Qmby6Bhfi4dtohjdyU2FVGqfXT97D6Tr8T84S7T2aa6RXf) is not the IPFS data root (bafkreic7jdewz3aoopafjxbuz7rbq466yrsdrdkrbfiazfffmszplownxq). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:12:26.250Z	INFO	adder	adder/adder.go:186	receive parity: File4-parity-shard-0 size: 16493
+
+2024-03-06T16:12:26.251Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihxvbqrjtuutuz4gp2tllwn4gsxypipwq3fzvlc6bjgseycmaj4qq size: 16602
+
+2024-03-06T16:12:26.288Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreieutowz5v5gi4yspnsqmj6nrwzpjfmigzcw7akzvxbsrf32g2on4q
+
+2024-03-06T16:12:26.309Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster bafkreihxvbqrjtuutuz4gp2tllwn4gsxypipwq3fzvlc6bjgseycmaj4qq
+
+2024-03-06T16:12:26.309Z	INFO	adder	adder/adder.go:186	receive parity: File4-parity-shard-1 size: 16493
+
+2024-03-06T16:12:26.310Z	ERROR	singledags	single/dag_service.go:150	------- bafkreigwfofrawosmxuf3hrstnf2u66vtux3tmv2hqb65ry3kopjugsdxq size: 16707
+
+2024-03-06T16:12:26.322Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihxvbqrjtuutuz4gp2tllwn4gsxypipwq3fzvlc6bjgseycmaj4qq
+
+2024-03-06T16:12:26.351Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster bafkreigwfofrawosmxuf3hrstnf2u66vtux3tmv2hqb65ry3kopjugsdxq
+
+2024-03-06T16:12:26.360Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreigwfofrawosmxuf3hrstnf2u66vtux3tmv2hqb65ry3kopjugsdxq
+
+2024-03-06T16:12:26.380Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize bafkreic7jdewz3aoopafjxbuz7rbq466yrsdrdkrbfiazfffmszplownxq:map[0:16493]
+
+2024-03-06T16:12:26.380Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreiaznxdu6mc4dfgdcusdziqt7nc3zle25wwwy4cejovaowkb75ogvy everywhere:
+
+2024-03-06T16:12:26.380Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiaznxdu6mc4dfgdcusdziqt7nc3zle25wwwy4cejovaowkb75ogvy
+
+2024-03-06T16:12:26.381Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreic7jdewz3aoopafjxbuz7rbq466yrsdrdkrbfiazfffmszplownxq
+
+2024-03-06T16:12:26.381Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: bafkreic7jdewz3aoopafjxbuz7rbq466yrsdrdkrbfiazfffmszplownxq
+
+Name: File4
+
+ClusterDAG: bafyreiaznxdu6mc4dfgdcusdziqt7nc3zle25wwwy4cejovaowkb75ogvy
+
+Total shards: 1
+
+Total size: 16493
+
+Total time: 227.517358ms
+
+Ingest Rate: ∞ B/s
+
+
+
+2024-03-06T16:12:26.381Z	INFO	adder	adder/adder.go:267	bafkreic7jdewz3aoopafjxbuz7rbq466yrsdrdkrbfiazfffmszplownxq successfully added to cluster
+
+2024-03-06T16:12:26.381Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:26 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File4&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=262144&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 805
+
+
+
+2024-03-06T16:12:26.386Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File5': #0
+
+2024-03-06T16:12:26.492Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreiaznxdu6mc4dfgdcusdziqt7nc3zle25wwwy4cejovaowkb75ogvy
+
+2024-03-06T16:12:26.520Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreieo2ugqtrbxtetfgjqky2lnstyyaf52hoiqksqzkoa4zkpt2nr2sq) completed. Total size: 33 kB. Links: 2
+
+2024-03-06T16:12:26.520Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafyreieo2ugqtrbxtetfgjqky2lnstyyaf52hoiqksqzkoa4zkpt2nr2sq on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:12:26.520Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:26.520Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreieo2ugqtrbxtetfgjqky2lnstyyaf52hoiqksqzkoa4zkpt2nr2sq
+
+2024-03-06T16:12:26.521Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:26.521Z	WARN	adder	adder/adder.go:258	the last added CID (QmXdCexjAc3sxRCfNMrcZ8x6HmDe4dPgUwjTECnsdZEUNj) is not the IPFS data root (bafkreiex7n622uplajtjxl3qklcopdbktv3co3t4nd3j5s6oybsvpubbty). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:12:26.521Z	INFO	adder	adder/adder.go:186	receive parity: File5-parity-shard-0 size: 32877
+
+2024-03-06T16:12:26.522Z	ERROR	singledags	single/dag_service.go:150	------- bafkreicndkokgggafepyvk5dyubp4bjru5a3sk3szlnqnoiuq7qmlhkofm size: 32986
+
+2024-03-06T16:12:26.545Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreieo2ugqtrbxtetfgjqky2lnstyyaf52hoiqksqzkoa4zkpt2nr2sq
+
+2024-03-06T16:12:26.560Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster bafkreicndkokgggafepyvk5dyubp4bjru5a3sk3szlnqnoiuq7qmlhkofm
+
+2024-03-06T16:12:26.561Z	INFO	adder	adder/adder.go:186	receive parity: File5-parity-shard-1 size: 32877
+
+2024-03-06T16:12:26.563Z	ERROR	singledags	single/dag_service.go:150	------- bafkreifsyioas2qugrmuq4wbayh3b4tcnywpy46tyxuoslubrxqfbpzfgm size: 33091
+
+2024-03-06T16:12:26.573Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreicndkokgggafepyvk5dyubp4bjru5a3sk3szlnqnoiuq7qmlhkofm
+
+2024-03-06T16:12:26.602Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster bafkreifsyioas2qugrmuq4wbayh3b4tcnywpy46tyxuoslubrxqfbpzfgm
+
+2024-03-06T16:12:26.613Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreifsyioas2qugrmuq4wbayh3b4tcnywpy46tyxuoslubrxqfbpzfgm
+
+2024-03-06T16:12:26.621Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize bafkreiex7n622uplajtjxl3qklcopdbktv3co3t4nd3j5s6oybsvpubbty:map[0:32877]
+
+2024-03-06T16:12:26.621Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreif6bizac2tyseursv6yghmqxyzle3y3mccgnuglhgalh4hrvebdha everywhere:
+
+2024-03-06T16:12:26.621Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreif6bizac2tyseursv6yghmqxyzle3y3mccgnuglhgalh4hrvebdha
+
+2024-03-06T16:12:26.630Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreiex7n622uplajtjxl3qklcopdbktv3co3t4nd3j5s6oybsvpubbty
+
+2024-03-06T16:12:26.630Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: bafkreiex7n622uplajtjxl3qklcopdbktv3co3t4nd3j5s6oybsvpubbty
+
+Name: File5
+
+ClusterDAG: bafyreif6bizac2tyseursv6yghmqxyzle3y3mccgnuglhgalh4hrvebdha
+
+Total shards: 1
+
+Total size: 32877
+
+Total time: 246.515854ms
+
+Ingest Rate: ∞ B/s
+
+
+
+2024-03-06T16:12:26.632Z	INFO	adder	adder/adder.go:267	bafkreiex7n622uplajtjxl3qklcopdbktv3co3t4nd3j5s6oybsvpubbty successfully added to cluster
+
+2024-03-06T16:12:26.632Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:26 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File5&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=262144&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 805
+
+
+
+2024-03-06T16:12:26.643Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File6': #0
+
+2024-03-06T16:12:26.688Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreif6bizac2tyseursv6yghmqxyzle3y3mccgnuglhgalh4hrvebdha
+
+2024-03-06T16:12:26.744Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreigdt73ox5gznjabfp3tckr5tnhv64k2yfqnuknnqhtecgenkxllkm) completed. Total size: 66 kB. Links: 2
+
+2024-03-06T16:12:26.747Z	WARN	adder	adder/adder.go:258	the last added CID (QmV1sZvyRGnj4yQdKL4PsL1iiFasUMcSFNAg9Ned1urKaT) is not the IPFS data root (bafkreie2yijq2deqfgvyuzqzopm2jxhsvnetrunifckp5ylfc5uqdh4j6m). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:12:26.748Z	INFO	adder	adder/adder.go:186	receive parity: File6-parity-shard-0 size: 65645
+
+2024-03-06T16:12:26.750Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihaghlhg3gbjptslomxhfrnxemutdzddn72ypmsclfdgvayvdd72q size: 65754
+
+2024-03-06T16:12:26.758Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:26.760Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreigdt73ox5gznjabfp3tckr5tnhv64k2yfqnuknnqhtecgenkxllkm
+
+2024-03-06T16:12:26.818Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster bafkreihaghlhg3gbjptslomxhfrnxemutdzddn72ypmsclfdgvayvdd72q
+
+2024-03-06T16:12:26.818Z	INFO	adder	adder/adder.go:186	receive parity: File6-parity-shard-1 size: 65645
+
+2024-03-06T16:12:26.819Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihhexb6ryowpn4ve5pzkmaj5flnmm5uwbiowngv5gf775npjclyfm size: 65859
+
+2024-03-06T16:12:26.833Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihaghlhg3gbjptslomxhfrnxemutdzddn72ypmsclfdgvayvdd72q
+
+2024-03-06T16:12:26.853Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreihhexb6ryowpn4ve5pzkmaj5flnmm5uwbiowngv5gf775npjclyfm on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:12:26.853Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihhexb6ryowpn4ve5pzkmaj5flnmm5uwbiowngv5gf775npjclyfm
+
+2024-03-06T16:12:26.853Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster bafkreihhexb6ryowpn4ve5pzkmaj5flnmm5uwbiowngv5gf775npjclyfm
+
+2024-03-06T16:12:26.879Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize bafkreie2yijq2deqfgvyuzqzopm2jxhsvnetrunifckp5ylfc5uqdh4j6m:map[0:65645]
+
+2024-03-06T16:12:26.879Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreiawv3nfnkizjugduv7mbo6uremnttclhdlzsp2f2h65zrtmnutjma everywhere:
+
+2024-03-06T16:12:26.880Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiawv3nfnkizjugduv7mbo6uremnttclhdlzsp2f2h65zrtmnutjma
+
+2024-03-06T16:12:26.881Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreie2yijq2deqfgvyuzqzopm2jxhsvnetrunifckp5ylfc5uqdh4j6m
+
+2024-03-06T16:12:26.881Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: bafkreie2yijq2deqfgvyuzqzopm2jxhsvnetrunifckp5ylfc5uqdh4j6m
+
+Name: File6
+
+ClusterDAG: bafyreiawv3nfnkizjugduv7mbo6uremnttclhdlzsp2f2h65zrtmnutjma
+
+Total shards: 1
+
+Total size: 65645
+
+Total time: 238.968431ms
+
+Ingest Rate: ∞ B/s
+
+
+
+2024-03-06T16:12:26.881Z	INFO	adder	adder/adder.go:267	bafkreie2yijq2deqfgvyuzqzopm2jxhsvnetrunifckp5ylfc5uqdh4j6m successfully added to cluster
+
+2024-03-06T16:12:26.881Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:26 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File6&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=262144&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 805
+
+
+
+2024-03-06T16:12:26.885Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File7': #0
+
+2024-03-06T16:12:26.911Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafkreihhexb6ryowpn4ve5pzkmaj5flnmm5uwbiowngv5gf775npjclyfm
+
+2024-03-06T16:12:26.947Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreiawv3nfnkizjugduv7mbo6uremnttclhdlzsp2f2h65zrtmnutjma
+
+2024-03-06T16:12:26.971Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreiazlcgoyl56olnaqdtu2m7vlpogx2jneyx665uj2bsdmeccnxciyy) completed. Total size: 131 kB. Links: 2
+
+2024-03-06T16:12:26.974Z	WARN	adder	adder/adder.go:258	the last added CID (QmQqcnHDiDh89HioJSfncjAKH8hdhYVzX76aARk7m5iWEG) is not the IPFS data root (bafkreihe2qihfhexh4ga5n5yeottmmc2bevgpnfnnl2bmpgmcyga7kdcpm). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:12:26.974Z	INFO	adder	adder/adder.go:186	receive parity: File7-parity-shard-0 size: 131181
+
+2024-03-06T16:12:26.977Z	ERROR	singledags	single/dag_service.go:150	------- bafkreidwiujeo4xkm2aul2o4ddvgjb5yqaioangi3eyvfdoboakl3finea size: 131290
+
+2024-03-06T16:12:26.980Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:26.982Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiazlcgoyl56olnaqdtu2m7vlpogx2jneyx665uj2bsdmeccnxciyy
+
+2024-03-06T16:12:27.007Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreidwiujeo4xkm2aul2o4ddvgjb5yqaioangi3eyvfdoboakl3finea on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:12:27.008Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreidwiujeo4xkm2aul2o4ddvgjb5yqaioangi3eyvfdoboakl3finea
+
+2024-03-06T16:12:27.008Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster bafkreidwiujeo4xkm2aul2o4ddvgjb5yqaioangi3eyvfdoboakl3finea
+
+2024-03-06T16:12:27.008Z	INFO	adder	adder/adder.go:186	receive parity: File7-parity-shard-1 size: 131181
+
+2024-03-06T16:12:27.015Z	ERROR	singledags	single/dag_service.go:150	------- bafkreidn5z36d3cvgszmm45xppxsszcjzhbozymplurdnmvisw3qi6o5je size: 131395
+
+2024-03-06T16:12:27.034Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafkreidwiujeo4xkm2aul2o4ddvgjb5yqaioangi3eyvfdoboakl3finea
+
+2024-03-06T16:12:27.049Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster bafkreidn5z36d3cvgszmm45xppxsszcjzhbozymplurdnmvisw3qi6o5je
+
+2024-03-06T16:12:27.060Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreidn5z36d3cvgszmm45xppxsszcjzhbozymplurdnmvisw3qi6o5je
+
+2024-03-06T16:12:27.078Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize bafkreihe2qihfhexh4ga5n5yeottmmc2bevgpnfnnl2bmpgmcyga7kdcpm:map[0:131181]
+
+2024-03-06T16:12:27.078Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreia6lfxp3t3wghwdiaiyfj2d2kgbu3xvdxcuq3qhocxim42mfjjty4 everywhere:
+
+2024-03-06T16:12:27.078Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreia6lfxp3t3wghwdiaiyfj2d2kgbu3xvdxcuq3qhocxim42mfjjty4
+
+2024-03-06T16:12:27.079Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihe2qihfhexh4ga5n5yeottmmc2bevgpnfnnl2bmpgmcyga7kdcpm
+
+2024-03-06T16:12:27.080Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: bafkreihe2qihfhexh4ga5n5yeottmmc2bevgpnfnnl2bmpgmcyga7kdcpm
+
+Name: File7
+
+ClusterDAG: bafyreia6lfxp3t3wghwdiaiyfj2d2kgbu3xvdxcuq3qhocxim42mfjjty4
+
+Total shards: 1
+
+Total size: 131181
+
+Total time: 195.631378ms
+
+Ingest Rate: ∞ B/s
+
+
+
+2024-03-06T16:12:27.080Z	INFO	adder	adder/adder.go:267	bafkreihe2qihfhexh4ga5n5yeottmmc2bevgpnfnnl2bmpgmcyga7kdcpm successfully added to cluster
+
+2024-03-06T16:12:27.080Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:26 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File7&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=262144&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 810
+
+
+
+2024-03-06T16:12:27.084Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File8': #0
+
+2024-03-06T16:12:27.126Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreia6lfxp3t3wghwdiaiyfj2d2kgbu3xvdxcuq3qhocxim42mfjjty4
+
+2024-03-06T16:12:27.160Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreid3zcu4wozazridog7m63odtrt3ejz73xj654mpr6n5xbtyhfknze) completed. Total size: 262 kB. Links: 1
+
+2024-03-06T16:12:27.164Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File8': #1
+
+2024-03-06T16:12:27.171Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:27.174Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreid3zcu4wozazridog7m63odtrt3ejz73xj654mpr6n5xbtyhfknze
+
+2024-03-06T16:12:27.205Z	INFO	shardingdags	sharding/shard.go:187	shard #1 (bafyreiawkku52wdrsuxehzik2lobewerdw3dpjlnxoilg2ybjylb73vuyq) completed. Total size: 109 B. Links: 1
+
+2024-03-06T16:12:27.208Z	WARN	adder	adder/adder.go:258	the last added CID (QmSgGs5jwAvFrznpD7ae9DmdtZLGfTLnoLya4pyZLKXDfF) is not the IPFS data root (bafkreiepclriokzmnwx4hsdnx2lq6zebjwda5wanou4sac4tvj7lzvsjs4). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:12:27.211Z	INFO	adder	adder/adder.go:186	receive parity: File8-parity-shard-0 size: 262144
+
+2024-03-06T16:12:27.215Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:27.216Z	ERROR	singledags	single/dag_service.go:150	------- bafkreigl5qwsnghsww3mrmfymoxn7a36s4ednlaecec25guxbkddwcxcoq size: 262253
+
+2024-03-06T16:12:27.224Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiawkku52wdrsuxehzik2lobewerdw3dpjlnxoilg2ybjylb73vuyq
+
+2024-03-06T16:12:27.274Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster bafkreigl5qwsnghsww3mrmfymoxn7a36s4ednlaecec25guxbkddwcxcoq
+
+2024-03-06T16:12:27.274Z	INFO	adder	adder/adder.go:186	receive parity: File8-parity-shard-1 size: 262144
+
+2024-03-06T16:12:27.275Z	ERROR	singledags	single/dag_service.go:150	------- bafkreibgtzhehqowogy7tl5niy6rybce3wzwba6afdml3zdouun74v35yq size: 262358
+
+2024-03-06T16:12:27.288Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreigl5qwsnghsww3mrmfymoxn7a36s4ednlaecec25guxbkddwcxcoq
+
+2024-03-06T16:12:27.325Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster bafkreibgtzhehqowogy7tl5niy6rybce3wzwba6afdml3zdouun74v35yq
+
+2024-03-06T16:12:27.334Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreibgtzhehqowogy7tl5niy6rybce3wzwba6afdml3zdouun74v35yq
+
+2024-03-06T16:12:27.349Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize bafkreiepclriokzmnwx4hsdnx2lq6zebjwda5wanou4sac4tvj7lzvsjs4:map[0:262144 1:109]
+
+2024-03-06T16:12:27.350Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreibxvytmfzhhqc53hefiiheo3oxe745ab7dyh5jvenzhpzzpl4e5ii everywhere:
+
+2024-03-06T16:12:27.351Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreibxvytmfzhhqc53hefiiheo3oxe745ab7dyh5jvenzhpzzpl4e5ii
+
+2024-03-06T16:12:27.351Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreiepclriokzmnwx4hsdnx2lq6zebjwda5wanou4sac4tvj7lzvsjs4
+
+2024-03-06T16:12:27.352Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: bafkreiepclriokzmnwx4hsdnx2lq6zebjwda5wanou4sac4tvj7lzvsjs4
+
+Name: File8
+
+ClusterDAG: bafyreibxvytmfzhhqc53hefiiheo3oxe745ab7dyh5jvenzhpzzpl4e5ii
+
+Total shards: 2
+
+Total size: 262253
+
+Total time: 269.193396ms
+
+Ingest Rate: ∞ B/s
+
+
+
+2024-03-06T16:12:27.352Z	INFO	adder	adder/adder.go:267	bafkreiepclriokzmnwx4hsdnx2lq6zebjwda5wanou4sac4tvj7lzvsjs4 successfully added to cluster
+
+2024-03-06T16:12:27.352Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:27 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File8&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=262144&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 979
+
+
+
+2024-03-06T16:12:27.357Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File9': #0
+
+2024-03-06T16:12:27.397Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreibxvytmfzhhqc53hefiiheo3oxe745ab7dyh5jvenzhpzzpl4e5ii
+
+2024-03-06T16:12:27.487Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreieguugg7rxw3e2w6ykxbpnnnscavgmulqbwl6omrhpokun7gnj2xe) completed. Total size: 262 kB. Links: 1
+
+2024-03-06T16:12:27.491Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File9': #1
+
+2024-03-06T16:12:27.495Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:27.498Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreieguugg7rxw3e2w6ykxbpnnnscavgmulqbwl6omrhpokun7gnj2xe
+
+2024-03-06T16:12:27.546Z	INFO	shardingdags	sharding/shard.go:187	shard #1 (bafyreign62v3lajlmculle7juufxgbs73wr3te7jegvpe36eyaalfgitty) completed. Total size: 262 kB. Links: 1
+
+2024-03-06T16:12:27.549Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File9': #2
+
+2024-03-06T16:12:27.558Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:27.565Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreign62v3lajlmculle7juufxgbs73wr3te7jegvpe36eyaalfgitty
+
+2024-03-06T16:12:27.635Z	INFO	shardingdags	sharding/shard.go:187	shard #2 (bafyreiekpprnn55t44cixcdzo6gq5kc2mqtbtuvyx5j4nc5f6suo4ykmhi) completed. Total size: 202 B. Links: 2
+
+2024-03-06T16:12:27.638Z	WARN	adder	adder/adder.go:258	the last added CID (QmRtsmMjYPPi5KjmQXUy14sAfegfGZmPrpKZXvJyg6JQBG) is not the IPFS data root (QmRm1a8YRcoK6QudGxVChsJmnCMBtGABcpyDaiJMDxmAva). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:12:27.639Z	INFO	adder	adder/adder.go:186	receive parity: File9-parity-shard-0 size: 262144
+
+2024-03-06T16:12:27.639Z	ERROR	singledags	single/dag_service.go:150	------- bafkreiez4756oprwfihq72r2ph4jo2mo5hfkeg6nz2ik56octg4tnawwzm size: 262253
+
+2024-03-06T16:12:27.641Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:27.642Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiekpprnn55t44cixcdzo6gq5kc2mqtbtuvyx5j4nc5f6suo4ykmhi
+
+2024-03-06T16:12:27.695Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster bafkreiez4756oprwfihq72r2ph4jo2mo5hfkeg6nz2ik56octg4tnawwzm
+
+2024-03-06T16:12:27.695Z	INFO	adder	adder/adder.go:186	receive parity: File9-parity-shard-1 size: 262144
+
+2024-03-06T16:12:27.697Z	ERROR	singledags	single/dag_service.go:150	------- bafkreiga7bd7lkrymljvyff6wpoqn26nq7k7dpiztr7q7c5sw63cxw7iei size: 262358
+
+2024-03-06T16:12:27.702Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreiez4756oprwfihq72r2ph4jo2mo5hfkeg6nz2ik56octg4tnawwzm
+
+2024-03-06T16:12:27.702Z	INFO	crdt	go-ds-crdt@v0.5.1/crdt.go:802	merged delta from node bafybeie6dlm55uendirbqnsl2eqb7y5gkuux426hirngkbcpelcctspnxi (priority: 50)
+
+2024-03-06T16:12:27.749Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreiga7bd7lkrymljvyff6wpoqn26nq7k7dpiztr7q7c5sw63cxw7iei on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:12:27.750Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreiga7bd7lkrymljvyff6wpoqn26nq7k7dpiztr7q7c5sw63cxw7iei
+
+2024-03-06T16:12:27.750Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster bafkreiga7bd7lkrymljvyff6wpoqn26nq7k7dpiztr7q7c5sw63cxw7iei
+
+2024-03-06T16:12:27.792Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize QmRm1a8YRcoK6QudGxVChsJmnCMBtGABcpyDaiJMDxmAva:map[0:262144 1:262144 2:202]
+
+2024-03-06T16:12:27.792Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreicbz5bpv7vlw2losmbqyxgwchtwseuuvjnf7nwjlwa5srpmwk4zim everywhere:
+
+2024-03-06T16:12:27.793Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreicbz5bpv7vlw2losmbqyxgwchtwseuuvjnf7nwjlwa5srpmwk4zim
+
+2024-03-06T16:12:27.793Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmRm1a8YRcoK6QudGxVChsJmnCMBtGABcpyDaiJMDxmAva
+
+2024-03-06T16:12:27.794Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: QmRm1a8YRcoK6QudGxVChsJmnCMBtGABcpyDaiJMDxmAva
+
+Name: File9
+
+ClusterDAG: bafyreicbz5bpv7vlw2losmbqyxgwchtwseuuvjnf7nwjlwa5srpmwk4zim
+
+Total shards: 3
+
+Total size: 524490
+
+Total time: 439.249454ms
+
+Ingest Rate: ∞ B/s
+
+
+
+2024-03-06T16:12:27.794Z	INFO	adder	adder/adder.go:267	QmRm1a8YRcoK6QudGxVChsJmnCMBtGABcpyDaiJMDxmAva successfully added to cluster
+
+2024-03-06T16:12:27.794Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:27 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File9&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=262144&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 1138
+
+
+
+2024-03-06T16:12:27.797Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File10': #0
+
+2024-03-06T16:12:27.801Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafkreiga7bd7lkrymljvyff6wpoqn26nq7k7dpiztr7q7c5sw63cxw7iei
+
+2024-03-06T16:12:27.853Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreicbz5bpv7vlw2losmbqyxgwchtwseuuvjnf7nwjlwa5srpmwk4zim
+
+2024-03-06T16:12:27.885Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreidlzmt3y5tqaodab42edqyhmyhrv2i4elfxkusno4k2szwttbj66i) completed. Total size: 524 kB. Links: 2
+
+2024-03-06T16:12:27.886Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafyreidlzmt3y5tqaodab42edqyhmyhrv2i4elfxkusno4k2szwttbj66i on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:12:27.886Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:27.886Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreidlzmt3y5tqaodab42edqyhmyhrv2i4elfxkusno4k2szwttbj66i
+
+2024-03-06T16:12:27.887Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:27.887Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File10': #1
+
+2024-03-06T16:12:27.918Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreidlzmt3y5tqaodab42edqyhmyhrv2i4elfxkusno4k2szwttbj66i
+
+2024-03-06T16:12:27.947Z	INFO	shardingdags	sharding/shard.go:187	shard #1 (bafyreicabd6mveif34az6b4sy6cnnmczf7ehrarh57vnrnar3nrplxiteu) completed. Total size: 524 kB. Links: 2
+
+2024-03-06T16:12:27.951Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File10': #2
+
+2024-03-06T16:12:27.960Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:27.964Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreicabd6mveif34az6b4sy6cnnmczf7ehrarh57vnrnar3nrplxiteu
+
+2024-03-06T16:12:28.033Z	INFO	shardingdags	sharding/shard.go:187	shard #2 (bafyreidawv2x5ug3oy3glnk7r2xntipr2xk6gjsdohq4unf3rv4o6zw2yy) completed. Total size: 302 B. Links: 2
+
+2024-03-06T16:12:28.036Z	WARN	adder	adder/adder.go:258	the last added CID (QmcGud61X7vnnzgwogoX5K6XZmRbMcBrMpCGoYpPVZvqnK) is not the IPFS data root (QmXQiXAki9rMS8c7yghWDjAXHHZcKbuPyJiaWoB1EdGLfY). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:12:28.037Z	INFO	adder	adder/adder.go:186	receive parity: File10-parity-shard-0 size: 524288
+
+2024-03-06T16:12:28.038Z	ERROR	singledags	single/dag_service.go:150	------- QmPKsQvaoqv6KMpRBQC6dg3gUGm8topwRi6KzscZR7Xo3g size: 524490
+
+2024-03-06T16:12:28.039Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:28.043Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreidawv2x5ug3oy3glnk7r2xntipr2xk6gjsdohq4unf3rv4o6zw2yy
+
+2024-03-06T16:12:28.974Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster QmPKsQvaoqv6KMpRBQC6dg3gUGm8topwRi6KzscZR7Xo3g
+
+2024-03-06T16:12:28.974Z	INFO	adder	adder/adder.go:186	receive parity: File10-parity-shard-1 size: 524288
+
+2024-03-06T16:12:28.976Z	ERROR	singledags	single/dag_service.go:150	------- QmcRtXvfAzkQxd5MUTK69HNdkq4f6vgKYDR7x2vgWggbsg size: 524580
+
+2024-03-06T16:12:28.983Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmPKsQvaoqv6KMpRBQC6dg3gUGm8topwRi6KzscZR7Xo3g
+
+2024-03-06T16:12:29.049Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster QmcRtXvfAzkQxd5MUTK69HNdkq4f6vgKYDR7x2vgWggbsg
+
+2024-03-06T16:12:29.061Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmcRtXvfAzkQxd5MUTK69HNdkq4f6vgKYDR7x2vgWggbsg
+
+2024-03-06T16:12:29.081Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize QmXQiXAki9rMS8c7yghWDjAXHHZcKbuPyJiaWoB1EdGLfY:map[0:524288 1:524288 2:302]
+
+2024-03-06T16:12:29.081Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreib6uxh7ezchcbofzitunzuco6t7bycstruyb4hdax5rzjtkglxrcq everywhere:
+
+2024-03-06T16:12:29.082Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreib6uxh7ezchcbofzitunzuco6t7bycstruyb4hdax5rzjtkglxrcq
+
+2024-03-06T16:12:29.083Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmXQiXAki9rMS8c7yghWDjAXHHZcKbuPyJiaWoB1EdGLfY
+
+2024-03-06T16:12:29.083Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: QmXQiXAki9rMS8c7yghWDjAXHHZcKbuPyJiaWoB1EdGLfY
+
+Name: File10
+
+ClusterDAG: bafyreib6uxh7ezchcbofzitunzuco6t7bycstruyb4hdax5rzjtkglxrcq
+
+Total shards: 3
+
+Total size: 1048878
+
+Total time: 1.287748541s
+
+Ingest Rate: 1.0 MB/s
+
+
+
+2024-03-06T16:12:29.083Z	INFO	adder	adder/adder.go:267	QmXQiXAki9rMS8c7yghWDjAXHHZcKbuPyJiaWoB1EdGLfY successfully added to cluster
+
+2024-03-06T16:12:29.084Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:27 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File10&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=524288&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 1116
+
+
+
+2024-03-06T16:12:29.090Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File11': #0
+
+2024-03-06T16:12:29.128Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreib6uxh7ezchcbofzitunzuco6t7bycstruyb4hdax5rzjtkglxrcq
+
+2024-03-06T16:12:29.248Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreigle7b2sbh4fbzqbsi6ex4spasml3xyxedbv36hgrm2jh6pvzhkpe) completed. Total size: 786 kB. Links: 3
+
+2024-03-06T16:12:29.251Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File11': #1
+
+2024-03-06T16:12:29.256Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:29.261Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreigle7b2sbh4fbzqbsi6ex4spasml3xyxedbv36hgrm2jh6pvzhkpe
+
+2024-03-06T16:12:29.322Z	INFO	shardingdags	sharding/shard.go:187	shard #1 (bafyreifyd4zpjmf63clzvdfheqsub3hmtbtlkqm4brduqakxq7pmbptkqa) completed. Total size: 786 kB. Links: 3
+
+2024-03-06T16:12:29.324Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File11': #2
+
+2024-03-06T16:12:29.334Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:29.336Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreifyd4zpjmf63clzvdfheqsub3hmtbtlkqm4brduqakxq7pmbptkqa
+
+2024-03-06T16:12:29.426Z	INFO	shardingdags	sharding/shard.go:187	shard #2 (bafyreiho4g3dnhmbgvbjp2isa4bg7ei5jyeur6hkmlmwb75wodgtyvlixy) completed. Total size: 525 kB. Links: 4
+
+2024-03-06T16:12:29.430Z	WARN	adder	adder/adder.go:258	the last added CID (QmSWQN9zFEYTWbKcnPhTnXZ7zLKrYXins7ZohDvcW9noPb) is not the IPFS data root (QmScZKmewv3q74QD9zC5ezMHEwg1uRHVEy1ntfkfqDeh2U). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:12:29.431Z	INFO	adder	adder/adder.go:186	receive parity: File11-parity-shard-0 size: 786432
+
+2024-03-06T16:12:29.433Z	ERROR	singledags	single/dag_service.go:150	------- QmYxYax9zhyTmyJLfWKpHGHmNREy6g4NJ6wLhjq9tZzVeB size: 786684
+
+2024-03-06T16:12:29.434Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:29.436Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiho4g3dnhmbgvbjp2isa4bg7ei5jyeur6hkmlmwb75wodgtyvlixy
+
+2024-03-06T16:12:30.039Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster QmYxYax9zhyTmyJLfWKpHGHmNREy6g4NJ6wLhjq9tZzVeB
+
+2024-03-06T16:12:30.039Z	INFO	adder	adder/adder.go:186	receive parity: File11-parity-shard-1 size: 786432
+
+2024-03-06T16:12:30.041Z	ERROR	singledags	single/dag_service.go:150	------- QmP1UBhm4wGv4JPcf7kUGrYFy5pcaDrmRiSXF5TuePr5cG size: 786774
+
+2024-03-06T16:12:30.045Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmYxYax9zhyTmyJLfWKpHGHmNREy6g4NJ6wLhjq9tZzVeB
+
+2024-03-06T16:12:30.822Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster QmP1UBhm4wGv4JPcf7kUGrYFy5pcaDrmRiSXF5TuePr5cG
+
+2024-03-06T16:12:30.828Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmP1UBhm4wGv4JPcf7kUGrYFy5pcaDrmRiSXF5TuePr5cG
+
+2024-03-06T16:12:30.932Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize QmScZKmewv3q74QD9zC5ezMHEwg1uRHVEy1ntfkfqDeh2U:map[0:786432 1:786432 2:524792]
+
+2024-03-06T16:12:30.933Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreiawrysadndpwg2mwd27tl6wlzejr4k2wastcokoqzct7jqals2yja everywhere:
+
+2024-03-06T16:12:30.933Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiawrysadndpwg2mwd27tl6wlzejr4k2wastcokoqzct7jqals2yja
+
+2024-03-06T16:12:30.934Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmScZKmewv3q74QD9zC5ezMHEwg1uRHVEy1ntfkfqDeh2U
+
+2024-03-06T16:12:30.938Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: QmScZKmewv3q74QD9zC5ezMHEwg1uRHVEy1ntfkfqDeh2U
+
+Name: File11
+
+ClusterDAG: bafyreiawrysadndpwg2mwd27tl6wlzejr4k2wastcokoqzct7jqals2yja
+
+Total shards: 3
+
+Total size: 2097656
+
+Total time: 1.850981846s
+
+Ingest Rate: 2.1 MB/s
+
+
+
+2024-03-06T16:12:30.938Z	INFO	adder	adder/adder.go:267	QmScZKmewv3q74QD9zC5ezMHEwg1uRHVEy1ntfkfqDeh2U successfully added to cluster
+
+2024-03-06T16:12:30.938Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:29 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File11&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=786432&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 1119
+
+
+
+2024-03-06T16:12:30.951Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File12': #0
+
+2024-03-06T16:12:31.115Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreiawrysadndpwg2mwd27tl6wlzejr4k2wastcokoqzct7jqals2yja
+
+2024-03-06T16:12:31.376Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreicvrizeahcpsfshgc53k6vyrvre2cgvy7z5x3s3ln5q7z3ixngnpq) completed. Total size: 1.3 MB. Links: 5
+
+2024-03-06T16:12:31.379Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File12': #1
+
+2024-03-06T16:12:31.382Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:31.385Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreicvrizeahcpsfshgc53k6vyrvre2cgvy7z5x3s3ln5q7z3ixngnpq
+
+2024-03-06T16:12:32.399Z	INFO	shardingdags	sharding/shard.go:187	shard #1 (bafyreib7z3pgpcmgq6x5dgze3wtfwd55rq52iww3irrya7bdasjloigcca) completed. Total size: 1.3 MB. Links: 5
+
+2024-03-06T16:12:32.402Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File12': #2
+
+2024-03-06T16:12:32.410Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:32.412Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreib7z3pgpcmgq6x5dgze3wtfwd55rq52iww3irrya7bdasjloigcca
+
+2024-03-06T16:12:32.925Z	INFO	shardingdags	sharding/shard.go:187	shard #2 (bafyreicwgwyjba4ixisw5gmuw4qeqiobzjmhoufnxsibsd5ps3robhaacm) completed. Total size: 1.3 MB. Links: 5
+
+2024-03-06T16:12:32.928Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File12': #3
+
+2024-03-06T16:12:32.933Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:32.937Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreicwgwyjba4ixisw5gmuw4qeqiobzjmhoufnxsibsd5ps3robhaacm
+
+2024-03-06T16:12:33.184Z	INFO	shardingdags	sharding/shard.go:187	shard #3 (bafyreiet4izqirx3kbag6huu3bfy3g6qsb4i6dxo47vs6wqlhlddy4ttfy) completed. Total size: 263 kB. Links: 3
+
+2024-03-06T16:12:33.190Z	WARN	adder	adder/adder.go:258	the last added CID (QmNjzyuML8GXsS4p82wVG6Dkq9z2LNNi5EW3h7SypBZSuq) is not the IPFS data root (QmXKwiNA2z9uNNNm88RxD5DCM4ozvyENc2dfmTgjAu4RRR). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:12:33.194Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:33.196Z	INFO	adder	adder/adder.go:186	receive parity: File12-parity-shard-0 size: 1310720
+
+2024-03-06T16:12:33.196Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiet4izqirx3kbag6huu3bfy3g6qsb4i6dxo47vs6wqlhlddy4ttfy
+
+2024-03-06T16:12:33.208Z	ERROR	singledags	single/dag_service.go:150	------- Qma7hF8sJL56AJCcHxfgR2e7wjtrLDTB1QC7NG3qjJ7pBp size: 1311072
+
+2024-03-06T16:12:33.848Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster Qma7hF8sJL56AJCcHxfgR2e7wjtrLDTB1QC7NG3qjJ7pBp
+
+2024-03-06T16:12:33.848Z	INFO	adder	adder/adder.go:186	receive parity: File12-parity-shard-1 size: 1310720
+
+2024-03-06T16:12:33.852Z	ERROR	singledags	single/dag_service.go:150	------- QmavBDrJ1uMukdNo6y1L5vTp86eBTarPewBhY8ynbnLxsZ size: 1311162
+
+2024-03-06T16:12:33.854Z	INFO	crdt	crdt/consensus.go:245	new pin added: Qma7hF8sJL56AJCcHxfgR2e7wjtrLDTB1QC7NG3qjJ7pBp
+
+2024-03-06T16:12:35.595Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning QmavBDrJ1uMukdNo6y1L5vTp86eBTarPewBhY8ynbnLxsZ on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:12:35.596Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmavBDrJ1uMukdNo6y1L5vTp86eBTarPewBhY8ynbnLxsZ
+
+2024-03-06T16:12:35.596Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster QmavBDrJ1uMukdNo6y1L5vTp86eBTarPewBhY8ynbnLxsZ
+
+2024-03-06T16:12:35.620Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize QmXKwiNA2z9uNNNm88RxD5DCM4ozvyENc2dfmTgjAu4RRR:map[0:1310720 1:1310720 2:1310720 3:263048]
+
+2024-03-06T16:12:35.621Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreicmx4rljicd5422mq6y5d2hw2gih54cabv3n5y65ntv7py5yifjje everywhere:
+
+2024-03-06T16:12:35.621Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreicmx4rljicd5422mq6y5d2hw2gih54cabv3n5y65ntv7py5yifjje
+
+2024-03-06T16:12:35.624Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmXKwiNA2z9uNNNm88RxD5DCM4ozvyENc2dfmTgjAu4RRR
+
+2024-03-06T16:12:35.625Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: QmXKwiNA2z9uNNNm88RxD5DCM4ozvyENc2dfmTgjAu4RRR
+
+Name: File12
+
+ClusterDAG: bafyreicmx4rljicd5422mq6y5d2hw2gih54cabv3n5y65ntv7py5yifjje
+
+Total shards: 4
+
+Total size: 4195208
+
+Total time: 4.683718529s
+
+Ingest Rate: 1.0 MB/s
+
+
+
+2024-03-06T16:12:35.625Z	INFO	adder	adder/adder.go:267	QmXKwiNA2z9uNNNm88RxD5DCM4ozvyENc2dfmTgjAu4RRR successfully added to cluster
+
+2024-03-06T16:12:35.625Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:30 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File12&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=1310720&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 1296
+
+
+
+2024-03-06T16:12:35.643Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: QmavBDrJ1uMukdNo6y1L5vTp86eBTarPewBhY8ynbnLxsZ
+
+2024-03-06T16:12:35.680Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File13': #0
+
+2024-03-06T16:12:35.927Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreicmx4rljicd5422mq6y5d2hw2gih54cabv3n5y65ntv7py5yifjje
+
+2024-03-06T16:12:36.029Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreieywfkdv7iqzug6runef7i4nymfxngsnzslecksre457bpafyn5zi) completed. Total size: 2.4 MB. Links: 9
+
+2024-03-06T16:12:36.032Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File13': #1
+
+2024-03-06T16:12:36.040Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:36.062Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreieywfkdv7iqzug6runef7i4nymfxngsnzslecksre457bpafyn5zi
+
+2024-03-06T16:12:42.227Z	WARN	cluster	ipfs-cluster/cluster.go:498	metric alert for ping: Peer: 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC.
+
+2024-03-06T16:12:45.629Z	INFO	shardingdags	sharding/shard.go:187	shard #1 (bafyreigf6uag76vh37gvpumn7ngrr3r2fiwq6afsf6y2d3zwk5mipdddre) completed. Total size: 2.4 MB. Links: 9
+
+2024-03-06T16:12:45.632Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File13': #2
+
+2024-03-06T16:12:45.636Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:45.637Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreigf6uag76vh37gvpumn7ngrr3r2fiwq6afsf6y2d3zwk5mipdddre
+
+2024-03-06T16:12:45.789Z	INFO	shardingdags	sharding/shard.go:187	shard #2 (bafyreicmyvlfdxmv7amqgwz3yp4qq7ealixe4ustbgx3br53fu5cvjgojy) completed. Total size: 2.4 MB. Links: 9
+
+2024-03-06T16:12:45.791Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File13': #3
+
+2024-03-06T16:12:45.797Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:45.803Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreicmyvlfdxmv7amqgwz3yp4qq7ealixe4ustbgx3br53fu5cvjgojy
+
+2024-03-06T16:12:45.898Z	INFO	shardingdags	sharding/shard.go:187	shard #3 (bafyreihzkyfsbp6ie4hau2v4knw6sml2zslanm5t5enkmipbrqbptsahei) completed. Total size: 1.3 MB. Links: 7
+
+2024-03-06T16:12:45.900Z	WARN	adder	adder/adder.go:258	the last added CID (QmZRGfYgHao9H9gZJNYhhVwssbZqcZM9ce1YJnKtRGGBvF) is not the IPFS data root (QmYioftAkLt5zm1R7FcDB4vU7mb3r7S7o8cg4dtN7Fu9Jw). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:12:45.905Z	INFO	adder	adder/adder.go:186	receive parity: File13-parity-shard-0 size: 2359296
+
+2024-03-06T16:12:45.906Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:45.911Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreihzkyfsbp6ie4hau2v4knw6sml2zslanm5t5enkmipbrqbptsahei
+
+2024-03-06T16:12:45.914Z	ERROR	singledags	single/dag_service.go:150	------- QmSDpFGkBzAfWu64ZMuoy2NHNK1AXHxATfnxQoGtjkve6p size: 2359850
+
+2024-03-06T16:12:46.161Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster QmSDpFGkBzAfWu64ZMuoy2NHNK1AXHxATfnxQoGtjkve6p
+
+2024-03-06T16:12:46.161Z	INFO	adder	adder/adder.go:186	receive parity: File13-parity-shard-1 size: 2359296
+
+2024-03-06T16:12:46.164Z	ERROR	singledags	single/dag_service.go:150	------- QmaSdgFKCmrBDpjQZ6CktZLe4ghKgYaGWmAaKaDnJfeb8B size: 2359941
+
+2024-03-06T16:12:46.168Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmSDpFGkBzAfWu64ZMuoy2NHNK1AXHxATfnxQoGtjkve6p
+
+2024-03-06T16:12:46.302Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning QmaSdgFKCmrBDpjQZ6CktZLe4ghKgYaGWmAaKaDnJfeb8B on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:12:46.303Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmaSdgFKCmrBDpjQZ6CktZLe4ghKgYaGWmAaKaDnJfeb8B
+
+2024-03-06T16:12:46.303Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster QmaSdgFKCmrBDpjQZ6CktZLe4ghKgYaGWmAaKaDnJfeb8B
+
+2024-03-06T16:12:46.324Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize QmYioftAkLt5zm1R7FcDB4vU7mb3r7S7o8cg4dtN7Fu9Jw:map[0:2359296 1:2359296 2:2359296 3:1312425]
+
+2024-03-06T16:12:46.324Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreifnrv2tuscbciu762tg3jjnz2p4kqorpi5lvcv56n3sjzsci6xgke everywhere:
+
+2024-03-06T16:12:46.325Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreifnrv2tuscbciu762tg3jjnz2p4kqorpi5lvcv56n3sjzsci6xgke
+
+2024-03-06T16:12:46.326Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmYioftAkLt5zm1R7FcDB4vU7mb3r7S7o8cg4dtN7Fu9Jw
+
+2024-03-06T16:12:46.326Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: QmYioftAkLt5zm1R7FcDB4vU7mb3r7S7o8cg4dtN7Fu9Jw
+
+Name: File13
+
+ClusterDAG: bafyreifnrv2tuscbciu762tg3jjnz2p4kqorpi5lvcv56n3sjzsci6xgke
+
+Total shards: 4
+
+Total size: 8390313
+
+Total time: 10.69962872s
+
+Ingest Rate: 839 kB/s
+
+
+
+2024-03-06T16:12:46.326Z	INFO	adder	adder/adder.go:267	QmYioftAkLt5zm1R7FcDB4vU7mb3r7S7o8cg4dtN7Fu9Jw successfully added to cluster
+
+2024-03-06T16:12:46.326Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:35 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File13&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=2359296&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 1297
+
+
+
+2024-03-06T16:12:46.333Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File14': #0
+
+2024-03-06T16:12:46.369Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: QmaSdgFKCmrBDpjQZ6CktZLe4ghKgYaGWmAaKaDnJfeb8B
+
+2024-03-06T16:12:46.485Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreifnrv2tuscbciu762tg3jjnz2p4kqorpi5lvcv56n3sjzsci6xgke
+
+2024-03-06T16:12:46.712Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreigfpzpl7fbaez2bnxzhmmm5xsyzbap62nfdsjbol63kcjfhleqknm) completed. Total size: 4.5 MB. Links: 17
+
+2024-03-06T16:12:46.715Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File14': #1
+
+2024-03-06T16:12:46.718Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:46.727Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreigfpzpl7fbaez2bnxzhmmm5xsyzbap62nfdsjbol63kcjfhleqknm
+
+2024-03-06T16:12:48.808Z	INFO	shardingdags	sharding/shard.go:187	shard #1 (bafyreidxjbandw6dhfhuwclsvpu3wwrv3sest76b6vhxgb5udleva2zk4m) completed. Total size: 4.5 MB. Links: 17
+
+2024-03-06T16:12:48.811Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File14': #2
+
+2024-03-06T16:12:48.817Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:48.820Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreidxjbandw6dhfhuwclsvpu3wwrv3sest76b6vhxgb5udleva2zk4m
+
+2024-03-06T16:12:49.020Z	INFO	shardingdags	sharding/shard.go:187	shard #2 (bafyreiccpnf2h2prrxmybleanuxtcgc7rzfgbntra6ir66qb6dvezyyn54) completed. Total size: 4.5 MB. Links: 17
+
+2024-03-06T16:12:49.021Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafyreiccpnf2h2prrxmybleanuxtcgc7rzfgbntra6ir66qb6dvezyyn54 on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:12:49.021Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:49.021Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiccpnf2h2prrxmybleanuxtcgc7rzfgbntra6ir66qb6dvezyyn54
+
+2024-03-06T16:12:49.021Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File14': #3
+
+2024-03-06T16:12:49.026Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:49.070Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreiccpnf2h2prrxmybleanuxtcgc7rzfgbntra6ir66qb6dvezyyn54
+
+2024-03-06T16:12:49.210Z	INFO	shardingdags	sharding/shard.go:187	shard #3 (bafyreidzcp3a3uhebyfl3oupffnjxjrjcgovqvo36i4go4r32l5uincaea) completed. Total size: 3.4 MB. Links: 15
+
+2024-03-06T16:12:49.213Z	WARN	adder	adder/adder.go:258	the last added CID (QmbDnV5bPAyekAS3cCEoLhAP2jvh62yKpN9UknwrnsURHk) is not the IPFS data root (QmbrDQi7AYoyETGHAekYxXg7w4GtqP7PkEaJE2ypRbeW4j). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:12:49.217Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:49.219Z	INFO	adder	adder/adder.go:186	receive parity: File14-parity-shard-0 size: 4456448
+
+2024-03-06T16:12:49.226Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreidzcp3a3uhebyfl3oupffnjxjrjcgovqvo36i4go4r32l5uincaea
+
+2024-03-06T16:12:49.229Z	ERROR	singledags	single/dag_service.go:150	------- QmZGjJuPTzDrcKtNFSAtYct6i5AcHAvnaJy2wzzg3Se5rj size: 4457402
+
+2024-03-06T16:12:52.160Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster QmZGjJuPTzDrcKtNFSAtYct6i5AcHAvnaJy2wzzg3Se5rj
+
+2024-03-06T16:12:52.160Z	INFO	adder	adder/adder.go:186	receive parity: File14-parity-shard-1 size: 4456448
+
+2024-03-06T16:12:52.166Z	ERROR	singledags	single/dag_service.go:150	------- QmXgp8WnCdLDNDZFLjaqbf8ujpc3feveyrecif8hGjxvbP size: 4457493
+
+2024-03-06T16:12:52.458Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmZGjJuPTzDrcKtNFSAtYct6i5AcHAvnaJy2wzzg3Se5rj
+
+2024-03-06T16:12:52.645Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster QmXgp8WnCdLDNDZFLjaqbf8ujpc3feveyrecif8hGjxvbP
+
+2024-03-06T16:12:52.658Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmXgp8WnCdLDNDZFLjaqbf8ujpc3feveyrecif8hGjxvbP
+
+2024-03-06T16:12:52.664Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize QmbrDQi7AYoyETGHAekYxXg7w4GtqP7PkEaJE2ypRbeW4j:map[0:4456448 1:4456448 2:4456448 3:3411177]
+
+2024-03-06T16:12:52.665Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreibehbw7mvnvagxr3yi75qg74n6a4jjmlc6hzsskriplkhvoh2ruma everywhere:
+
+2024-03-06T16:12:52.665Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreibehbw7mvnvagxr3yi75qg74n6a4jjmlc6hzsskriplkhvoh2ruma
+
+2024-03-06T16:12:52.666Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmbrDQi7AYoyETGHAekYxXg7w4GtqP7PkEaJE2ypRbeW4j
+
+2024-03-06T16:12:52.667Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: QmbrDQi7AYoyETGHAekYxXg7w4GtqP7PkEaJE2ypRbeW4j
+
+Name: File14
+
+ClusterDAG: bafyreibehbw7mvnvagxr3yi75qg74n6a4jjmlc6hzsskriplkhvoh2ruma
+
+Total shards: 4
+
+Total size: 16780521
+
+Total time: 6.336037405s
+
+Ingest Rate: 2.8 MB/s
+
+
+
+2024-03-06T16:12:52.667Z	INFO	adder	adder/adder.go:267	QmbrDQi7AYoyETGHAekYxXg7w4GtqP7PkEaJE2ypRbeW4j successfully added to cluster
+
+2024-03-06T16:12:52.667Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:46 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File14&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=4456448&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 1299
+
+
+
+2024-03-06T16:12:52.698Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File15': #0
+
+2024-03-06T16:12:52.756Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreibehbw7mvnvagxr3yi75qg74n6a4jjmlc6hzsskriplkhvoh2ruma
+
+2024-03-06T16:12:53.240Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreic54wciioe6xmt7gg35gnprpxrgydozjqw3y377psv7qammoz4j2q) completed. Total size: 8.7 MB. Links: 33
+
+2024-03-06T16:12:53.245Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File15': #1
+
+2024-03-06T16:12:53.260Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:53.263Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreic54wciioe6xmt7gg35gnprpxrgydozjqw3y377psv7qammoz4j2q
+
+2024-03-06T16:12:53.879Z	INFO	shardingdags	sharding/shard.go:187	shard #1 (bafyreif2z5bngovdl67g46c5pvngsgv75y6rnopawatkb7pt7zkgiuwqze) completed. Total size: 8.7 MB. Links: 33
+
+2024-03-06T16:12:53.884Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File15': #2
+
+2024-03-06T16:12:53.889Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:53.895Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreif2z5bngovdl67g46c5pvngsgv75y6rnopawatkb7pt7zkgiuwqze
+
+2024-03-06T16:12:54.340Z	INFO	shardingdags	sharding/shard.go:187	shard #2 (bafyreih7yo2ctjlt3vle6g4hrn26muzu4wftpwvuiftvtzeh3rpkwfctgu) completed. Total size: 8.7 MB. Links: 33
+
+2024-03-06T16:12:54.342Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File15': #3
+
+2024-03-06T16:12:54.360Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:54.364Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreih7yo2ctjlt3vle6g4hrn26muzu4wftpwvuiftvtzeh3rpkwfctgu
+
+2024-03-06T16:12:54.842Z	INFO	shardingdags	sharding/shard.go:187	shard #3 (bafyreihblrqvnncqwcpsf25ceeaisdm3jypztf7oryg3k5jaea6o5njb3q) completed. Total size: 7.6 MB. Links: 31
+
+2024-03-06T16:12:54.842Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafyreihblrqvnncqwcpsf25ceeaisdm3jypztf7oryg3k5jaea6o5njb3q on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:12:54.844Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:54.844Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreihblrqvnncqwcpsf25ceeaisdm3jypztf7oryg3k5jaea6o5njb3q
+
+2024-03-06T16:12:54.844Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:54.845Z	WARN	adder	adder/adder.go:258	the last added CID (QmPm6n57erQ278UwLoR2UGQ5iLD4KsSxdBcdN3WdfCzJL6) is not the IPFS data root (QmQRQRLj2z4ZaumgcgSc2UT9qUspLdqrBN1UMJcDy5uTS4). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:12:54.858Z	INFO	adder	adder/adder.go:186	receive parity: File15-parity-shard-0 size: 8650752
+
+2024-03-06T16:12:54.876Z	ERROR	singledags	single/dag_service.go:150	------- QmaNX8q1CHTai8U3vZw1iENJL7VDXj99E5ZLFqSPVtie4B size: 8652507
+
+2024-03-06T16:12:56.222Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreihblrqvnncqwcpsf25ceeaisdm3jypztf7oryg3k5jaea6o5njb3q
+
+2024-03-06T16:12:57.160Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster QmaNX8q1CHTai8U3vZw1iENJL7VDXj99E5ZLFqSPVtie4B
+
+2024-03-06T16:12:57.160Z	INFO	adder	adder/adder.go:186	receive parity: File15-parity-shard-1 size: 8650752
+
+2024-03-06T16:12:57.176Z	ERROR	singledags	single/dag_service.go:150	------- QmZHAX6NzARd4aRNUNqjKeKa1CssbgqyCDjD2RwVV5EN1J size: 8652598
+
+2024-03-06T16:12:57.179Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmaNX8q1CHTai8U3vZw1iENJL7VDXj99E5ZLFqSPVtie4B
+
+2024-03-06T16:12:57.740Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster QmZHAX6NzARd4aRNUNqjKeKa1CssbgqyCDjD2RwVV5EN1J
+
+2024-03-06T16:12:57.749Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmZHAX6NzARd4aRNUNqjKeKa1CssbgqyCDjD2RwVV5EN1J
+
+2024-03-06T16:12:57.767Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize QmQRQRLj2z4ZaumgcgSc2UT9qUspLdqrBN1UMJcDy5uTS4:map[0:8650752 1:8650752 2:8650752 3:7608681]
+
+2024-03-06T16:12:57.767Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreibzstfd623knociqjjiit447hp2ezhqvkcdw6jmayewsgb6dfyjui everywhere:
+
+2024-03-06T16:12:57.774Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreibzstfd623knociqjjiit447hp2ezhqvkcdw6jmayewsgb6dfyjui
+
+2024-03-06T16:12:57.858Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmQRQRLj2z4ZaumgcgSc2UT9qUspLdqrBN1UMJcDy5uTS4
+
+2024-03-06T16:12:57.858Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: QmQRQRLj2z4ZaumgcgSc2UT9qUspLdqrBN1UMJcDy5uTS4
+
+Name: File15
+
+ClusterDAG: bafyreibzstfd623knociqjjiit447hp2ezhqvkcdw6jmayewsgb6dfyjui
+
+Total shards: 4
+
+Total size: 33560937
+
+Total time: 5.180579491s
+
+Ingest Rate: 6.7 MB/s
+
+
+
+2024-03-06T16:12:57.858Z	INFO	adder	adder/adder.go:267	QmQRQRLj2z4ZaumgcgSc2UT9qUspLdqrBN1UMJcDy5uTS4 successfully added to cluster
+
+2024-03-06T16:12:57.859Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:52 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File15&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=8650752&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 1299
+
+
+
+2024-03-06T16:12:57.925Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreibzstfd623knociqjjiit447hp2ezhqvkcdw6jmayewsgb6dfyjui
+
+2024-03-06T16:12:57.952Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File16': #0
+
+2024-03-06T16:12:58.688Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreiap7oen3b7yhbr6pu5saf6btc7vqm4rsntcrx7nuxr4jm7yl3i34y) completed. Total size: 17 MB. Links: 65
+
+2024-03-06T16:12:58.690Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafyreiap7oen3b7yhbr6pu5saf6btc7vqm4rsntcrx7nuxr4jm7yl3i34y on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:12:58.690Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:58.691Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiap7oen3b7yhbr6pu5saf6btc7vqm4rsntcrx7nuxr4jm7yl3i34y
+
+2024-03-06T16:12:58.691Z	INFO	crdt	go-ds-crdt@v0.5.1/crdt.go:802	merged delta from node bafybeifz3xpbl7bk25jvvrldhqnqvl62b2judkxlwvotujtdh3epirangm (priority: 100)
+
+2024-03-06T16:12:58.692Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File16': #1
+
+2024-03-06T16:12:58.691Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:58.739Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreiap7oen3b7yhbr6pu5saf6btc7vqm4rsntcrx7nuxr4jm7yl3i34y
+
+2024-03-06T16:12:59.443Z	INFO	shardingdags	sharding/shard.go:187	shard #1 (bafyreica6vsnmekrajcp45ps4rzqnndzq244buvrgpkjxlxjss36eexswm) completed. Total size: 17 MB. Links: 65
+
+2024-03-06T16:12:59.447Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File16': #2
+
+2024-03-06T16:12:59.453Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:12:59.465Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreica6vsnmekrajcp45ps4rzqnndzq244buvrgpkjxlxjss36eexswm
+
+2024-03-06T16:13:00.328Z	INFO	shardingdags	sharding/shard.go:187	shard #2 (bafyreidg4bt46kgdt362u3jxljlmeb4teidoqojyvhg23hkehdb5etucjq) completed. Total size: 17 MB. Links: 65
+
+2024-03-06T16:13:00.330Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File16': #3
+
+2024-03-06T16:13:00.341Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:13:00.344Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreidg4bt46kgdt362u3jxljlmeb4teidoqojyvhg23hkehdb5etucjq
+
+2024-03-06T16:13:01.627Z	INFO	shardingdags	sharding/shard.go:187	shard #3 (bafyreicc2btvbhf5nza2lf3tum3hskirfbqit775ktefdbgfzyhuenn6de) completed. Total size: 16 MB. Links: 65
+
+2024-03-06T16:13:01.634Z	WARN	adder	adder/adder.go:258	the last added CID (QmS8gLWyd4J6HFFLbJkbMBKWtnMuMhtU4PTzQYvnFtgUdc) is not the IPFS data root (QmUAFNwuMJWYgwcZrPkjmB33JL1H3o5qPhYVwbCAS6nfJK). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:13:01.661Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:13:01.667Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreicc2btvbhf5nza2lf3tum3hskirfbqit775ktefdbgfzyhuenn6de
+
+2024-03-06T16:13:01.667Z	INFO	adder	adder/adder.go:186	receive parity: File16-parity-shard-0 size: 17039360
+
+2024-03-06T16:13:01.692Z	ERROR	singledags	single/dag_service.go:150	------- QmcGkCC7ydPhoGXaNeo6gY1YmkcuzVoyML25qw6yd83PA9 size: 17042715
+
+2024-03-06T16:13:02.815Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster QmcGkCC7ydPhoGXaNeo6gY1YmkcuzVoyML25qw6yd83PA9
+
+2024-03-06T16:13:02.816Z	INFO	adder	adder/adder.go:186	receive parity: File16-parity-shard-1 size: 17039360
+
+2024-03-06T16:13:02.822Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmcGkCC7ydPhoGXaNeo6gY1YmkcuzVoyML25qw6yd83PA9
+
+2024-03-06T16:13:02.837Z	ERROR	singledags	single/dag_service.go:150	------- QmZB9dNx3Uq795KMnqozJcKto5W8BtC65j1SWLiXR2qfcc size: 17042806
+
+2024-03-06T16:13:03.567Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster QmZB9dNx3Uq795KMnqozJcKto5W8BtC65j1SWLiXR2qfcc
+
+2024-03-06T16:13:03.573Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmZB9dNx3Uq795KMnqozJcKto5W8BtC65j1SWLiXR2qfcc
+
+2024-03-06T16:13:03.736Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize QmUAFNwuMJWYgwcZrPkjmB33JL1H3o5qPhYVwbCAS6nfJK:map[0:17039360 1:17039360 2:16785926 3:16257242]
+
+2024-03-06T16:13:03.737Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreicz74h7exmdovr76sqalq2jlchhzeisg27mectglnms2z3vkkwhsq everywhere:
+
+2024-03-06T16:13:03.740Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreicz74h7exmdovr76sqalq2jlchhzeisg27mectglnms2z3vkkwhsq
+
+2024-03-06T16:13:03.741Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmUAFNwuMJWYgwcZrPkjmB33JL1H3o5qPhYVwbCAS6nfJK
+
+2024-03-06T16:13:03.742Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: QmUAFNwuMJWYgwcZrPkjmB33JL1H3o5qPhYVwbCAS6nfJK
+
+Name: File16
+
+ClusterDAG: bafyreicz74h7exmdovr76sqalq2jlchhzeisg27mectglnms2z3vkkwhsq
+
+Total shards: 4
+
+Total size: 67121888
+
+Total time: 5.850453676s
+
+Ingest Rate: 13 MB/s
+
+
+
+2024-03-06T16:13:03.742Z	INFO	adder	adder/adder.go:267	QmUAFNwuMJWYgwcZrPkjmB33JL1H3o5qPhYVwbCAS6nfJK successfully added to cluster
+
+2024-03-06T16:13:03.742Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:12:57 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File16&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=17039360&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 1305
+
+
+
+2024-03-06T16:13:03.805Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File17': #0
+
+2024-03-06T16:13:03.812Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreicz74h7exmdovr76sqalq2jlchhzeisg27mectglnms2z3vkkwhsq
+
+2024-03-06T16:13:05.496Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreidu47uw3ttqfp7qbekwwifecwrx3d42uvncex3euaj3eomuqxawau) completed. Total size: 34 MB. Links: 129
+
+2024-03-06T16:13:05.498Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File17': #1
+
+2024-03-06T16:13:05.506Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:13:05.508Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreidu47uw3ttqfp7qbekwwifecwrx3d42uvncex3euaj3eomuqxawau
+
+2024-03-06T16:13:07.081Z	INFO	shardingdags	sharding/shard.go:187	shard #1 (bafyreiby5a4tvfgsrsxgwwmuztzjlpkxvcb2pohu44mrishqyttvgrrfs4) completed. Total size: 34 MB. Links: 129
+
+2024-03-06T16:13:07.083Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File17': #2
+
+2024-03-06T16:13:07.096Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:13:07.116Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiby5a4tvfgsrsxgwwmuztzjlpkxvcb2pohu44mrishqyttvgrrfs4
+
+2024-03-06T16:13:09.493Z	INFO	shardingdags	sharding/shard.go:187	shard #2 (bafyreibihwkx6prny4tn5brqoai3kuv3tfdbg7hnaazjpd37i2jxldg7ki) completed. Total size: 34 MB. Links: 129
+
+2024-03-06T16:13:09.494Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafyreibihwkx6prny4tn5brqoai3kuv3tfdbg7hnaazjpd37i2jxldg7ki on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:13:09.494Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:13:09.494Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreibihwkx6prny4tn5brqoai3kuv3tfdbg7hnaazjpd37i2jxldg7ki
+
+2024-03-06T16:13:09.495Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:13:09.495Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File17': #3
+
+2024-03-06T16:13:10.072Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreibihwkx6prny4tn5brqoai3kuv3tfdbg7hnaazjpd37i2jxldg7ki
+
+2024-03-06T16:13:11.513Z	INFO	shardingdags	sharding/shard.go:187	shard #3 (bafyreiadl4sbstc52br5s33szu6ngdtmlkyazhfahdvglohxsfubk5ux54) completed. Total size: 33 MB. Links: 130
+
+2024-03-06T16:13:11.516Z	WARN	adder	adder/adder.go:258	the last added CID (QmcNGmeom1V5phBBF4SCvGrMq1kQ3PwCy6fpALvrZhZdG8) is not the IPFS data root (QmfWtk5zQEJee1dJZB9YHaC1mLKNHfhKKKcFBr79y2bJNj). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:13:11.519Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:13:11.524Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiadl4sbstc52br5s33szu6ngdtmlkyazhfahdvglohxsfubk5ux54
+
+2024-03-06T16:13:11.560Z	INFO	adder	adder/adder.go:186	receive parity: File17-parity-shard-0 size: 33816576
+
+2024-03-06T16:13:11.617Z	ERROR	singledags	single/dag_service.go:150	------- QmejAX2N9ufAu88DwPJ7Wjm9kUA8Jp75dYvVbpuy53uZRA size: 33823131
+
+2024-03-06T16:13:14.299Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster QmejAX2N9ufAu88DwPJ7Wjm9kUA8Jp75dYvVbpuy53uZRA
+
+2024-03-06T16:13:14.299Z	INFO	adder	adder/adder.go:186	receive parity: File17-parity-shard-1 size: 33816576
+
+2024-03-06T16:13:14.307Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmejAX2N9ufAu88DwPJ7Wjm9kUA8Jp75dYvVbpuy53uZRA
+
+2024-03-06T16:13:14.341Z	ERROR	singledags	single/dag_service.go:150	------- QmQsvrKH73N1tMJeyhv8xi38TVq1xpv68FSdmJ4gGj8Krf size: 33823222
+
+2024-03-06T16:13:16.597Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster QmQsvrKH73N1tMJeyhv8xi38TVq1xpv68FSdmJ4gGj8Krf
+
+2024-03-06T16:13:16.605Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmQsvrKH73N1tMJeyhv8xi38TVq1xpv68FSdmJ4gGj8Krf
+
+2024-03-06T16:13:16.619Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize QmfWtk5zQEJee1dJZB9YHaC1mLKNHfhKKKcFBr79y2bJNj:map[0:33816576 1:33563142 2:33563142 3:33300752]
+
+2024-03-06T16:13:16.620Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreif2mwssbskoruzb6x3eogmjezjcziroy73lj52ftb4eggn3rgsrqe everywhere:
+
+2024-03-06T16:13:16.623Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreif2mwssbskoruzb6x3eogmjezjcziroy73lj52ftb4eggn3rgsrqe
+
+2024-03-06T16:13:16.623Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmfWtk5zQEJee1dJZB9YHaC1mLKNHfhKKKcFBr79y2bJNj
+
+2024-03-06T16:13:16.624Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: QmfWtk5zQEJee1dJZB9YHaC1mLKNHfhKKKcFBr79y2bJNj
+
+Name: File17
+
+ClusterDAG: bafyreif2mwssbskoruzb6x3eogmjezjcziroy73lj52ftb4eggn3rgsrqe
+
+Total shards: 4
+
+Total size: 134243612
+
+Total time: 12.860945959s
+
+Ingest Rate: 11 MB/s
+
+
+
+2024-03-06T16:13:16.624Z	INFO	adder	adder/adder.go:267	QmfWtk5zQEJee1dJZB9YHaC1mLKNHfhKKKcFBr79y2bJNj successfully added to cluster
+
+2024-03-06T16:13:16.626Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:13:03 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File17&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=33816576&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 1307
+
+
+
+2024-03-06T16:13:16.728Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File18': #0
+
+2024-03-06T16:13:16.750Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreif2mwssbskoruzb6x3eogmjezjcziroy73lj52ftb4eggn3rgsrqe
+
+2024-03-06T16:13:22.186Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreie2zh2y6mux6l7hmex2bgqhsvguv2eih4h65lsmnnreifpvtu6tfa) completed. Total size: 67 MB. Links: 257
+
+2024-03-06T16:13:22.189Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File18': #1
+
+2024-03-06T16:13:22.198Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:13:22.200Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreie2zh2y6mux6l7hmex2bgqhsvguv2eih4h65lsmnnreifpvtu6tfa
+
+2024-03-06T16:13:27.686Z	INFO	shardingdags	sharding/shard.go:187	shard #1 (bafyreigkn72vs6hsx6e6q2efw27wqb4avkj5vyzr2exypjmrgao3a3y5eu) completed. Total size: 67 MB. Links: 257
+
+2024-03-06T16:13:27.689Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File18': #2
+
+2024-03-06T16:13:27.693Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:13:27.696Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreigkn72vs6hsx6e6q2efw27wqb4avkj5vyzr2exypjmrgao3a3y5eu
+
+2024-03-06T16:13:32.337Z	INFO	shardingdags	sharding/shard.go:187	shard #2 (bafyreih7yh2lkg4bbardxiseb3nh5gdztdkjb353i4iisfkasti2w2kgxa) completed. Total size: 67 MB. Links: 258
+
+2024-03-06T16:13:32.340Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File18': #3
+
+2024-03-06T16:13:32.343Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:13:32.345Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreih7yh2lkg4bbardxiseb3nh5gdztdkjb353i4iisfkasti2w2kgxa
+
+2024-03-06T16:13:36.638Z	INFO	shardingdags	sharding/shard.go:187	shard #3 (bafyreib4qauhlmgvd6lwkrkc5iak2p6hvfpvap65wkyugnnfmmsd6ctj6m) completed. Total size: 67 MB. Links: 260
+
+2024-03-06T16:13:36.640Z	WARN	adder	adder/adder.go:258	the last added CID (QmfWnyrjZkCq5Vk2zzrmQGHmQDs7HnB3GWNRLxhUeNM44r) is not the IPFS data root (QmW229LtsdQkJ4W3PEZieauY58YWxX7nxnQzXp8oHrpTrA). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:13:36.648Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:13:36.650Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreib4qauhlmgvd6lwkrkc5iak2p6hvfpvap65wkyugnnfmmsd6ctj6m
+
+2024-03-06T16:13:36.731Z	INFO	adder	adder/adder.go:186	receive parity: File18-parity-shard-0 size: 67126284
+
+2024-03-06T16:13:36.832Z	ERROR	singledags	single/dag_service.go:150	------- QmUXSoZGJdi5v4NZ6c1vVch1Qiw8frvpQcWBKAsNspNkdZ size: 67139358
+
+2024-03-06T16:13:41.447Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster QmUXSoZGJdi5v4NZ6c1vVch1Qiw8frvpQcWBKAsNspNkdZ
+
+2024-03-06T16:13:41.447Z	INFO	adder	adder/adder.go:186	receive parity: File18-parity-shard-1 size: 67126284
+
+2024-03-06T16:13:41.463Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmUXSoZGJdi5v4NZ6c1vVch1Qiw8frvpQcWBKAsNspNkdZ
+
+2024-03-06T16:13:41.522Z	ERROR	singledags	single/dag_service.go:150	------- QmdAd9QRzpwq32SdkgVwFMdkGmA72t95SN1XprtaUp7YHR size: 67139449
+
+2024-03-06T16:13:45.226Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning QmdAd9QRzpwq32SdkgVwFMdkGmA72t95SN1XprtaUp7YHR on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:13:45.226Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmdAd9QRzpwq32SdkgVwFMdkGmA72t95SN1XprtaUp7YHR
+
+2024-03-06T16:13:45.227Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster QmdAd9QRzpwq32SdkgVwFMdkGmA72t95SN1XprtaUp7YHR
+
+2024-03-06T16:13:45.241Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize QmW229LtsdQkJ4W3PEZieauY58YWxX7nxnQzXp8oHrpTrA:map[0:67117574 1:67117574 2:67126284 3:67125690]
+
+2024-03-06T16:13:45.243Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreiapifhdi5yoz66hn7jv4xrqhnl6nibkoi3cceik27zouqqspvfh74 everywhere:
+
+2024-03-06T16:13:45.245Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiapifhdi5yoz66hn7jv4xrqhnl6nibkoi3cceik27zouqqspvfh74
+
+2024-03-06T16:13:45.246Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmW229LtsdQkJ4W3PEZieauY58YWxX7nxnQzXp8oHrpTrA
+
+2024-03-06T16:13:45.247Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: QmW229LtsdQkJ4W3PEZieauY58YWxX7nxnQzXp8oHrpTrA
+
+Name: File18
+
+ClusterDAG: bafyreiapifhdi5yoz66hn7jv4xrqhnl6nibkoi3cceik27zouqqspvfh74
+
+Total shards: 4
+
+Total size: 268487122
+
+Total time: 28.602840306s
+
+Ingest Rate: 9.6 MB/s
+
+
+
+2024-03-06T16:13:45.247Z	INFO	adder	adder/adder.go:267	QmW229LtsdQkJ4W3PEZieauY58YWxX7nxnQzXp8oHrpTrA successfully added to cluster
+
+2024-03-06T16:13:45.248Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:13:16 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File18&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=67371008&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 1307
+
+
+
+2024-03-06T16:13:45.395Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File19': #0
+
+2024-03-06T16:13:45.940Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: QmdAd9QRzpwq32SdkgVwFMdkGmA72t95SN1XprtaUp7YHR
+
+2024-03-06T16:13:45.940Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreiapifhdi5yoz66hn7jv4xrqhnl6nibkoi3cceik27zouqqspvfh74
+
+2024-03-06T16:13:57.262Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreihvexjyelcujtsho7gg7yn3vgmzwpofx5dfvetnjgksehjq5dbrt4) completed. Total size: 134 MB. Links: 514
+
+2024-03-06T16:13:57.263Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafyreihvexjyelcujtsho7gg7yn3vgmzwpofx5dfvetnjgksehjq5dbrt4 on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:13:57.263Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:13:57.263Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreihvexjyelcujtsho7gg7yn3vgmzwpofx5dfvetnjgksehjq5dbrt4
+
+2024-03-06T16:13:57.263Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:13:57.263Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File19': #1
+
+2024-03-06T16:13:57.804Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreihvexjyelcujtsho7gg7yn3vgmzwpofx5dfvetnjgksehjq5dbrt4
+
+2024-03-06T16:14:10.742Z	INFO	shardingdags	sharding/shard.go:187	shard #1 (bafyreih7cq7mgdieavacdofztq7xelhgyhkm3whrnptcbldx7nhgkpfzlq) completed. Total size: 134 MB. Links: 515
+
+2024-03-06T16:14:10.745Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File19': #2
+
+2024-03-06T16:14:10.747Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:14:10.749Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreih7cq7mgdieavacdofztq7xelhgyhkm3whrnptcbldx7nhgkpfzlq
+
+2024-03-06T16:14:22.981Z	INFO	shardingdags	sharding/shard.go:187	shard #2 (bafyreidwgs5rdk4ghff3szz4amxeqxjunoozqwj2pcmrows4434wq5s3za) completed. Total size: 134 MB. Links: 515
+
+2024-03-06T16:14:22.983Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File19': #3
+
+2024-03-06T16:14:22.986Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:14:22.989Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreidwgs5rdk4ghff3szz4amxeqxjunoozqwj2pcmrows4434wq5s3za
+
+2024-03-06T16:14:32.725Z	INFO	shardingdags	sharding/shard.go:187	shard #3 (bafyreicgtmo5hwjoclezwwtjdcytebpakc6qvl7cwiuztglw3xiawlkdau) completed. Total size: 134 MB. Links: 518
+
+2024-03-06T16:14:32.739Z	WARN	adder	adder/adder.go:258	the last added CID (QmcwSQsQdeXohBoqbQGfuLwH6saJx4YDxS8t3jAU17g9Vd) is not the IPFS data root (QmdGHMhbVBfJ5xAhgAcH7f7Hd3vEq8K5196fWDjqfEXCQM). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:14:32.747Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:14:32.749Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreicgtmo5hwjoclezwwtjdcytebpakc6qvl7cwiuztglw3xiawlkdau
+
+2024-03-06T16:14:32.949Z	INFO	adder	adder/adder.go:186	receive parity: File19-parity-shard-0 size: 134251274
+
+2024-03-06T16:14:40.965Z	ERROR	singledags	single/dag_service.go:150	------- QmcrJFwM3LtRPjMqLGPmD92L31K6sczNM2CAerZJndRih1 size: 134277208
+
+2024-03-06T16:14:43.129Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster QmcrJFwM3LtRPjMqLGPmD92L31K6sczNM2CAerZJndRih1
+
+2024-03-06T16:14:43.130Z	INFO	adder	adder/adder.go:186	receive parity: File19-parity-shard-1 size: 134251274
+
+2024-03-06T16:14:43.154Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmcrJFwM3LtRPjMqLGPmD92L31K6sczNM2CAerZJndRih1
+
+2024-03-06T16:14:45.151Z	ERROR	singledags	single/dag_service.go:150	------- QmPiY7N6j4cHqcz3MMWYuBY8Nqzz6D3iuDySVdtsDvfjyB size: 134277299
+
+2024-03-06T16:14:49.826Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster QmPiY7N6j4cHqcz3MMWYuBY8Nqzz6D3iuDySVdtsDvfjyB
+
+2024-03-06T16:14:49.833Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmPiY7N6j4cHqcz3MMWYuBY8Nqzz6D3iuDySVdtsDvfjyB
+
+2024-03-06T16:14:49.855Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize QmdGHMhbVBfJ5xAhgAcH7f7Hd3vEq8K5196fWDjqfEXCQM:map[0:134235148 1:134243858 2:134243858 3:134251274]
+
+2024-03-06T16:14:49.861Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreiayya5pz5tpgl447pof5f2y2ral3zqqfbrwamxxjgfoplxkbj5jhm everywhere:
+
+2024-03-06T16:14:49.864Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiayya5pz5tpgl447pof5f2y2ral3zqqfbrwamxxjgfoplxkbj5jhm
+
+2024-03-06T16:14:49.866Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmdGHMhbVBfJ5xAhgAcH7f7Hd3vEq8K5196fWDjqfEXCQM
+
+2024-03-06T16:14:49.866Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: QmdGHMhbVBfJ5xAhgAcH7f7Hd3vEq8K5196fWDjqfEXCQM
+
+Name: File19
+
+ClusterDAG: bafyreiayya5pz5tpgl447pof5f2y2ral3zqqfbrwamxxjgfoplxkbj5jhm
+
+Total shards: 4
+
+Total size: 536974138
+
+Total time: 1m4.615940627s
+
+Ingest Rate: 8.4 MB/s
+
+
+
+2024-03-06T16:14:49.866Z	INFO	adder	adder/adder.go:267	QmdGHMhbVBfJ5xAhgAcH7f7Hd3vEq8K5196fWDjqfEXCQM successfully added to cluster
+
+2024-03-06T16:14:49.867Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:13:45 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File19&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=134479872&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 1313
+
+
+
+2024-03-06T16:14:49.887Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File20': #0
+
+2024-03-06T16:14:50.259Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreiayya5pz5tpgl447pof5f2y2ral3zqqfbrwamxxjgfoplxkbj5jhm
+
+2024-03-06T16:15:01.555Z	INFO	shardingdags	sharding/shard.go:187	shard #0 (bafyreid2i5pw673i3vpi55nq3uf6yk666yapidk7xax27msrnmletvoejq) completed. Total size: 134 MB. Links: 514
+
+2024-03-06T16:15:01.555Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafyreid2i5pw673i3vpi55nq3uf6yk666yapidk7xax27msrnmletvoejq on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:15:01.556Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:01.556Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreid2i5pw673i3vpi55nq3uf6yk666yapidk7xax27msrnmletvoejq
+
+2024-03-06T16:15:01.556Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File20': #1
+
+2024-03-06T16:15:01.556Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:01.878Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreid2i5pw673i3vpi55nq3uf6yk666yapidk7xax27msrnmletvoejq
+
+2024-03-06T16:15:10.757Z	INFO	shardingdags	sharding/shard.go:187	shard #1 (bafyreibiobgafnp26bsl7vob5ih53uklwnjxoli2fylx7awnerzu4ecjau) completed. Total size: 134 MB. Links: 515
+
+2024-03-06T16:15:10.760Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File20': #2
+
+2024-03-06T16:15:10.773Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:10.774Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreibiobgafnp26bsl7vob5ih53uklwnjxoli2fylx7awnerzu4ecjau
+
+2024-03-06T16:15:11.484Z	INFO	crdt	go-ds-crdt@v0.5.1/crdt.go:562	Number of heads: 1. Current max height: 133. Queued jobs: 0. Dirty: false
+
+2024-03-06T16:15:18.103Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.103Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.104Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.105Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.105Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.105Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.111Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.111Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.112Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.112Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.114Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.115Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.115Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.115Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.115Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.115Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.115Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.115Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.115Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.115Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.117Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.117Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.117Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.117Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.124Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.124Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.124Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.124Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.124Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.124Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.124Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.124Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.124Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.124Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:18.124Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:29.610Z	INFO	shardingdags	sharding/shard.go:187	shard #2 (bafyreiceuvwmkq7mpgf7waevyktohifgwfl3xl4o3gcoot2odi3aoynzpu) completed. Total size: 134 MB. Links: 515
+
+2024-03-06T16:15:29.613Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File20': #3
+
+2024-03-06T16:15:29.624Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:29.626Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiceuvwmkq7mpgf7waevyktohifgwfl3xl4o3gcoot2odi3aoynzpu
+
+2024-03-06T16:15:39.123Z	INFO	shardingdags	sharding/shard.go:187	shard #3 (bafyreieidam5gwb25yqzt2n42vovfrdao5npy5yd27ctlgmb3t3nikapwe) completed. Total size: 134 MB. Links: 515
+
+2024-03-06T16:15:39.127Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File20': #4
+
+2024-03-06T16:15:39.136Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:39.162Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreieidam5gwb25yqzt2n42vovfrdao5npy5yd27ctlgmb3t3nikapwe
+
+2024-03-06T16:15:39.352Z	INFO	adder	adder/adder.go:186	receive parity: File20-parity-shard-0 size: 134243858
+
+2024-03-06T16:15:49.454Z	ERROR	singledags	single/dag_service.go:150	------- QmQWCWHp7HX6nM1ZsUNRUuxCrBHL7FFPLS2L7LEYVJRutq size: 134269792
+
+2024-03-06T16:15:53.117Z	INFO	shardingdags	sharding/shard.go:187	shard #4 (bafyreiatffmv656zihcl62syygti3b4ysfapog7qvkuyuok3xe2qtvfdri) completed. Total size: 134 MB. Links: 515
+
+2024-03-06T16:15:53.117Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafyreiatffmv656zihcl62syygti3b4ysfapog7qvkuyuok3xe2qtvfdri on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:15:53.118Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:53.118Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiatffmv656zihcl62syygti3b4ysfapog7qvkuyuok3xe2qtvfdri
+
+2024-03-06T16:15:53.118Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:15:53.118Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File20': #5
+
+2024-03-06T16:15:53.601Z	INFO	adder	adder/adder.go:199	parity-shard-0 successfully added to cluster QmQWCWHp7HX6nM1ZsUNRUuxCrBHL7FFPLS2L7LEYVJRutq
+
+2024-03-06T16:15:53.601Z	INFO	adder	adder/adder.go:186	receive parity: File20-parity-shard-1 size: 134243858
+
+2024-03-06T16:15:53.624Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmQWCWHp7HX6nM1ZsUNRUuxCrBHL7FFPLS2L7LEYVJRutq
+
+2024-03-06T16:15:55.841Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreiatffmv656zihcl62syygti3b4ysfapog7qvkuyuok3xe2qtvfdri
+
+2024-03-06T16:16:02.730Z	ERROR	singledags	single/dag_service.go:150	------- QmaENfnMRrCTjo5Qi2PrGPqeWKPUUvPh7rfVQ3z7ZkaDXx size: 134269883
+
+2024-03-06T16:16:06.150Z	INFO	shardingdags	sharding/shard.go:187	shard #5 (bafyreicz7lwb4b6u6fbee43nathzliz6e554fm4xjzobczgufrgt3rl6um) completed. Total size: 134 MB. Links: 515
+
+2024-03-06T16:16:06.153Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File20': #6
+
+2024-03-06T16:16:06.167Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:16:06.173Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreicz7lwb4b6u6fbee43nathzliz6e554fm4xjzobczgufrgt3rl6um
+
+2024-03-06T16:16:08.229Z	INFO	adder	adder/adder.go:199	parity-shard-1 successfully added to cluster QmaENfnMRrCTjo5Qi2PrGPqeWKPUUvPh7rfVQ3z7ZkaDXx
+
+2024-03-06T16:16:08.246Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmaENfnMRrCTjo5Qi2PrGPqeWKPUUvPh7rfVQ3z7ZkaDXx
+
+2024-03-06T16:16:19.976Z	INFO	shardingdags	sharding/shard.go:187	shard #6 (bafyreiat6ohp3qfeohzh5illonwnvnpdl3qb7cwwmadwyg5akxfavijtky) completed. Total size: 134 MB. Links: 515
+
+2024-03-06T16:16:19.978Z	INFO	shardingdags	sharding/dag_service.go:227	new shard for 'File20': #7
+
+2024-03-06T16:16:19.981Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:16:19.984Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiat6ohp3qfeohzh5illonwnvnpdl3qb7cwwmadwyg5akxfavijtky
+
+2024-03-06T16:16:37.143Z	INFO	shardingdags	sharding/shard.go:187	shard #7 (bafyreiesso5p4pljimusybwmxsz4yfngol6mzqbukdtockh7pmqv675fpe) completed. Total size: 134 MB. Links: 518
+
+2024-03-06T16:16:37.146Z	WARN	adder	adder/adder.go:258	the last added CID (QmSRvy1CPJaBBJFTyKeiwA1tHuRsMyMRvPZUUtCQzp6eGs) is not the IPFS data root (QmXx85ks5rMpzYndxPiYrAsrZYsaB42qmWiKtSPf9wqfxJ). This is only normal when adding a single file without wrapping in directory.
+
+2024-03-06T16:16:37.150Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:16:37.158Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiesso5p4pljimusybwmxsz4yfngol6mzqbukdtockh7pmqv675fpe
+
+2024-03-06T16:16:37.347Z	INFO	adder	adder/adder.go:186	receive parity: File20-parity-shard-2 size: 134249875
+
+2024-03-06T16:16:48.051Z	ERROR	singledags	single/dag_service.go:150	------- Qme2xb8UvqsWmoCKTrAEwPYe3CyNFyHWCGoRia7wMGZqWE size: 134275991
+
+2024-03-06T16:16:50.419Z	INFO	adder	adder/adder.go:199	parity-shard-2 successfully added to cluster Qme2xb8UvqsWmoCKTrAEwPYe3CyNFyHWCGoRia7wMGZqWE
+
+2024-03-06T16:16:50.419Z	INFO	adder	adder/adder.go:186	receive parity: File20-parity-shard-3 size: 134249875
+
+2024-03-06T16:16:50.428Z	INFO	crdt	crdt/consensus.go:245	new pin added: Qme2xb8UvqsWmoCKTrAEwPYe3CyNFyHWCGoRia7wMGZqWE
+
+2024-03-06T16:16:52.961Z	ERROR	singledags	single/dag_service.go:150	------- QmTPPZCEofNC7b836MMSHqmo3QKYDzgNY6w5KwbzYNZZJZ size: 134276082
+
+2024-03-06T16:16:55.186Z	INFO	adder	adder/adder.go:199	parity-shard-3 successfully added to cluster QmTPPZCEofNC7b836MMSHqmo3QKYDzgNY6w5KwbzYNZZJZ
+
+2024-03-06T16:16:55.192Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmTPPZCEofNC7b836MMSHqmo3QKYDzgNY6w5KwbzYNZZJZ
+
+2024-03-06T16:16:55.217Z	ERROR	shardingdags	sharding/dag_service.go:160	+++++++ datashardsize QmXx85ks5rMpzYndxPiYrAsrZYsaB42qmWiKtSPf9wqfxJ:map[0:134235148 1:134243858 2:134243858 3:134243858 4:134243858 5:134243858 6:134243858 7:134249875]
+
+2024-03-06T16:16:55.225Z	INFO	cluster	ipfs-cluster/cluster.go:1591	pinning bafyreiae564n2zdejv75liuyafccjsmxcrluyg7f4bkxwmdtsjryjgjyoe everywhere:
+
+2024-03-06T16:16:55.255Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiae564n2zdejv75liuyafccjsmxcrluyg7f4bkxwmdtsjryjgjyoe
+
+2024-03-06T16:16:55.256Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmXx85ks5rMpzYndxPiYrAsrZYsaB42qmWiKtSPf9wqfxJ
+
+2024-03-06T16:16:55.257Z	INFO	shardingdags	sharding/dag_service.go:311	sharding session successful:
+
+CID: QmXx85ks5rMpzYndxPiYrAsrZYsaB42qmWiKtSPf9wqfxJ
+
+Name: File20
+
+ClusterDAG: bafyreiae564n2zdejv75liuyafccjsmxcrluyg7f4bkxwmdtsjryjgjyoe
+
+Total shards: 8
+
+Total size: 1073948171
+
+Total time: 2m5.38824704s
+
+Ingest Rate: 8.6 MB/s
+
+
+
+2024-03-06T16:16:55.257Z	INFO	adder	adder/adder.go:267	QmXx85ks5rMpzYndxPiYrAsrZYsaB42qmWiKtSPf9wqfxJ successfully added to cluster
+
+2024-03-06T16:16:55.265Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:14:49 +0000] "POST /add?chunker=size-262144&cid-version=0&data-shards=4&erasure=true&format=unixfs&hash=sha2-256&hidden=false&layout=&local=false&mode=recursive&name=File20&no-pin=false&nocopy=false&parity-shards=2&progress=false&raw-leaves=false&recursive=false&replication-max=1&replication-min=1&shard=false&shard-size=134479872&stream-channels=true&user-allocations=&wrap-with-directory=false HTTP/1.1" 200 2353
+
+
+
+2024-03-06T16:16:55.374Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreiae564n2zdejv75liuyafccjsmxcrluyg7f4bkxwmdtsjryjgjyoe
+
+2024-03-06T16:17:08.814Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.817Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.817Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.817Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.817Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.818Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.818Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.818Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.818Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.818Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.818Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.818Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.818Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.818Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.818Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.818Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.818Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.819Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.820Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.820Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.820Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.820Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.820Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.820Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.820Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.820Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.820Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.820Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.820Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.820Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.820Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.820Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.870Z	INFO	cluster	ipfs-cluster/getter.go:196	use 45.894577ms fetch 0-batch-1-shard(parity) bafkreigdc5n4nzw536bbebfshyrbmieolrbsart4t3bbsg3aechyl6upue successfully, size:1132
+
+2024-03-06T16:17:08.872Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:1.463512ms, rs_recon_size_diff:1132, rs_recon_rate_diff:773396.790130
+
+
+
+2024-03-06T16:17:08.874Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku size: 107
+
+2024-03-06T16:17:08.878Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreidkajjoooxh2mc45tfktjkrnvopkotvjapgt5427k2evswjvy3rcq": context canceled
+
+2024-03-06T16:17:08.878Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreihbnpooagznh36gsvrmfmp74mu2ytzdnmnens2vy3lyybytux2wh4": context canceled
+
+2024-03-06T16:17:08.878Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block bafkreihbnpooagznh36gsvrmfmp74mu2ytzdnmnens2vy3lyybytux2wh4, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreihbnpooagznh36gsvrmfmp74mu2ytzdnmnens2vy3lyybytux2wh4": context canceled
+
+2024-03-06T16:17:08.878Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:cannot resolve shard(bafyreidkajjoooxh2mc45tfktjkrnvopkotvjapgt5427k2evswjvy3rcq): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreidkajjoooxh2mc45tfktjkrnvopkotvjapgt5427k2evswjvy3rcq": context canceled
+
+Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreihbnpooagznh36gsvrmfmp74mu2ytzdnmnens2vy3lyybytux2wh4": context canceled
+
+2024-03-06T16:17:08.893Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku on [12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC]:
+
+2024-03-06T16:17:08.894Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:08.894Z	INFO	adder	adder/adder.go:267	bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku successfully added to cluster
+
+2024-03-06T16:17:08.895Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku) allocation to 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC
+
+2024-03-06T16:17:08.906Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.907Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.908Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreidkajjoooxh2mc45tfktjkrnvopkotvjapgt5427k2evswjvy3rcq
+
+2024-03-06T16:17:08.908Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreidkajjoooxh2mc45tfktjkrnvopkotvjapgt5427k2evswjvy3rcq) allocation to 12D3KooWC9jfXKJSmULBqpVZNopGpz7rKbHQ4cZpaWqzYoB9zyan
+
+2024-03-06T16:17:08.909Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct bafkreiee3gr3sxdw6mwtalqa7mjndit3zjafouefnkg53olzeqgnfnsdua recon_total_time_diff:0.088314478s, recon_getdata_time_diff:0.052136103s, recon_repin_time_diff:0.036178375s, recon_total_size_diff:3396, recon_data_size_diff:2264, recon_repin_size_diff:1132, recon_total_rate_diff:38453.49117049642, recon_data_rate_diff:43424.80296235413, recon_repin_rate_diff:31289.409764811164
+
+
+
+2024-03-06T16:17:08.915Z	INFO	cluster	ipfs-cluster/getter.go:196	use 3.267537ms fetch 0-batch-1-shard(parity) bafkreihqylwe75j2dprlj3ortcdjb6bq7bct3whpkkt75n3fhc77okeytq successfully, size:2156
+
+2024-03-06T16:17:08.915Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:56.819µs, rs_recon_size_diff:2156, rs_recon_rate_diff:37885044.544800
+
+
+
+2024-03-06T16:17:08.915Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreiecwqpkww7aey24ilystx4frrwib6hnfqfqhvpu67s2gcmuabliy4": context canceled
+
+2024-03-06T16:17:08.915Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreidjlkt4gcg2ydpofsdtdax2zrwxve62qd432odguzegonfvlggpca": context canceled
+
+2024-03-06T16:17:08.915Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block bafkreidjlkt4gcg2ydpofsdtdax2zrwxve62qd432odguzegonfvlggpca, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreidjlkt4gcg2ydpofsdtdax2zrwxve62qd432odguzegonfvlggpca": context canceled
+
+2024-03-06T16:17:08.918Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:cannot resolve shard(bafyreiecwqpkww7aey24ilystx4frrwib6hnfqfqhvpu67s2gcmuabliy4): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreiecwqpkww7aey24ilystx4frrwib6hnfqfqhvpu67s2gcmuabliy4": context canceled
+
+Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreidjlkt4gcg2ydpofsdtdax2zrwxve62qd432odguzegonfvlggpca": context canceled
+
+2024-03-06T16:17:08.917Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku size: 107
+
+2024-03-06T16:17:08.949Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:17:08.949Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:08.950Z	INFO	adder	adder/adder.go:267	bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku successfully added to cluster
+
+2024-03-06T16:17:08.950Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku) allocation to 12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku
+
+2024-03-06T16:17:08.967Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.967Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:08.973Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:08.973Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiecwqpkww7aey24ilystx4frrwib6hnfqfqhvpu67s2gcmuabliy4
+
+2024-03-06T16:17:08.974Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreiecwqpkww7aey24ilystx4frrwib6hnfqfqhvpu67s2gcmuabliy4) allocation to 12D3KooWC9jfXKJSmULBqpVZNopGpz7rKbHQ4cZpaWqzYoB9zyan
+
+2024-03-06T16:17:08.974Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct bafkreibclxlrhvud7iljfkxzpbtxxjwughynehrqxgpvatw3fxk42rwyga recon_total_time_diff:0.064335815s, recon_getdata_time_diff:0.005379143s, recon_repin_time_diff:0.058956672s, recon_total_size_diff:6468, recon_data_size_diff:4312, recon_repin_size_diff:2156, recon_total_rate_diff:100534.98195367541, recon_data_rate_diff:801614.6810003006, recon_repin_rate_diff:36569.22833093428
+
+
+
+2024-03-06T16:17:09.004Z	INFO	cluster	ipfs-cluster/getter.go:196	use 28.325777ms fetch 0-batch-2-shard(parity) bafkreih5iygp4y2v6jjq3plmrt2eq3gqii2rjo5ytspzylg5dwqdvnh2vu successfully, size:4204
+
+2024-03-06T16:17:09.004Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:95.983µs, rs_recon_size_diff:4204, rs_recon_rate_diff:43630778.172157
+
+
+
+2024-03-06T16:17:09.005Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreifmwjlmofde6hm3efbhkok6iyioanzcleagjdhrtsojakwvnrkani": context canceled
+
+2024-03-06T16:17:09.005Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreib42yxgocizuohx6ezpd4glq2f2zoqypiwignt4dwempiohjnlomq": context canceled
+
+2024-03-06T16:17:09.005Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmS7HsdNU6JpZdsqdFKeny44SxoqETEeaNJafDHQSPET2S": context canceled
+
+2024-03-06T16:17:09.005Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block bafkreib42yxgocizuohx6ezpd4glq2f2zoqypiwignt4dwempiohjnlomq, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreib42yxgocizuohx6ezpd4glq2f2zoqypiwignt4dwempiohjnlomq": context canceled
+
+2024-03-06T16:17:09.006Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreifmwjlmofde6hm3efbhkok6iyioanzcleagjdhrtsojakwvnrkani": context canceled
+
+Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmS7HsdNU6JpZdsqdFKeny44SxoqETEeaNJafDHQSPET2S": context canceled
+
+Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreib42yxgocizuohx6ezpd4glq2f2zoqypiwignt4dwempiohjnlomq": context canceled
+
+2024-03-06T16:17:09.015Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku size: 107
+
+2024-03-06T16:17:09.016Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.016Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.017Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku on [12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC]:
+
+2024-03-06T16:17:09.018Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreibklgvxghljskvwlxqo2fhhs32wdkyp6zijz7fjpdfjph2pl7q6ce
+
+2024-03-06T16:17:09.018Z	INFO	crdt	go-ds-crdt@v0.5.1/crdt.go:802	merged delta from node bafybeigfx5oc6tqkug5cgdidaquvmqtcnm4pn4ef4ioi3mbw6qkypkexlu (priority: 150)
+
+2024-03-06T16:17:09.018Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreibklgvxghljskvwlxqo2fhhs32wdkyp6zijz7fjpdfjph2pl7q6ce) allocation to 12D3KooWC9jfXKJSmULBqpVZNopGpz7rKbHQ4cZpaWqzYoB9zyan
+
+2024-03-06T16:17:09.031Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:607	IPFS Unpin request succeeded:bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:09.031Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:09.031Z	INFO	crdt	go-ds-crdt@v0.5.1/crdt.go:802	merged delta from node bafybeibq3hupxnbuc42tgz7qmepjahnpws75c6lgj3nkhzptvp3cdgjrz4 (priority: 150)
+
+2024-03-06T16:17:09.031Z	INFO	adder	adder/adder.go:267	bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku successfully added to cluster
+
+2024-03-06T16:17:09.031Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku) allocation to 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC
+
+2024-03-06T16:17:09.031Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct bafkreifmwjlmofde6hm3efbhkok6iyioanzcleagjdhrtsojakwvnrkani recon_total_time_diff:0.057480206s, recon_getdata_time_diff:0.030386172s, recon_repin_time_diff:0.027094034s, recon_total_size_diff:12612, recon_data_size_diff:8408, recon_repin_size_diff:4204, recon_total_rate_diff:219414.66250138351, recon_data_rate_diff:276704.8116491936, recon_repin_rate_diff:155163.31012207337
+
+
+
+2024-03-06T16:17:09.069Z	INFO	cluster	ipfs-cluster/getter.go:196	use 35.93552ms fetch 0-batch-2-shard(parity) bafkreigkpksnguz3scd62c3wc7u3ccu6xf3ffxcamld5hdd3qy27xkegvm successfully, size:8300
+
+2024-03-06T16:17:09.070Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:69.893µs, rs_recon_size_diff:8300, rs_recon_rate_diff:118446214.002340
+
+
+
+2024-03-06T16:17:09.070Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreihaehssyzzkpjyaevixnbd67tfdjgy6lykivhfwdseyjm7gtc5xtm": context canceled
+
+2024-03-06T16:17:09.070Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block bafkreihaehssyzzkpjyaevixnbd67tfdjgy6lykivhfwdseyjm7gtc5xtm, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreihaehssyzzkpjyaevixnbd67tfdjgy6lykivhfwdseyjm7gtc5xtm": context canceled
+
+2024-03-06T16:17:09.070Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreibmnmphq2cf3elrhyvqepdte4q7p4hiolmrrawh7wzfvzh6m7zxyq": context canceled
+
+2024-03-06T16:17:09.071Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=Qmf4HSJ5HmvwtzXSDsAFeRZJenZLVAxsuHnZpBzHEDV52X": context canceled
+
+2024-03-06T16:17:09.071Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreihaehssyzzkpjyaevixnbd67tfdjgy6lykivhfwdseyjm7gtc5xtm": context canceled
+
+Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreibmnmphq2cf3elrhyvqepdte4q7p4hiolmrrawh7wzfvzh6m7zxyq": context canceled
+
+Post "http://172.18.0.4:5001/api/v0/block/get?arg=Qmf4HSJ5HmvwtzXSDsAFeRZJenZLVAxsuHnZpBzHEDV52X": context canceled
+
+2024-03-06T16:17:09.071Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku size: 107
+
+2024-03-06T16:17:09.074Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.074Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.076Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreihn4v2pdu5ohscbdye62t5g5jfk4i4tvmiymshuhszkpko4uydcpe
+
+2024-03-06T16:17:09.076Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreihn4v2pdu5ohscbdye62t5g5jfk4i4tvmiymshuhszkpko4uydcpe) allocation to 12D3KooWC9jfXKJSmULBqpVZNopGpz7rKbHQ4cZpaWqzYoB9zyan
+
+2024-03-06T16:17:09.094Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku on [12D3KooWDJN1rRHCmoRABRF4cYUJQ3aSoBMCzRJXc3XxxCUqHJ1Q]:
+
+2024-03-06T16:17:09.095Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:09.096Z	INFO	adder	adder/adder.go:267	bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku successfully added to cluster
+
+2024-03-06T16:17:09.096Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku) allocation to 12D3KooWDJN1rRHCmoRABRF4cYUJQ3aSoBMCzRJXc3XxxCUqHJ1Q
+
+2024-03-06T16:17:09.096Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct bafkreibmnmphq2cf3elrhyvqepdte4q7p4hiolmrrawh7wzfvzh6m7zxyq recon_total_time_diff:0.064168134s, recon_getdata_time_diff:0.038220373s, recon_repin_time_diff:0.025947761s, recon_total_size_diff:24900, recon_data_size_diff:16600, recon_repin_size_diff:8300, recon_total_rate_diff:388043.07446434395, recon_data_rate_diff:434323.33849803085, recon_repin_rate_diff:319873.45651904226
+
+
+
+2024-03-06T16:17:09.104Z	INFO	cluster	ipfs-cluster/getter.go:196	use 6.666363ms fetch 0-batch-0-shard(data) bafyreieutowz5v5gi4yspnsqmj6nrwzpjfmigzcw7akzvxbsrf32g2on4q successfully, size:16493
+
+2024-03-06T16:17:09.104Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:88.319µs, rs_recon_size_diff:16493, rs_recon_rate_diff:186574508.761411
+
+
+
+2024-03-06T16:17:09.104Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreigwfofrawosmxuf3hrstnf2u66vtux3tmv2hqb65ry3kopjugsdxq": context canceled
+
+2024-03-06T16:17:09.104Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreihxvbqrjtuutuz4gp2tllwn4gsxypipwq3fzvlc6bjgseycmaj4qq": context canceled
+
+2024-03-06T16:17:09.104Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block bafkreigwfofrawosmxuf3hrstnf2u66vtux3tmv2hqb65ry3kopjugsdxq, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreigwfofrawosmxuf3hrstnf2u66vtux3tmv2hqb65ry3kopjugsdxq": context canceled
+
+2024-03-06T16:17:09.105Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block bafkreihxvbqrjtuutuz4gp2tllwn4gsxypipwq3fzvlc6bjgseycmaj4qq, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreihxvbqrjtuutuz4gp2tllwn4gsxypipwq3fzvlc6bjgseycmaj4qq": context canceled
+
+2024-03-06T16:17:09.105Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreigwfofrawosmxuf3hrstnf2u66vtux3tmv2hqb65ry3kopjugsdxq": context canceled
+
+Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreihxvbqrjtuutuz4gp2tllwn4gsxypipwq3fzvlc6bjgseycmaj4qq": context canceled
+
+2024-03-06T16:17:09.105Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku size: 107
+
+2024-03-06T16:17:09.105Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku size: 107
+
+2024-03-06T16:17:09.109Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku on [12D3KooWDJN1rRHCmoRABRF4cYUJQ3aSoBMCzRJXc3XxxCUqHJ1Q]:
+
+2024-03-06T16:17:09.110Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:09.111Z	INFO	adder	adder/adder.go:267	bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku successfully added to cluster
+
+2024-03-06T16:17:09.111Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku on [12D3KooWDJN1rRHCmoRABRF4cYUJQ3aSoBMCzRJXc3XxxCUqHJ1Q]:
+
+2024-03-06T16:17:09.111Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku) allocation to 12D3KooWDJN1rRHCmoRABRF4cYUJQ3aSoBMCzRJXc3XxxCUqHJ1Q
+
+2024-03-06T16:17:09.112Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:09.113Z	INFO	adder	adder/adder.go:267	bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku successfully added to cluster
+
+2024-03-06T16:17:09.113Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku) allocation to 12D3KooWDJN1rRHCmoRABRF4cYUJQ3aSoBMCzRJXc3XxxCUqHJ1Q
+
+2024-03-06T16:17:09.113Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct bafkreic7jdewz3aoopafjxbuz7rbq466yrsdrdkrbfiazfffmszplownxq recon_total_time_diff:0.017242004s, recon_getdata_time_diff:0.00822883s, recon_repin_time_diff:0.009013173999999999s, recon_total_size_diff:49479, recon_data_size_diff:49479, recon_repin_size_diff:0, recon_total_rate_diff:2.8696780258257687e+06, recon_data_rate_diff:6.012883970139133e+06, recon_repin_rate_diff:0
+
+
+
+2024-03-06T16:17:09.121Z	INFO	cluster	ipfs-cluster/getter.go:196	use 5.959047ms fetch 0-batch-0-shard(data) bafyreieo2ugqtrbxtetfgjqky2lnstyyaf52hoiqksqzkoa4zkpt2nr2sq successfully, size:32877
+
+2024-03-06T16:17:09.132Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:10.817238ms, rs_recon_size_diff:32877, rs_recon_rate_diff:3039281.865313
+
+
+
+2024-03-06T16:17:09.132Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreicndkokgggafepyvk5dyubp4bjru5a3sk3szlnqnoiuq7qmlhkofm": context canceled
+
+2024-03-06T16:17:09.132Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block bafkreicndkokgggafepyvk5dyubp4bjru5a3sk3szlnqnoiuq7qmlhkofm, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreicndkokgggafepyvk5dyubp4bjru5a3sk3szlnqnoiuq7qmlhkofm": context canceled
+
+2024-03-06T16:17:09.133Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreifsyioas2qugrmuq4wbayh3b4tcnywpy46tyxuoslubrxqfbpzfgm": context canceled
+
+2024-03-06T16:17:09.133Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block bafkreifsyioas2qugrmuq4wbayh3b4tcnywpy46tyxuoslubrxqfbpzfgm, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreifsyioas2qugrmuq4wbayh3b4tcnywpy46tyxuoslubrxqfbpzfgm": context canceled
+
+2024-03-06T16:17:09.133Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreicndkokgggafepyvk5dyubp4bjru5a3sk3szlnqnoiuq7qmlhkofm": context canceled
+
+Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreifsyioas2qugrmuq4wbayh3b4tcnywpy46tyxuoslubrxqfbpzfgm": context canceled
+
+2024-03-06T16:17:09.133Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku size: 107
+
+2024-03-06T16:17:09.133Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku size: 107
+
+2024-03-06T16:17:09.135Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku on [12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC]:
+
+2024-03-06T16:17:09.136Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku on [12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC]:
+
+2024-03-06T16:17:09.137Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:09.138Z	INFO	adder	adder/adder.go:267	bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku successfully added to cluster
+
+2024-03-06T16:17:09.138Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku) allocation to 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC
+
+2024-03-06T16:17:09.139Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:09.139Z	INFO	adder	adder/adder.go:267	bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku successfully added to cluster
+
+2024-03-06T16:17:09.139Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku) allocation to 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC
+
+2024-03-06T16:17:09.139Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct bafkreiex7n622uplajtjxl3qklcopdbktv3co3t4nd3j5s6oybsvpubbty recon_total_time_diff:0.02591265s, recon_getdata_time_diff:0.018805199s, recon_repin_time_diff:0.007107450999999997s, recon_total_size_diff:98631, recon_data_size_diff:98631, recon_repin_size_diff:0, recon_total_rate_diff:3.8062876625895076e+06, recon_data_rate_diff:5.244879354906055e+06, recon_repin_rate_diff:0
+
+
+
+2024-03-06T16:17:09.150Z	INFO	cluster	ipfs-cluster/getter.go:196	use 7.792496ms fetch 0-batch-2-shard(parity) bafkreihhexb6ryowpn4ve5pzkmaj5flnmm5uwbiowngv5gf775npjclyfm successfully, size:65645
+
+2024-03-06T16:17:09.150Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:148.795µs, rs_recon_size_diff:65645, rs_recon_rate_diff:440230694.430473
+
+
+
+2024-03-06T16:17:09.150Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreihaghlhg3gbjptslomxhfrnxemutdzddn72ypmsclfdgvayvdd72q": context canceled
+
+2024-03-06T16:17:09.151Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block bafkreihaghlhg3gbjptslomxhfrnxemutdzddn72ypmsclfdgvayvdd72q, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreihaghlhg3gbjptslomxhfrnxemutdzddn72ypmsclfdgvayvdd72q": context canceled
+
+2024-03-06T16:17:09.151Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreigdt73ox5gznjabfp3tckr5tnhv64k2yfqnuknnqhtecgenkxllkm": context canceled
+
+2024-03-06T16:17:09.151Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreihaghlhg3gbjptslomxhfrnxemutdzddn72ypmsclfdgvayvdd72q": context canceled
+
+cannot resolve shard(bafyreigdt73ox5gznjabfp3tckr5tnhv64k2yfqnuknnqhtecgenkxllkm): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreigdt73ox5gznjabfp3tckr5tnhv64k2yfqnuknnqhtecgenkxllkm": context canceled
+
+2024-03-06T16:17:09.156Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.157Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.158Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreigdt73ox5gznjabfp3tckr5tnhv64k2yfqnuknnqhtecgenkxllkm
+
+2024-03-06T16:17:09.159Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreigdt73ox5gznjabfp3tckr5tnhv64k2yfqnuknnqhtecgenkxllkm) allocation to 12D3KooWC9jfXKJSmULBqpVZNopGpz7rKbHQ4cZpaWqzYoB9zyan
+
+2024-03-06T16:17:09.165Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku size: 107
+
+2024-03-06T16:17:09.166Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:17:09.167Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:09.167Z	INFO	adder	adder/adder.go:267	bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku successfully added to cluster
+
+2024-03-06T16:17:09.167Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku) allocation to 12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku
+
+2024-03-06T16:17:09.167Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct bafkreie2yijq2deqfgvyuzqzopm2jxhsvnetrunifckp5ylfc5uqdh4j6m recon_total_time_diff:0.027740774s, recon_getdata_time_diff:0.010387848s, recon_repin_time_diff:0.017352925999999998s, recon_total_size_diff:196935, recon_data_size_diff:131290, recon_repin_size_diff:65645, recon_total_rate_diff:7.099116989309671e+06, recon_data_rate_diff:1.2638806420733148e+07, recon_repin_rate_diff:3.782935511855465e+06
+
+
+
+2024-03-06T16:17:09.178Z	INFO	cluster	ipfs-cluster/getter.go:196	use 8.099754ms fetch 0-batch-1-shard(parity) bafkreidwiujeo4xkm2aul2o4ddvgjb5yqaioangi3eyvfdoboakl3finea successfully, size:131181
+
+2024-03-06T16:17:09.179Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:754.227µs, rs_recon_size_diff:131181, rs_recon_rate_diff:173906991.357745
+
+
+
+2024-03-06T16:17:09.179Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreidn5z36d3cvgszmm45xppxsszcjzhbozymplurdnmvisw3qi6o5je": context canceled
+
+2024-03-06T16:17:09.179Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block bafkreidn5z36d3cvgszmm45xppxsszcjzhbozymplurdnmvisw3qi6o5je, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreidn5z36d3cvgszmm45xppxsszcjzhbozymplurdnmvisw3qi6o5je": context canceled
+
+2024-03-06T16:17:09.180Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku size: 107
+
+2024-03-06T16:17:09.179Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreiazlcgoyl56olnaqdtu2m7vlpogx2jneyx665uj2bsdmeccnxciyy": context canceled
+
+2024-03-06T16:17:09.180Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreidn5z36d3cvgszmm45xppxsszcjzhbozymplurdnmvisw3qi6o5je": context canceled
+
+cannot resolve shard(bafyreiazlcgoyl56olnaqdtu2m7vlpogx2jneyx665uj2bsdmeccnxciyy): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreiazlcgoyl56olnaqdtu2m7vlpogx2jneyx665uj2bsdmeccnxciyy": context canceled
+
+2024-03-06T16:17:09.182Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:17:09.183Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:09.183Z	INFO	adder	adder/adder.go:267	bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku successfully added to cluster
+
+2024-03-06T16:17:09.183Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku) allocation to 12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku
+
+2024-03-06T16:17:09.198Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:09.215Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.215Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.216Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiazlcgoyl56olnaqdtu2m7vlpogx2jneyx665uj2bsdmeccnxciyy
+
+2024-03-06T16:17:09.216Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreiazlcgoyl56olnaqdtu2m7vlpogx2jneyx665uj2bsdmeccnxciyy) allocation to 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC
+
+2024-03-06T16:17:09.216Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct bafkreihe2qihfhexh4ga5n5yeottmmc2bevgpnfnnl2bmpgmcyga7kdcpm recon_total_time_diff:0.048929039s, recon_getdata_time_diff:0.011597204s, recon_repin_time_diff:0.037331835s, recon_total_size_diff:393543, recon_data_size_diff:262362, recon_repin_size_diff:131181, recon_total_rate_diff:8.043137736672081e+06, recon_data_rate_diff:2.262286668407316e+07, recon_repin_rate_diff:3.5139178130408e+06
+
+
+
+2024-03-06T16:17:09.268Z	INFO	cluster	ipfs-cluster/getter.go:196	use 49.379454ms fetch 0-batch-2-shard(parity) bafkreigl5qwsnghsww3mrmfymoxn7a36s4ednlaecec25guxbkddwcxcoq successfully, size:262144
+
+2024-03-06T16:17:09.276Z	INFO	cluster	ipfs-cluster/getter.go:196	use 57.709868ms fetch 0-batch-1-shard(data) bafyreiawkku52wdrsuxehzik2lobewerdw3dpjlnxoilg2ybjylb73vuyq successfully, size:109
+
+2024-03-06T16:17:09.277Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:791.473µs, rs_recon_size_diff:262253, rs_recon_rate_diff:331251326.253246
+
+
+
+2024-03-06T16:17:09.277Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreibgtzhehqowogy7tl5niy6rybce3wzwba6afdml3zdouun74v35yq": context canceled
+
+2024-03-06T16:17:09.277Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreiepclriokzmnwx4hsdnx2lq6zebjwda5wanou4sac4tvj7lzvsjs4": context canceled
+
+2024-03-06T16:17:09.277Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block bafkreibgtzhehqowogy7tl5niy6rybce3wzwba6afdml3zdouun74v35yq, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreibgtzhehqowogy7tl5niy6rybce3wzwba6afdml3zdouun74v35yq": context canceled
+
+2024-03-06T16:17:09.277Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreiepclriokzmnwx4hsdnx2lq6zebjwda5wanou4sac4tvj7lzvsjs4": context canceled
+
+Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreibgtzhehqowogy7tl5niy6rybce3wzwba6afdml3zdouun74v35yq": context canceled
+
+2024-03-06T16:17:09.278Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku size: 107
+
+2024-03-06T16:17:09.283Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.284Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.285Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreid3zcu4wozazridog7m63odtrt3ejz73xj654mpr6n5xbtyhfknze
+
+2024-03-06T16:17:09.285Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreid3zcu4wozazridog7m63odtrt3ejz73xj654mpr6n5xbtyhfknze) allocation to 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC
+
+2024-03-06T16:17:09.301Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku on [12D3KooWC9jfXKJSmULBqpVZNopGpz7rKbHQ4cZpaWqzYoB9zyan]:
+
+2024-03-06T16:17:09.311Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:607	IPFS Unpin request succeeded:bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:09.312Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:09.312Z	INFO	adder	adder/adder.go:267	bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku successfully added to cluster
+
+2024-03-06T16:17:09.312Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku) allocation to 12D3KooWC9jfXKJSmULBqpVZNopGpz7rKbHQ4cZpaWqzYoB9zyan
+
+2024-03-06T16:17:09.312Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct bafkreiepclriokzmnwx4hsdnx2lq6zebjwda5wanou4sac4tvj7lzvsjs4 recon_total_time_diff:0.095915423s, recon_getdata_time_diff:0.060471582s, recon_repin_time_diff:0.035443841s, recon_total_size_diff:786541, recon_data_size_diff:524397, recon_repin_size_diff:262144, recon_total_rate_diff:8.200360019264055e+06, recon_data_rate_diff:8.671792313950047e+06, recon_repin_rate_diff:7.396038143834355e+06
+
+
+
+2024-03-06T16:17:09.321Z	INFO	cluster	ipfs-cluster/getter.go:196	use 6.492661ms fetch 0-batch-4-shard(parity) bafkreiga7bd7lkrymljvyff6wpoqn26nq7k7dpiztr7q7c5sw63cxw7iei successfully, size:262144
+
+2024-03-06T16:17:09.363Z	INFO	cluster	ipfs-cluster/getter.go:196	use 48.556285ms fetch 0-batch-2-shard(data) bafyreiekpprnn55t44cixcdzo6gq5kc2mqtbtuvyx5j4nc5f6suo4ykmhi successfully, size:202
+
+2024-03-06T16:17:09.367Z	INFO	cluster	ipfs-cluster/getter.go:196	use 51.984994ms fetch 0-batch-0-shard(data) bafyreieguugg7rxw3e2w6ykxbpnnnscavgmulqbwl6omrhpokun7gnj2xe successfully, size:262144
+
+2024-03-06T16:17:09.367Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:752.128µs, rs_recon_size_diff:524490, rs_recon_rate_diff:697081902.372117
+
+
+
+2024-03-06T16:17:09.368Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreiez4756oprwfihq72r2ph4jo2mo5hfkeg6nz2ik56octg4tnawwzm": context canceled
+
+2024-03-06T16:17:09.368Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block bafkreiez4756oprwfihq72r2ph4jo2mo5hfkeg6nz2ik56octg4tnawwzm, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreiez4756oprwfihq72r2ph4jo2mo5hfkeg6nz2ik56octg4tnawwzm": context canceled
+
+2024-03-06T16:17:09.368Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreign62v3lajlmculle7juufxgbs73wr3te7jegvpe36eyaalfgitty": context canceled
+
+2024-03-06T16:17:09.368Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreiez4756oprwfihq72r2ph4jo2mo5hfkeg6nz2ik56octg4tnawwzm": context canceled
+
+cannot resolve shard(bafyreign62v3lajlmculle7juufxgbs73wr3te7jegvpe36eyaalfgitty): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreign62v3lajlmculle7juufxgbs73wr3te7jegvpe36eyaalfgitty": context canceled
+
+2024-03-06T16:17:09.368Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku size: 107
+
+2024-03-06T16:17:09.370Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:17:09.370Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:09.370Z	INFO	adder	adder/adder.go:267	bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku successfully added to cluster
+
+2024-03-06T16:17:09.370Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku) allocation to 12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku
+
+2024-03-06T16:17:09.389Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.389Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.393Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:09.394Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreign62v3lajlmculle7juufxgbs73wr3te7jegvpe36eyaalfgitty
+
+2024-03-06T16:17:09.394Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreign62v3lajlmculle7juufxgbs73wr3te7jegvpe36eyaalfgitty) allocation to 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC
+
+2024-03-06T16:17:09.394Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct QmRm1a8YRcoK6QudGxVChsJmnCMBtGABcpyDaiJMDxmAva recon_total_time_diff:0.081412479s, recon_getdata_time_diff:0.054897687s, recon_repin_time_diff:0.026514791999999995s, recon_total_size_diff:1048778, recon_data_size_diff:786634, recon_repin_size_diff:262144, recon_total_rate_diff:1.2882275701247226e+07, recon_data_rate_diff:1.4329091861374779e+07, recon_repin_rate_diff:9.88670776674394e+06
+
+
+
+2024-03-06T16:17:09.447Z	INFO	cluster	ipfs-cluster/getter.go:196	use 50.787286ms fetch 0-batch-0-shard(data) bafyreidlzmt3y5tqaodab42edqyhmyhrv2i4elfxkusno4k2szwttbj66i successfully, size:524288
+
+2024-03-06T16:17:09.490Z	INFO	cluster	ipfs-cluster/getter.go:196	use 93.804523ms fetch 0-batch-2-shard(data) bafyreidawv2x5ug3oy3glnk7r2xntipr2xk6gjsdohq4unf3rv4o6zw2yy successfully, size:302
+
+2024-03-06T16:17:09.497Z	INFO	cluster	ipfs-cluster/getter.go:196	use 100.735217ms fetch 0-batch-3-shard(parity) QmPKsQvaoqv6KMpRBQC6dg3gUGm8topwRi6KzscZR7Xo3g successfully, size:524288
+
+2024-03-06T16:17:09.498Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:885.953µs, rs_recon_size_diff:1048878, rs_recon_rate_diff:1183442514.560631
+
+
+
+2024-03-06T16:17:09.498Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreiauk3ar7jmcfmw32fz2b4h2hgnatfjuvhrd26n7gp4azkditnstce": context canceled
+
+2024-03-06T16:17:09.498Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmcRtXvfAzkQxd5MUTK69HNdkq4f6vgKYDR7x2vgWggbsg": context canceled
+
+2024-03-06T16:17:09.498Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block QmcRtXvfAzkQxd5MUTK69HNdkq4f6vgKYDR7x2vgWggbsg, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmcRtXvfAzkQxd5MUTK69HNdkq4f6vgKYDR7x2vgWggbsg": context canceled
+
+2024-03-06T16:17:09.499Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafkreiauk3ar7jmcfmw32fz2b4h2hgnatfjuvhrd26n7gp4azkditnstce": context canceled
+
+Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmcRtXvfAzkQxd5MUTK69HNdkq4f6vgKYDR7x2vgWggbsg": context canceled
+
+2024-03-06T16:17:09.500Z	ERROR	singledags	single/dag_service.go:150	------- QmPKsQvaoqv6KMpRBQC6dg3gUGm8topwRi6KzscZR7Xo3g size: 524490
+
+2024-03-06T16:17:09.507Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning QmPKsQvaoqv6KMpRBQC6dg3gUGm8topwRi6KzscZR7Xo3g on [12D3KooWC9jfXKJSmULBqpVZNopGpz7rKbHQ4cZpaWqzYoB9zyan]:
+
+2024-03-06T16:17:09.508Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.509Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmPKsQvaoqv6KMpRBQC6dg3gUGm8topwRi6KzscZR7Xo3g
+
+2024-03-06T16:17:09.509Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.509Z	INFO	adder	adder/adder.go:267	QmPKsQvaoqv6KMpRBQC6dg3gUGm8topwRi6KzscZR7Xo3g successfully added to cluster
+
+2024-03-06T16:17:09.509Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(QmPKsQvaoqv6KMpRBQC6dg3gUGm8topwRi6KzscZR7Xo3g) allocation to 12D3KooWC9jfXKJSmULBqpVZNopGpz7rKbHQ4cZpaWqzYoB9zyan
+
+2024-03-06T16:17:09.510Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreicabd6mveif34az6b4sy6cnnmczf7ehrarh57vnrnar3nrplxiteu
+
+2024-03-06T16:17:09.510Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreicabd6mveif34az6b4sy6cnnmczf7ehrarh57vnrnar3nrplxiteu) allocation to 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC
+
+2024-03-06T16:17:09.510Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct QmXQiXAki9rMS8c7yghWDjAXHHZcKbuPyJiaWoB1EdGLfY recon_total_time_diff:0.116359584s, recon_getdata_time_diff:0.103676433s, recon_repin_time_diff:0.012683151000000004s, recon_total_size_diff:2097454, recon_data_size_diff:1048878, recon_repin_size_diff:1048576, recon_total_rate_diff:1.8025623054822885e+07, recon_data_rate_diff:1.0116841114701545e+07, recon_repin_rate_diff:8.267472333964956e+07
+
+
+
+2024-03-06T16:17:09.578Z	INFO	cluster	ipfs-cluster/getter.go:196	use 64.586314ms fetch 0-batch-0-shard(data) bafyreigle7b2sbh4fbzqbsi6ex4spasml3xyxedbv36hgrm2jh6pvzhkpe successfully, size:786432
+
+2024-03-06T16:17:09.578Z	INFO	cluster	ipfs-cluster/getter.go:196	use 64.785208ms fetch 0-batch-2-shard(data) bafyreiho4g3dnhmbgvbjp2isa4bg7ei5jyeur6hkmlmwb75wodgtyvlixy successfully, size:524792
+
+2024-03-06T16:17:09.584Z	INFO	cluster	ipfs-cluster/getter.go:196	use 70.5694ms fetch 0-batch-4-shard(parity) QmP1UBhm4wGv4JPcf7kUGrYFy5pcaDrmRiSXF5TuePr5cG successfully, size:786432
+
+2024-03-06T16:17:09.585Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:1.167813ms, rs_recon_size_diff:2097656, rs_recon_rate_diff:1796010627.139962
+
+
+
+2024-03-06T16:17:09.585Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmYxYax9zhyTmyJLfWKpHGHmNREy6g4NJ6wLhjq9tZzVeB": context canceled
+
+2024-03-06T16:17:09.585Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block QmYxYax9zhyTmyJLfWKpHGHmNREy6g4NJ6wLhjq9tZzVeB, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmYxYax9zhyTmyJLfWKpHGHmNREy6g4NJ6wLhjq9tZzVeB": context canceled
+
+2024-03-06T16:17:09.585Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreifyd4zpjmf63clzvdfheqsub3hmtbtlkqm4brduqakxq7pmbptkqa": context canceled
+
+2024-03-06T16:17:09.585Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmYxYax9zhyTmyJLfWKpHGHmNREy6g4NJ6wLhjq9tZzVeB": context canceled
+
+cannot resolve shard(bafyreifyd4zpjmf63clzvdfheqsub3hmtbtlkqm4brduqakxq7pmbptkqa): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreifyd4zpjmf63clzvdfheqsub3hmtbtlkqm4brduqakxq7pmbptkqa": context canceled
+
+2024-03-06T16:17:09.586Z	ERROR	singledags	single/dag_service.go:150	------- bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku size: 107
+
+2024-03-06T16:17:09.588Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku on [12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC]:
+
+2024-03-06T16:17:09.604Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:607	IPFS Unpin request succeeded:bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:09.604Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku
+
+2024-03-06T16:17:09.605Z	INFO	adder	adder/adder.go:267	bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku successfully added to cluster
+
+2024-03-06T16:17:09.605Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku) allocation to 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC
+
+2024-03-06T16:17:09.630Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.631Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.632Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreifyd4zpjmf63clzvdfheqsub3hmtbtlkqm4brduqakxq7pmbptkqa
+
+2024-03-06T16:17:09.632Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreifyd4zpjmf63clzvdfheqsub3hmtbtlkqm4brduqakxq7pmbptkqa) allocation to 12D3KooWC9jfXKJSmULBqpVZNopGpz7rKbHQ4cZpaWqzYoB9zyan
+
+2024-03-06T16:17:09.632Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct QmScZKmewv3q74QD9zC5ezMHEwg1uRHVEy1ntfkfqDeh2U recon_total_time_diff:0.12166226s, recon_getdata_time_diff:0.074224368s, recon_repin_time_diff:0.047437891999999995s, recon_total_size_diff:3670520, recon_data_size_diff:2884088, recon_repin_size_diff:786432, recon_total_rate_diff:3.016975025780386e+07, recon_data_rate_diff:3.885634970984192e+07, recon_repin_rate_diff:1.6578139686308153e+07
+
+
+
+2024-03-06T16:17:09.652Z	INFO	cluster	ipfs-cluster/getter.go:196	use 18.000035ms fetch 0-batch-5-shard(parity) QmavBDrJ1uMukdNo6y1L5vTp86eBTarPewBhY8ynbnLxsZ successfully, size:1310720
+
+2024-03-06T16:17:09.755Z	INFO	cluster	ipfs-cluster/getter.go:196	use 120.738565ms fetch 0-batch-1-shard(data) bafyreib7z3pgpcmgq6x5dgze3wtfwd55rq52iww3irrya7bdasjloigcca successfully, size:1310720
+
+2024-03-06T16:17:09.761Z	INFO	cluster	ipfs-cluster/getter.go:196	use 126.557739ms fetch 0-batch-4-shard(parity) Qma7hF8sJL56AJCcHxfgR2e7wjtrLDTB1QC7NG3qjJ7pBp successfully, size:1310720
+
+2024-03-06T16:17:09.765Z	INFO	cluster	ipfs-cluster/getter.go:196	use 131.121683ms fetch 0-batch-2-shard(data) bafyreicwgwyjba4ixisw5gmuw4qeqiobzjmhoufnxsibsd5ps3robhaacm successfully, size:1310720
+
+2024-03-06T16:17:09.766Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:1.094221ms, rs_recon_size_diff:4195208, rs_recon_rate_diff:3832388149.144218
+
+
+
+2024-03-06T16:17:09.767Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreiet4izqirx3kbag6huu3bfy3g6qsb4i6dxo47vs6wqlhlddy4ttfy": context canceled
+
+2024-03-06T16:17:09.767Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreicvrizeahcpsfshgc53k6vyrvre2cgvy7z5x3s3ln5q7z3ixngnpq": context canceled
+
+2024-03-06T16:17:09.767Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:cannot resolve shard(bafyreiet4izqirx3kbag6huu3bfy3g6qsb4i6dxo47vs6wqlhlddy4ttfy): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreiet4izqirx3kbag6huu3bfy3g6qsb4i6dxo47vs6wqlhlddy4ttfy": context canceled
+
+cannot resolve shard(bafyreicvrizeahcpsfshgc53k6vyrvre2cgvy7z5x3s3ln5q7z3ixngnpq): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreicvrizeahcpsfshgc53k6vyrvre2cgvy7z5x3s3ln5q7z3ixngnpq": context canceled
+
+2024-03-06T16:17:09.815Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.816Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.817Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiet4izqirx3kbag6huu3bfy3g6qsb4i6dxo47vs6wqlhlddy4ttfy
+
+2024-03-06T16:17:09.818Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreiet4izqirx3kbag6huu3bfy3g6qsb4i6dxo47vs6wqlhlddy4ttfy) allocation to 12D3KooWDJN1rRHCmoRABRF4cYUJQ3aSoBMCzRJXc3XxxCUqHJ1Q
+
+2024-03-06T16:17:09.851Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.852Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:09.854Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreicvrizeahcpsfshgc53k6vyrvre2cgvy7z5x3s3ln5q7z3ixngnpq
+
+2024-03-06T16:17:09.854Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreicvrizeahcpsfshgc53k6vyrvre2cgvy7z5x3s3ln5q7z3ixngnpq) allocation to 12D3KooWDJN1rRHCmoRABRF4cYUJQ3aSoBMCzRJXc3XxxCUqHJ1Q
+
+2024-03-06T16:17:09.854Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct QmXKwiNA2z9uNNNm88RxD5DCM4ozvyENc2dfmTgjAu4RRR recon_total_time_diff:0.221411163s, recon_getdata_time_diff:0.133905566s, recon_repin_time_diff:0.08750559699999999s, recon_total_size_diff:6816648, recon_data_size_diff:5242880, recon_repin_size_diff:1573768, recon_total_rate_diff:3.0787282391899996e+07, recon_data_rate_diff:3.915356289222511e+07, recon_repin_rate_diff:1.7984769591366827e+07
+
+
+
+2024-03-06T16:17:09.886Z	INFO	cluster	ipfs-cluster/getter.go:196	use 27.749089ms fetch 0-batch-5-shard(parity) QmaSdgFKCmrBDpjQZ6CktZLe4ghKgYaGWmAaKaDnJfeb8B successfully, size:2359296
+
+2024-03-06T16:17:10.014Z	INFO	cluster	ipfs-cluster/getter.go:196	use 154.729482ms fetch 0-batch-2-shard(data) bafyreicmyvlfdxmv7amqgwz3yp4qq7ealixe4ustbgx3br53fu5cvjgojy successfully, size:2359296
+
+2024-03-06T16:17:10.041Z	INFO	cluster	ipfs-cluster/getter.go:196	use 181.660523ms fetch 0-batch-3-shard(data) bafyreihzkyfsbp6ie4hau2v4knw6sml2zslanm5t5enkmipbrqbptsahei successfully, size:1312425
+
+2024-03-06T16:17:10.043Z	INFO	cluster	ipfs-cluster/getter.go:196	use 184.756362ms fetch 0-batch-0-shard(data) bafyreieywfkdv7iqzug6runef7i4nymfxngsnzslecksre457bpafyn5zi successfully, size:2359296
+
+2024-03-06T16:17:10.046Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:3.052535ms, rs_recon_size_diff:8390313, rs_recon_rate_diff:2748493708.018652
+
+
+
+2024-03-06T16:17:10.047Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmSDpFGkBzAfWu64ZMuoy2NHNK1AXHxATfnxQoGtjkve6p": context canceled
+
+2024-03-06T16:17:10.049Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block QmSDpFGkBzAfWu64ZMuoy2NHNK1AXHxATfnxQoGtjkve6p, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmSDpFGkBzAfWu64ZMuoy2NHNK1AXHxATfnxQoGtjkve6p": context canceled
+
+2024-03-06T16:17:10.047Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreigf6uag76vh37gvpumn7ngrr3r2fiwq6afsf6y2d3zwk5mipdddre": context canceled
+
+2024-03-06T16:17:10.049Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmSDpFGkBzAfWu64ZMuoy2NHNK1AXHxATfnxQoGtjkve6p": context canceled
+
+cannot resolve shard(bafyreigf6uag76vh37gvpumn7ngrr3r2fiwq6afsf6y2d3zwk5mipdddre): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreigf6uag76vh37gvpumn7ngrr3r2fiwq6afsf6y2d3zwk5mipdddre": context canceled
+
+2024-03-06T16:17:10.053Z	ERROR	singledags	single/dag_service.go:150	------- QmSDpFGkBzAfWu64ZMuoy2NHNK1AXHxATfnxQoGtjkve6p size: 2359850
+
+2024-03-06T16:17:10.198Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:10.198Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:10.199Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreigf6uag76vh37gvpumn7ngrr3r2fiwq6afsf6y2d3zwk5mipdddre
+
+2024-03-06T16:17:10.200Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreigf6uag76vh37gvpumn7ngrr3r2fiwq6afsf6y2d3zwk5mipdddre) allocation to 12D3KooWC9jfXKJSmULBqpVZNopGpz7rKbHQ4cZpaWqzYoB9zyan
+
+2024-03-06T16:17:10.206Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning QmSDpFGkBzAfWu64ZMuoy2NHNK1AXHxATfnxQoGtjkve6p on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:17:10.206Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmSDpFGkBzAfWu64ZMuoy2NHNK1AXHxATfnxQoGtjkve6p
+
+2024-03-06T16:17:10.207Z	INFO	adder	adder/adder.go:267	QmSDpFGkBzAfWu64ZMuoy2NHNK1AXHxATfnxQoGtjkve6p successfully added to cluster
+
+2024-03-06T16:17:10.207Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(QmSDpFGkBzAfWu64ZMuoy2NHNK1AXHxATfnxQoGtjkve6p) allocation to 12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku
+
+2024-03-06T16:17:10.207Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct QmYioftAkLt5zm1R7FcDB4vU7mb3r7S7o8cg4dtN7Fu9Jw recon_total_time_diff:0.35281222s, recon_getdata_time_diff:0.191999412s, recon_repin_time_diff:0.160812808s, recon_total_size_diff:13108905, recon_data_size_diff:8390313, recon_repin_size_diff:4718592, recon_total_rate_diff:3.7155473242961936e+07, recon_data_rate_diff:4.369968070527216e+07, recon_repin_rate_diff:2.934214045935943e+07
+
+
+
+2024-03-06T16:17:10.251Z	INFO	cluster	ipfs-cluster/getter.go:196	use 37.329756ms fetch 0-batch-2-shard(data) bafyreiccpnf2h2prrxmybleanuxtcgc7rzfgbntra6ir66qb6dvezyyn54 successfully, size:4456448
+
+2024-03-06T16:17:10.277Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: QmSDpFGkBzAfWu64ZMuoy2NHNK1AXHxATfnxQoGtjkve6p
+
+2024-03-06T16:17:10.667Z	INFO	cluster	ipfs-cluster/getter.go:196	use 453.153281ms fetch 0-batch-3-shard(data) bafyreidzcp3a3uhebyfl3oupffnjxjrjcgovqvo36i4go4r32l5uincaea successfully, size:3411177
+
+2024-03-06T16:17:10.727Z	INFO	cluster	ipfs-cluster/getter.go:196	use 513.502394ms fetch 0-batch-1-shard(data) bafyreidxjbandw6dhfhuwclsvpu3wwrv3sest76b6vhxgb5udleva2zk4m successfully, size:4456448
+
+2024-03-06T16:17:10.761Z	INFO	cluster	ipfs-cluster/getter.go:196	use 548.077258ms fetch 0-batch-5-shard(parity) QmXgp8WnCdLDNDZFLjaqbf8ujpc3feveyrecif8hGjxvbP successfully, size:4456448
+
+2024-03-06T16:17:10.765Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:4.61646ms, rs_recon_size_diff:16780521, rs_recon_rate_diff:3634790099.555066
+
+
+
+2024-03-06T16:17:10.766Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreigfpzpl7fbaez2bnxzhmmm5xsyzbap62nfdsjbol63kcjfhleqknm": context canceled
+
+2024-03-06T16:17:10.766Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmZGjJuPTzDrcKtNFSAtYct6i5AcHAvnaJy2wzzg3Se5rj": context canceled
+
+2024-03-06T16:17:10.766Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block QmZGjJuPTzDrcKtNFSAtYct6i5AcHAvnaJy2wzzg3Se5rj, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmZGjJuPTzDrcKtNFSAtYct6i5AcHAvnaJy2wzzg3Se5rj": context canceled
+
+2024-03-06T16:17:10.766Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:cannot resolve shard(bafyreigfpzpl7fbaez2bnxzhmmm5xsyzbap62nfdsjbol63kcjfhleqknm): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreigfpzpl7fbaez2bnxzhmmm5xsyzbap62nfdsjbol63kcjfhleqknm": context canceled
+
+Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmZGjJuPTzDrcKtNFSAtYct6i5AcHAvnaJy2wzzg3Se5rj": context canceled
+
+2024-03-06T16:17:10.773Z	ERROR	singledags	single/dag_service.go:150	------- QmZGjJuPTzDrcKtNFSAtYct6i5AcHAvnaJy2wzzg3Se5rj size: 4457402
+
+2024-03-06T16:17:11.019Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:11.020Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:11.021Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreigfpzpl7fbaez2bnxzhmmm5xsyzbap62nfdsjbol63kcjfhleqknm
+
+2024-03-06T16:17:11.022Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreigfpzpl7fbaez2bnxzhmmm5xsyzbap62nfdsjbol63kcjfhleqknm) allocation to 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC
+
+2024-03-06T16:17:11.047Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning QmZGjJuPTzDrcKtNFSAtYct6i5AcHAvnaJy2wzzg3Se5rj on [12D3KooWC9jfXKJSmULBqpVZNopGpz7rKbHQ4cZpaWqzYoB9zyan]:
+
+2024-03-06T16:17:11.049Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmZGjJuPTzDrcKtNFSAtYct6i5AcHAvnaJy2wzzg3Se5rj
+
+2024-03-06T16:17:11.049Z	INFO	adder	adder/adder.go:267	QmZGjJuPTzDrcKtNFSAtYct6i5AcHAvnaJy2wzzg3Se5rj successfully added to cluster
+
+2024-03-06T16:17:11.049Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(QmZGjJuPTzDrcKtNFSAtYct6i5AcHAvnaJy2wzzg3Se5rj) allocation to 12D3KooWC9jfXKJSmULBqpVZNopGpz7rKbHQ4cZpaWqzYoB9zyan
+
+2024-03-06T16:17:11.049Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct QmbrDQi7AYoyETGHAekYxXg7w4GtqP7PkEaJE2ypRbeW4j recon_total_time_diff:0.841323881s, recon_getdata_time_diff:0.557216087s, recon_repin_time_diff:0.28410779399999997s, recon_total_size_diff:25693417, recon_data_size_diff:16780521, recon_repin_size_diff:8912896, recon_total_rate_diff:3.0539269810647395e+07, recon_data_rate_diff:3.011492559438615e+07, recon_repin_rate_diff:3.137152935691726e+07
+
+
+
+2024-03-06T16:17:11.099Z	INFO	cluster	ipfs-cluster/getter.go:196	use 47.367749ms fetch 0-batch-3-shard(data) bafyreihblrqvnncqwcpsf25ceeaisdm3jypztf7oryg3k5jaea6o5njb3q successfully, size:7608681
+
+2024-03-06T16:17:11.163Z	INFO	cluster	ipfs-cluster/getter.go:196	use 111.336592ms fetch 0-batch-2-shard(data) bafyreih7yo2ctjlt3vle6g4hrn26muzu4wftpwvuiftvtzeh3rpkwfctgu successfully, size:8650752
+
+2024-03-06T16:17:12.020Z	INFO	cluster	ipfs-cluster/getter.go:196	use 967.655861ms fetch 0-batch-4-shard(parity) QmaNX8q1CHTai8U3vZw1iENJL7VDXj99E5ZLFqSPVtie4B successfully, size:8650752
+
+2024-03-06T16:17:12.025Z	INFO	cluster	ipfs-cluster/getter.go:196	use 973.51462ms fetch 0-batch-5-shard(parity) QmZHAX6NzARd4aRNUNqjKeKa1CssbgqyCDjD2RwVV5EN1J successfully, size:8650752
+
+2024-03-06T16:17:12.040Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:14.666728ms, rs_recon_size_diff:33560937, rs_recon_rate_diff:2288190891.972724
+
+
+
+2024-03-06T16:17:12.040Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreif2z5bngovdl67g46c5pvngsgv75y6rnopawatkb7pt7zkgiuwqze": context canceled
+
+2024-03-06T16:17:12.040Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreic54wciioe6xmt7gg35gnprpxrgydozjqw3y377psv7qammoz4j2q": context canceled
+
+2024-03-06T16:17:12.040Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:cannot resolve shard(bafyreif2z5bngovdl67g46c5pvngsgv75y6rnopawatkb7pt7zkgiuwqze): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreif2z5bngovdl67g46c5pvngsgv75y6rnopawatkb7pt7zkgiuwqze": context canceled
+
+cannot resolve shard(bafyreic54wciioe6xmt7gg35gnprpxrgydozjqw3y377psv7qammoz4j2q): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreic54wciioe6xmt7gg35gnprpxrgydozjqw3y377psv7qammoz4j2q": context canceled
+
+2024-03-06T16:17:12.099Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:12.099Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:12.099Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreif2z5bngovdl67g46c5pvngsgv75y6rnopawatkb7pt7zkgiuwqze
+
+2024-03-06T16:17:12.100Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:12.100Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreif2z5bngovdl67g46c5pvngsgv75y6rnopawatkb7pt7zkgiuwqze) allocation to 12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku
+
+2024-03-06T16:17:12.130Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreif2z5bngovdl67g46c5pvngsgv75y6rnopawatkb7pt7zkgiuwqze
+
+2024-03-06T16:17:12.330Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:12.330Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:12.332Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreic54wciioe6xmt7gg35gnprpxrgydozjqw3y377psv7qammoz4j2q
+
+2024-03-06T16:17:12.332Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreic54wciioe6xmt7gg35gnprpxrgydozjqw3y377psv7qammoz4j2q) allocation to 12D3KooWDJN1rRHCmoRABRF4cYUJQ3aSoBMCzRJXc3XxxCUqHJ1Q
+
+2024-03-06T16:17:12.333Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct QmQRQRLj2z4ZaumgcgSc2UT9qUspLdqrBN1UMJcDy5uTS4 recon_total_time_diff:1.282600513s, recon_getdata_time_diff:0.98988774s, recon_repin_time_diff:0.292712773s, recon_total_size_diff:50862441, recon_data_size_diff:33560937, recon_repin_size_diff:17301504, recon_total_rate_diff:3.965571546594259e+07, recon_data_rate_diff:3.3903780846906945e+07, recon_repin_rate_diff:5.910744455282107e+07
+
+
+
+2024-03-06T16:17:12.405Z	INFO	cluster	ipfs-cluster/getter.go:196	use 70.065588ms fetch 0-batch-0-shard(data) bafyreiap7oen3b7yhbr6pu5saf6btc7vqm4rsntcrx7nuxr4jm7yl3i34y successfully, size:17039360
+
+2024-03-06T16:17:13.044Z	INFO	cluster	ipfs-cluster/getter.go:196	use 708.341163ms fetch 0-batch-2-shard(data) bafyreidg4bt46kgdt362u3jxljlmeb4teidoqojyvhg23hkehdb5etucjq successfully, size:16785926
+
+2024-03-06T16:17:13.046Z	INFO	cluster	ipfs-cluster/getter.go:196	use 710.148186ms fetch 0-batch-1-shard(data) bafyreica6vsnmekrajcp45ps4rzqnndzq244buvrgpkjxlxjss36eexswm successfully, size:17039360
+
+2024-03-06T16:17:13.249Z	INFO	cluster	ipfs-cluster/getter.go:196	use 913.439791ms fetch 0-batch-4-shard(parity) QmcGkCC7ydPhoGXaNeo6gY1YmkcuzVoyML25qw6yd83PA9 successfully, size:17039360
+
+2024-03-06T16:17:13.274Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:24.936137ms, rs_recon_size_diff:67121888, rs_recon_rate_diff:2691732115.382873
+
+
+
+2024-03-06T16:17:13.274Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreicc2btvbhf5nza2lf3tum3hskirfbqit775ktefdbgfzyhuenn6de": context canceled
+
+2024-03-06T16:17:13.274Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmZB9dNx3Uq795KMnqozJcKto5W8BtC65j1SWLiXR2qfcc": context canceled
+
+2024-03-06T16:17:13.274Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block QmZB9dNx3Uq795KMnqozJcKto5W8BtC65j1SWLiXR2qfcc, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmZB9dNx3Uq795KMnqozJcKto5W8BtC65j1SWLiXR2qfcc": context canceled
+
+2024-03-06T16:17:13.274Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:cannot resolve shard(bafyreicc2btvbhf5nza2lf3tum3hskirfbqit775ktefdbgfzyhuenn6de): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreicc2btvbhf5nza2lf3tum3hskirfbqit775ktefdbgfzyhuenn6de": context canceled
+
+Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmZB9dNx3Uq795KMnqozJcKto5W8BtC65j1SWLiXR2qfcc": context canceled
+
+2024-03-06T16:17:13.303Z	ERROR	singledags	single/dag_service.go:150	------- QmZB9dNx3Uq795KMnqozJcKto5W8BtC65j1SWLiXR2qfcc size: 17042715
+
+2024-03-06T16:17:14.235Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning QmZB9dNx3Uq795KMnqozJcKto5W8BtC65j1SWLiXR2qfcc on [12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC]:
+
+2024-03-06T16:17:14.237Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmZB9dNx3Uq795KMnqozJcKto5W8BtC65j1SWLiXR2qfcc
+
+2024-03-06T16:17:14.237Z	INFO	adder	adder/adder.go:267	QmZB9dNx3Uq795KMnqozJcKto5W8BtC65j1SWLiXR2qfcc successfully added to cluster
+
+2024-03-06T16:17:14.237Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(QmZB9dNx3Uq795KMnqozJcKto5W8BtC65j1SWLiXR2qfcc) allocation to 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC
+
+2024-03-06T16:17:14.251Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:14.251Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:14.252Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreicc2btvbhf5nza2lf3tum3hskirfbqit775ktefdbgfzyhuenn6de
+
+2024-03-06T16:17:14.252Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreicc2btvbhf5nza2lf3tum3hskirfbqit775ktefdbgfzyhuenn6de) allocation to 12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku
+
+2024-03-06T16:17:14.252Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:14.252Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct QmUAFNwuMJWYgwcZrPkjmB33JL1H3o5qPhYVwbCAS6nfJK recon_total_time_diff:1.918182114s, recon_getdata_time_diff:0.940027205s, recon_repin_time_diff:0.9781549089999999s, recon_total_size_diff:101200608, recon_data_size_diff:67904006, recon_repin_size_diff:33296602, recon_total_rate_diff:5.275860266936052e+07, recon_data_rate_diff:7.22362136317108e+07, recon_repin_rate_diff:3.40402135629419e+07
+
+
+
+2024-03-06T16:17:14.609Z	INFO	cluster	ipfs-cluster/getter.go:196	use 351.736197ms fetch 0-batch-2-shard(data) bafyreibihwkx6prny4tn5brqoai3kuv3tfdbg7hnaazjpd37i2jxldg7ki successfully, size:33563142
+
+2024-03-06T16:17:14.761Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: bafyreicc2btvbhf5nza2lf3tum3hskirfbqit775ktefdbgfzyhuenn6de
+
+2024-03-06T16:17:14.991Z	INFO	cluster	ipfs-cluster/getter.go:196	use 733.905065ms fetch 0-batch-1-shard(data) bafyreiby5a4tvfgsrsxgwwmuztzjlpkxvcb2pohu44mrishqyttvgrrfs4 successfully, size:33563142
+
+2024-03-06T16:17:15.505Z	INFO	cluster	ipfs-cluster/getter.go:196	use 1.247671758s fetch 0-batch-3-shard(data) bafyreiadl4sbstc52br5s33szu6ngdtmlkyazhfahdvglohxsfubk5ux54 successfully, size:33300752
+
+2024-03-06T16:17:17.063Z	INFO	cluster	ipfs-cluster/getter.go:196	use 2.805435391s fetch 0-batch-4-shard(parity) QmejAX2N9ufAu88DwPJ7Wjm9kUA8Jp75dYvVbpuy53uZRA successfully, size:33816576
+
+2024-03-06T16:17:17.113Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:50.52257ms, rs_recon_size_diff:134243612, rs_recon_rate_diff:2657093391.429956
+
+
+
+2024-03-06T16:17:17.114Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmQsvrKH73N1tMJeyhv8xi38TVq1xpv68FSdmJ4gGj8Krf": context canceled
+
+2024-03-06T16:17:17.114Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block QmQsvrKH73N1tMJeyhv8xi38TVq1xpv68FSdmJ4gGj8Krf, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmQsvrKH73N1tMJeyhv8xi38TVq1xpv68FSdmJ4gGj8Krf": context canceled
+
+2024-03-06T16:17:17.114Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreidu47uw3ttqfp7qbekwwifecwrx3d42uvncex3euaj3eomuqxawau": context canceled
+
+2024-03-06T16:17:17.114Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmQsvrKH73N1tMJeyhv8xi38TVq1xpv68FSdmJ4gGj8Krf": context canceled
+
+cannot resolve shard(bafyreidu47uw3ttqfp7qbekwwifecwrx3d42uvncex3euaj3eomuqxawau): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreidu47uw3ttqfp7qbekwwifecwrx3d42uvncex3euaj3eomuqxawau": context canceled
+
+2024-03-06T16:17:17.172Z	ERROR	singledags	single/dag_service.go:150	------- QmQsvrKH73N1tMJeyhv8xi38TVq1xpv68FSdmJ4gGj8Krf size: 33823131
+
+2024-03-06T16:17:17.461Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:17.461Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:17.463Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreidu47uw3ttqfp7qbekwwifecwrx3d42uvncex3euaj3eomuqxawau
+
+2024-03-06T16:17:17.463Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreidu47uw3ttqfp7qbekwwifecwrx3d42uvncex3euaj3eomuqxawau) allocation to 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC
+
+2024-03-06T16:17:18.504Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning QmQsvrKH73N1tMJeyhv8xi38TVq1xpv68FSdmJ4gGj8Krf on [12D3KooWC9jfXKJSmULBqpVZNopGpz7rKbHQ4cZpaWqzYoB9zyan]:
+
+2024-03-06T16:17:18.505Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmQsvrKH73N1tMJeyhv8xi38TVq1xpv68FSdmJ4gGj8Krf
+
+2024-03-06T16:17:18.505Z	INFO	adder	adder/adder.go:267	QmQsvrKH73N1tMJeyhv8xi38TVq1xpv68FSdmJ4gGj8Krf successfully added to cluster
+
+2024-03-06T16:17:18.505Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(QmQsvrKH73N1tMJeyhv8xi38TVq1xpv68FSdmJ4gGj8Krf) allocation to 12D3KooWC9jfXKJSmULBqpVZNopGpz7rKbHQ4cZpaWqzYoB9zyan
+
+2024-03-06T16:17:18.505Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct QmfWtk5zQEJee1dJZB9YHaC1mLKNHfhKKKcFBr79y2bJNj recon_total_time_diff:4.25090505s, recon_getdata_time_diff:2.8593635649999998s, recon_repin_time_diff:1.3915414850000003s, recon_total_size_diff:201876764, recon_data_size_diff:134243612, recon_repin_size_diff:67633152, recon_total_rate_diff:4.749030185936522e+07, recon_data_rate_diff:4.694877337153172e+07, recon_repin_rate_diff:4.8603043983270094e+07
+
+
+
+2024-03-06T16:17:22.257Z	INFO	cluster	ipfs-cluster/getter.go:196	use 3.742419872s fetch 0-batch-5-shard(parity) QmdAd9QRzpwq32SdkgVwFMdkGmA72t95SN1XprtaUp7YHR successfully, size:67126284
+
+2024-03-06T16:17:26.368Z	INFO	cluster	ipfs-cluster/getter.go:196	use 7.853335621s fetch 0-batch-1-shard(data) bafyreigkn72vs6hsx6e6q2efw27wqb4avkj5vyzr2exypjmrgao3a3y5eu successfully, size:67117574
+
+2024-03-06T16:17:26.431Z	INFO	cluster	ipfs-cluster/getter.go:196	use 7.915933283s fetch 0-batch-0-shard(data) bafyreie2zh2y6mux6l7hmex2bgqhsvguv2eih4h65lsmnnreifpvtu6tfa successfully, size:67117574
+
+2024-03-06T16:17:26.432Z	INFO	cluster	ipfs-cluster/getter.go:196	use 7.91698289s fetch 0-batch-3-shard(data) bafyreib4qauhlmgvd6lwkrkc5iak2p6hvfpvap65wkyugnnfmmsd6ctj6m successfully, size:67125690
+
+2024-03-06T16:17:26.503Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:69.983591ms, rs_recon_size_diff:268487122, rs_recon_rate_diff:3836421405.366140
+
+
+
+2024-03-06T16:17:26.503Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmUXSoZGJdi5v4NZ6c1vVch1Qiw8frvpQcWBKAsNspNkdZ": context canceled
+
+2024-03-06T16:17:26.503Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block QmUXSoZGJdi5v4NZ6c1vVch1Qiw8frvpQcWBKAsNspNkdZ, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmUXSoZGJdi5v4NZ6c1vVch1Qiw8frvpQcWBKAsNspNkdZ": context canceled
+
+2024-03-06T16:17:26.503Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreih7yh2lkg4bbardxiseb3nh5gdztdkjb353i4iisfkasti2w2kgxa": context canceled
+
+2024-03-06T16:17:26.504Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmUXSoZGJdi5v4NZ6c1vVch1Qiw8frvpQcWBKAsNspNkdZ": context canceled
+
+cannot resolve shard(bafyreih7yh2lkg4bbardxiseb3nh5gdztdkjb353i4iisfkasti2w2kgxa): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreih7yh2lkg4bbardxiseb3nh5gdztdkjb353i4iisfkasti2w2kgxa": context canceled
+
+2024-03-06T16:17:26.594Z	ERROR	singledags	single/dag_service.go:150	------- QmUXSoZGJdi5v4NZ6c1vVch1Qiw8frvpQcWBKAsNspNkdZ size: 67139358
+
+2024-03-06T16:17:27.179Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:27.180Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:27.181Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreih7yh2lkg4bbardxiseb3nh5gdztdkjb353i4iisfkasti2w2kgxa
+
+2024-03-06T16:17:27.182Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreih7yh2lkg4bbardxiseb3nh5gdztdkjb353i4iisfkasti2w2kgxa) allocation to 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC
+
+2024-03-06T16:17:30.053Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning QmUXSoZGJdi5v4NZ6c1vVch1Qiw8frvpQcWBKAsNspNkdZ on [12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku]:
+
+2024-03-06T16:17:30.053Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmUXSoZGJdi5v4NZ6c1vVch1Qiw8frvpQcWBKAsNspNkdZ
+
+2024-03-06T16:17:30.053Z	INFO	adder	adder/adder.go:267	QmUXSoZGJdi5v4NZ6c1vVch1Qiw8frvpQcWBKAsNspNkdZ successfully added to cluster
+
+2024-03-06T16:17:30.054Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(QmUXSoZGJdi5v4NZ6c1vVch1Qiw8frvpQcWBKAsNspNkdZ) allocation to 12D3KooWHLC9JSCtM59DbCwMKAJCKUw6YC9dwKJu2iGkFxfU8Dku
+
+2024-03-06T16:17:30.054Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct QmW229LtsdQkJ4W3PEZieauY58YWxX7nxnQzXp8oHrpTrA recon_total_time_diff:11.544732312s, recon_getdata_time_diff:7.993387992s, recon_repin_time_diff:3.551344320000001s, recon_total_size_diff:402739690, recon_data_size_diff:268487122, recon_repin_size_diff:134252568, recon_total_rate_diff:3.4885147538793795e+07, recon_data_rate_diff:3.3588651303891316e+07, recon_repin_rate_diff:3.7803309367648125e+07
+
+
+
+2024-03-06T16:17:30.471Z	INFO	ipfshttp	ipfshttp/ipfshttp.go:514	IPFS Pin request succeeded: QmUXSoZGJdi5v4NZ6c1vVch1Qiw8frvpQcWBKAsNspNkdZ
+
+2024-03-06T16:17:30.518Z	INFO	cluster	ipfs-cluster/getter.go:196	use 442.217573ms fetch 0-batch-0-shard(data) bafyreihvexjyelcujtsho7gg7yn3vgmzwpofx5dfvetnjgksehjq5dbrt4 successfully, size:134235148
+
+2024-03-06T16:17:33.758Z	INFO	cluster	ipfs-cluster/getter.go:196	use 3.681229158s fetch 0-batch-3-shard(data) bafyreicgtmo5hwjoclezwwtjdcytebpakc6qvl7cwiuztglw3xiawlkdau successfully, size:134251274
+
+2024-03-06T16:17:36.819Z	INFO	cluster	ipfs-cluster/getter.go:196	use 6.743198681s fetch 0-batch-5-shard(parity) QmPiY7N6j4cHqcz3MMWYuBY8Nqzz6D3iuDySVdtsDvfjyB successfully, size:134251274
+
+2024-03-06T16:17:37.104Z	INFO	cluster	ipfs-cluster/getter.go:196	use 7.026946571s fetch 0-batch-4-shard(parity) QmcrJFwM3LtRPjMqLGPmD92L31K6sczNM2CAerZJndRih1 successfully, size:134251274
+
+2024-03-06T16:17:37.354Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:250.035087ms, rs_recon_size_diff:536974138, rs_recon_rate_diff:2147593758.460807
+
+
+
+2024-03-06T16:17:37.356Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreidwgs5rdk4ghff3szz4amxeqxjunoozqwj2pcmrows4434wq5s3za": context canceled
+
+2024-03-06T16:17:37.356Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreih7cq7mgdieavacdofztq7xelhgyhkm3whrnptcbldx7nhgkpfzlq": context canceled
+
+2024-03-06T16:17:37.360Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:cannot resolve shard(bafyreidwgs5rdk4ghff3szz4amxeqxjunoozqwj2pcmrows4434wq5s3za): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreidwgs5rdk4ghff3szz4amxeqxjunoozqwj2pcmrows4434wq5s3za": context canceled
+
+cannot resolve shard(bafyreih7cq7mgdieavacdofztq7xelhgyhkm3whrnptcbldx7nhgkpfzlq): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreih7cq7mgdieavacdofztq7xelhgyhkm3whrnptcbldx7nhgkpfzlq": context canceled
+
+2024-03-06T16:17:38.723Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:38.724Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:38.725Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreih7cq7mgdieavacdofztq7xelhgyhkm3whrnptcbldx7nhgkpfzlq
+
+2024-03-06T16:17:38.726Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreih7cq7mgdieavacdofztq7xelhgyhkm3whrnptcbldx7nhgkpfzlq) allocation to 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC
+
+2024-03-06T16:17:42.217Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:42.217Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:42.219Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreidwgs5rdk4ghff3szz4amxeqxjunoozqwj2pcmrows4434wq5s3za
+
+2024-03-06T16:17:42.219Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreidwgs5rdk4ghff3szz4amxeqxjunoozqwj2pcmrows4434wq5s3za) allocation to 12D3KooWDJN1rRHCmoRABRF4cYUJQ3aSoBMCzRJXc3XxxCUqHJ1Q
+
+2024-03-06T16:17:42.219Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct QmdGHMhbVBfJ5xAhgAcH7f7Hd3vEq8K5196fWDjqfEXCQM recon_total_time_diff:12.154726958s, recon_getdata_time_diff:7.289630061s, recon_repin_time_diff:4.865096896999999s, recon_total_size_diff:805476686, recon_data_size_diff:536988970, recon_repin_size_diff:268487716, recon_total_rate_diff:6.626859564869545e+07, recon_data_rate_diff:7.366477660820214e+07, recon_repin_rate_diff:5.518650947436619e+07
+
+
+
+2024-03-06T16:17:42.987Z	INFO	cluster	ipfs-cluster/getter.go:196	use 737.422361ms fetch 0-batch-0-shard(data) bafyreid2i5pw673i3vpi55nq3uf6yk666yapidk7xax27msrnmletvoejq successfully, size:134235148
+
+2024-03-06T16:17:47.093Z	INFO	cluster	ipfs-cluster/getter.go:196	use 4.842679008s fetch 0-batch-1-shard(data) bafyreibiobgafnp26bsl7vob5ih53uklwnjxoli2fylx7awnerzu4ecjau successfully, size:134243858
+
+2024-03-06T16:17:47.102Z	INFO	cluster	ipfs-cluster/getter.go:196	use 4.852523995s fetch 0-batch-3-shard(data) bafyreieidam5gwb25yqzt2n42vovfrdao5npy5yd27ctlgmb3t3nikapwe successfully, size:134243858
+
+2024-03-06T16:17:49.223Z	INFO	cluster	ipfs-cluster/getter.go:196	use 6.972957764s fetch 0-batch-4-shard(parity) QmQWCWHp7HX6nM1ZsUNRUuxCrBHL7FFPLS2L7LEYVJRutq successfully, size:134243858
+
+2024-03-06T16:17:49.334Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 0 rs_recon_time_diff:110.649402ms, rs_recon_size_diff:536966722, rs_recon_rate_diff:4852858554.211127
+
+
+
+2024-03-06T16:17:49.334Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmaENfnMRrCTjo5Qi2PrGPqeWKPUUvPh7rfVQ3z7ZkaDXx": context canceled
+
+2024-03-06T16:17:49.334Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block QmaENfnMRrCTjo5Qi2PrGPqeWKPUUvPh7rfVQ3z7ZkaDXx, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmaENfnMRrCTjo5Qi2PrGPqeWKPUUvPh7rfVQ3z7ZkaDXx": context canceled
+
+2024-03-06T16:17:49.334Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreiceuvwmkq7mpgf7waevyktohifgwfl3xl4o3gcoot2odi3aoynzpu": context canceled
+
+2024-03-06T16:17:49.335Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 0batch shards fail:Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmaENfnMRrCTjo5Qi2PrGPqeWKPUUvPh7rfVQ3z7ZkaDXx": context canceled
+
+cannot resolve shard(bafyreiceuvwmkq7mpgf7waevyktohifgwfl3xl4o3gcoot2odi3aoynzpu): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreiceuvwmkq7mpgf7waevyktohifgwfl3xl4o3gcoot2odi3aoynzpu": context canceled
+
+2024-03-06T16:17:49.898Z	INFO	cluster	ipfs-cluster/getter.go:196	use 563.998699ms fetch 1-batch-0-shard(data) bafyreiatffmv656zihcl62syygti3b4ysfapog7qvkuyuok3xe2qtvfdri successfully, size:134243858
+
+2024-03-06T16:17:51.622Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:51.622Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:17:51.624Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiceuvwmkq7mpgf7waevyktohifgwfl3xl4o3gcoot2odi3aoynzpu
+
+2024-03-06T16:17:51.624Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreiceuvwmkq7mpgf7waevyktohifgwfl3xl4o3gcoot2odi3aoynzpu) allocation to 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC
+
+2024-03-06T16:17:54.721Z	INFO	cluster	ipfs-cluster/getter.go:196	use 5.387074795s fetch 1-batch-3-shard(data) bafyreiesso5p4pljimusybwmxsz4yfngol6mzqbukdtockh7pmqv675fpe successfully, size:134249875
+
+2024-03-06T16:17:54.733Z	INFO	cluster	ipfs-cluster/getter.go:196	use 5.398724968s fetch 1-batch-1-shard(data) bafyreicz7lwb4b6u6fbee43nathzliz6e554fm4xjzobczgufrgt3rl6um successfully, size:134243858
+
+2024-03-06T16:17:55.536Z	ERROR	singledags	single/dag_service.go:150	------- QmaENfnMRrCTjo5Qi2PrGPqeWKPUUvPh7rfVQ3z7ZkaDXx size: 134269792
+
+2024-03-06T16:17:58.659Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning QmaENfnMRrCTjo5Qi2PrGPqeWKPUUvPh7rfVQ3z7ZkaDXx on [12D3KooWDJN1rRHCmoRABRF4cYUJQ3aSoBMCzRJXc3XxxCUqHJ1Q]:
+
+2024-03-06T16:17:58.661Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmaENfnMRrCTjo5Qi2PrGPqeWKPUUvPh7rfVQ3z7ZkaDXx
+
+2024-03-06T16:17:58.661Z	INFO	adder	adder/adder.go:267	QmaENfnMRrCTjo5Qi2PrGPqeWKPUUvPh7rfVQ3z7ZkaDXx successfully added to cluster
+
+2024-03-06T16:17:58.661Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(QmaENfnMRrCTjo5Qi2PrGPqeWKPUUvPh7rfVQ3z7ZkaDXx) allocation to 12D3KooWDJN1rRHCmoRABRF4cYUJQ3aSoBMCzRJXc3XxxCUqHJ1Q
+
+2024-03-06T16:18:15.351Z	INFO	cluster	ipfs-cluster/getter.go:196	use 26.017317632s fetch 1-batch-4-shard(parity) Qme2xb8UvqsWmoCKTrAEwPYe3CyNFyHWCGoRia7wMGZqWE successfully, size:134249875
+
+2024-03-06T16:18:15.469Z	ERROR	erasure	erasure/reedsolomon.go:276	1111111111111111batch 1 rs_recon_time_diff:117.15673ms, rs_recon_size_diff:536981449, rs_recon_rate_diff:4583439699.268169
+
+
+
+2024-03-06T16:18:15.469Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmTPPZCEofNC7b836MMSHqmo3QKYDzgNY6w5KwbzYNZZJZ": context canceled
+
+2024-03-06T16:18:15.469Z	INFO	cluster	ipfs-cluster/getter.go:124	Failed to get block QmTPPZCEofNC7b836MMSHqmo3QKYDzgNY6w5KwbzYNZZJZ, err: Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmTPPZCEofNC7b836MMSHqmo3QKYDzgNY6w5KwbzYNZZJZ": context canceled
+
+2024-03-06T16:18:15.469Z	ERROR	ipfshttp	ipfshttp/ipfshttp.go:1287	error posting to IPFS:Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreiat6ohp3qfeohzh5illonwnvnpdl3qb7cwwmadwyg5akxfavijtky": context canceled
+
+2024-03-06T16:18:15.470Z	ERROR	cluster	ipfs-cluster/getter.go:238	directly get 1batch shards fail:Post "http://172.18.0.4:5001/api/v0/block/get?arg=QmTPPZCEofNC7b836MMSHqmo3QKYDzgNY6w5KwbzYNZZJZ": context canceled
+
+cannot resolve shard(bafyreiat6ohp3qfeohzh5illonwnvnpdl3qb7cwwmadwyg5akxfavijtky): Post "http://172.18.0.4:5001/api/v0/block/get?arg=bafyreiat6ohp3qfeohzh5illonwnvnpdl3qb7cwwmadwyg5akxfavijtky": context canceled
+
+2024-03-06T16:18:16.784Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:18:16.784Z	WARN	apitypes	api/types.go:1011	bad pin depth: 1
+
+2024-03-06T16:18:16.786Z	INFO	crdt	crdt/consensus.go:245	new pin added: bafyreiat6ohp3qfeohzh5illonwnvnpdl3qb7cwwmadwyg5akxfavijtky
+
+2024-03-06T16:18:16.786Z	INFO	cluster	ipfs-cluster/cluster.go:2596	repin data shard(bafyreiat6ohp3qfeohzh5illonwnvnpdl3qb7cwwmadwyg5akxfavijtky) allocation to 12D3KooWG19qyog4wY5CmNVoth32mKQT26ZqWDUnPFdbZcLckqNC
+
+2024-03-06T16:18:19.847Z	ERROR	singledags	single/dag_service.go:150	------- QmTPPZCEofNC7b836MMSHqmo3QKYDzgNY6w5KwbzYNZZJZ size: 134275809
+
+2024-03-06T16:18:24.122Z	INFO	cluster	ipfs-cluster/cluster.go:1593	pinning QmTPPZCEofNC7b836MMSHqmo3QKYDzgNY6w5KwbzYNZZJZ on [12D3KooWDJN1rRHCmoRABRF4cYUJQ3aSoBMCzRJXc3XxxCUqHJ1Q]:
+
+2024-03-06T16:18:24.124Z	INFO	crdt	crdt/consensus.go:245	new pin added: QmTPPZCEofNC7b836MMSHqmo3QKYDzgNY6w5KwbzYNZZJZ
+
+2024-03-06T16:18:24.124Z	INFO	adder	adder/adder.go:267	QmTPPZCEofNC7b836MMSHqmo3QKYDzgNY6w5KwbzYNZZJZ successfully added to cluster
+
+2024-03-06T16:18:24.124Z	INFO	cluster	ipfs-cluster/cluster.go:2522	repin parity shard(QmTPPZCEofNC7b836MMSHqmo3QKYDzgNY6w5KwbzYNZZJZ) allocation to 12D3KooWDJN1rRHCmoRABRF4cYUJQ3aSoBMCzRJXc3XxxCUqHJ1Q
+
+2024-03-06T16:18:24.124Z	ERROR	cluster	ipfs-cluster/cluster.go:2453	==================== ECReConstruct QmXx85ks5rMpzYndxPiYrAsrZYsaB42qmWiKtSPf9wqfxJ recon_total_time_diff:41.877932791s, recon_getdata_time_diff:23.895135382s, recon_repin_time_diff:17.982797409s, recon_total_size_diff:1610935637, recon_data_size_diff:1073954188, recon_repin_size_diff:536981449, recon_total_rate_diff:3.846741062983431e+07, recon_data_rate_diff:4.494446969356786e+07, recon_repin_rate_diff:2.986084071276099e+07
+
+
+
+2024-03-06T16:18:24.124Z	INFO	restapilog	common/api.go:110	172.18.0.1 - - [06/Mar/2024:16:17:08 +0000] "POST /ecrecovery HTTP/1.1" 200 9804
+
+
+

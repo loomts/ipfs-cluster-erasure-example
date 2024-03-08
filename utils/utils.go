@@ -4,6 +4,7 @@ package utils
 
 import (
 	"bytes"
+	"context"
 	"fmt"
 	"io"
 	"math/rand"
@@ -11,8 +12,13 @@ import (
 	"os/exec"
 	"path/filepath"
 
+	"github.com/cheggaaa/pb"
 	files "github.com/ipfs/boxo/files"
+	"github.com/ipfs/boxo/path"
+	"github.com/ipfs/go-cid"
 	logging "github.com/ipfs/go-log/v2"
+	ipfshttp "github.com/ipfs/kubo/client/rpc"
+	"github.com/multiformats/go-multiaddr"
 )
 
 var log = logging.Logger("cluster")
@@ -42,15 +48,9 @@ type fileHelper struct {
 type ECFile struct {
 	Mfr *files.MultiFileReader
 	io.Closer
-	name string
-	sz   uint64
-}
-
-func (f ECFile) Name() string {
-	return f.name
-}
-func (f ECFile) Size() uint64 {
-	return f.sz
+	Name string
+	Base string
+	Size uint64
 }
 
 // NewFileHelper returns a new helper.
@@ -71,7 +71,7 @@ func (sth *fileHelper) GetTreeMultiReader() ECFile {
 	if err != nil {
 		log.Error(err)
 	}
-	return ECFile{files.NewMultiFileReader(mapDir, true, false), sf, Tree, uint64(sz)}
+	return ECFile{files.NewMultiFileReader(mapDir, true, false), sf, Tree, SourceDir, uint64(sz)}
 }
 
 // GetTreeSerialFile returns a files.Directory pointing to the testing
@@ -94,9 +94,23 @@ func (sth *fileHelper) GetRandFileMultiReader() []ECFile {
 	for i := 0; i <= 20; i++ {
 		kbs := 1 << i
 		slf, sf := sth.GetRandFileReader(kbs, GetFileName(i))
-		fs[i] = ECFile{slf, sf, GetFileName(i), uint64(kbs * 1024)}
+		fs[i] = ECFile{slf, sf, GetFileName(i), SourceDir, uint64(kbs * 1024)}
 	}
 	return fs
+}
+
+func (sth *fileHelper) Get512MBRandFileMultiReader() []ECFile {
+	fs := make([]ECFile, 21)
+	for i := 0; i <= 20; i++ {
+		kbs := 1 << 19
+		slf, sf := sth.GetRandFileReader(kbs, GetFileName(i))
+		fs[i] = ECFile{slf, sf, GetFileName(i), SourceDir, uint64(kbs * 1024)}
+	}
+	return fs
+}
+
+func (sth *fileHelper) GetRandFilePath(kbs int, name string) {
+	sth.makeRandFile(kbs, name)
 }
 
 // GetRandFileReader creates and returns a directory containing a testing
@@ -119,10 +133,10 @@ func (sth *fileHelper) Clean() {
 	if err != nil {
 		log.Error(err)
 	}
-	err = os.RemoveAll(RetrieveDir)
-	if err != nil {
-		log.Error(err)
-	}
+	// err = os.RemoveAll(RetrieveDir)
+	// if err != nil {
+	// 	log.Error(err)
+	// }
 }
 
 func folderExists(path string) bool {
@@ -231,6 +245,7 @@ func (sth *fileHelper) path(p ...string) string {
 
 // Writes randomness to a writer up to the given size (in kBs)
 func (sth *fileHelper) randFile(w io.Writer, kbs int) {
+	sth.randSrc.Seed(rand.Int63())
 	buf := make([]byte, 1024)
 	for i := 0; i < kbs; i++ {
 		sth.randSrc.Read(buf) // read 1 kb
@@ -280,4 +295,83 @@ func Diff(path1, path2 string) error {
 		return fmt.Errorf("%s and %s verify failed, something error:%s", path1, path2, err)
 	}
 	return nil
+}
+
+func IPFSGet(ci cid.Cid) error {
+	mr, err := multiaddr.NewMultiaddr("/ip4/127.0.0.1/tcp/5001")
+	if err != nil {
+		return err
+	}
+	ipfs, err := ipfshttp.NewApi(mr)
+	if err != nil {
+		return err
+	}
+	err = ipfs.Request("version").Exec(context.Background(), nil)
+	if err != nil {
+		return err
+	}
+
+	out, err := ipfs.Unixfs().Get(context.Background(), path.FromCid(ci))
+	if err != nil {
+		return err
+	}
+	err = WriteTo(out, "/home/loomt/gopath/src/ipfs-cluster-erasure-example/retrieve/"+ci.String(), false)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+// WriteTo writes the given node to the local filesystem at fpath.
+func WriteTo(nd files.Node, fpath string, progress bool) error {
+	s, err := nd.Size()
+	if err != nil {
+		return err
+	}
+
+	var bar *pb.ProgressBar
+	if progress {
+		bar = pb.New64(s).Start()
+	}
+
+	return writeToRec(nd, fpath, bar)
+}
+
+func writeToRec(nd files.Node, fpath string, bar *pb.ProgressBar) error {
+	switch nd := nd.(type) {
+	case *files.Symlink:
+		return os.Symlink(nd.Target, fpath)
+	case files.File:
+		f, err := os.Create(fpath)
+		defer f.Close()
+		if err != nil {
+			return err
+		}
+
+		var r io.Reader = nd
+		if bar != nil {
+			r = bar.NewProxyReader(r)
+		}
+		_, err = io.Copy(f, r)
+		if err != nil {
+			return err
+		}
+		return nil
+	case files.Directory:
+		err := os.Mkdir(fpath, 0777)
+		if err != nil {
+			return err
+		}
+
+		entries := nd.Entries()
+		for entries.Next() {
+			child := filepath.Join(fpath, entries.Name())
+			if err := writeToRec(entries.Node(), child, bar); err != nil {
+				return err
+			}
+		}
+		return entries.Err()
+	default:
+		return fmt.Errorf("file type %T at %q is not supported", nd, fpath)
+	}
 }

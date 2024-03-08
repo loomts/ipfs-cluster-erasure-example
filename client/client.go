@@ -18,15 +18,21 @@ type Client struct {
 
 var log = logging.Logger("EClient")
 var defaultTimeout = 3 * time.Minute
-var ECAddParams api.AddParams
+var ECAddParams, DefaultAddParams api.AddParams
 
 func init() {
 	ECAddParams = api.DefaultAddParams()
 	ECAddParams.ReplicationFactorMin = 1
 	ECAddParams.ReplicationFactorMax = 1
 	ECAddParams.Erasure = true // automatically enable shard and raw-leaves
-	ECAddParams.DataShards = 6
-	ECAddParams.ParityShards = 4
+	ECAddParams.DataShards = 4
+	ECAddParams.ParityShards = 2
+
+	DefaultAddParams = api.DefaultAddParams()
+	DefaultAddParams.Shard = true
+	DefaultAddParams.RawLeaves = true
+	DefaultAddParams.ReplicationFactorMin = 3
+	DefaultAddParams.ReplicationFactorMax = 3
 }
 
 func NewClient() (Client, error) {
@@ -60,6 +66,30 @@ func (c *Client) AddMultiFile(ctx context.Context, multiFileR *files.MultiFileRe
 		}
 	}()
 	err := c.Client.AddMultiFile(ctx, multiFileR, params, out)
+	if err != nil {
+		return api.AddedOutput{}, err
+	}
+	wg.Wait()
+	return added, nil
+}
+
+func (c *Client) Add(ctx context.Context, path string, params api.AddParams) (api.AddedOutput, error) {
+	ctx, cancle := context.WithTimeout(ctx, defaultTimeout)
+	defer cancle()
+	out := make(chan api.AddedOutput, 100)
+	var added api.AddedOutput
+	var wg sync.WaitGroup
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		for v := range out {
+			if v.Name == params.Name {
+				// log.Infof("cluster pinned file, name: %s, cid: %s", v.Name, v.Cid)
+				added = v
+			}
+		}
+	}()
+	err := c.Client.Add(ctx, []string{path}, params, out)
 	if err != nil {
 		return api.AddedOutput{}, err
 	}

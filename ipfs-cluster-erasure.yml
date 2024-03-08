@@ -64,6 +64,7 @@ services:
       # - "9096:9096" # Cluster swarm endpoint
     volumes:
       - ./compose/cluster0:/data/ipfs-cluster
+      - ./cluster0.log:/var/log/cluster.log
 
   ##################################################################################
   ## Cluster PEER 1 ################################################################
@@ -190,98 +191,194 @@ services:
     volumes:
       - ./compose/cluster5:/data/ipfs-cluster
 
-  ##################################################################################
-  ## Cluster PEER 6 ################################################################
-  ##################################################################################
+  # ##################################################################################
+  # ## Cluster PEER 6 ################################################################
+  # ##################################################################################
 
-  ipfs6:
-    container_name: ipfs6
-    image: ipfs/kubo:release
-    volumes:
-      - ./compose/ipfs6:/data/ipfs
+  # ipfs6:
+  #   container_name: ipfs6
+  #   image: ipfs/kubo:release
+  #   volumes:
+  #     - ./compose/ipfs6:/data/ipfs
 
-  cluster6:
-    container_name: cluster6
-    image: ipfs-cluster-erasure
-    depends_on:
-      - ipfs6
-    environment:
-      CLUSTER_PEERNAME: cluster6
-      CLUSTER_SECRET: ${CLUSTER_SECRET}
-      CLUSTER_IPFSHTTP_NODEMULTIADDRESS: /dns4/ipfs6/tcp/5001
-      CLUSTER_CRDT_TRUSTEDPEERS: '*'
-      CLUSTER_MONITORPINGINTERVAL: 2s
-    volumes:
-      - ./compose/cluster6:/data/ipfs-cluster
+  # cluster6:
+  #   container_name: cluster6
+  #   image: ipfs-cluster-erasure
+  #   depends_on:
+  #     - ipfs6
+  #   environment:
+  #     CLUSTER_PEERNAME: cluster6
+  #     CLUSTER_SECRET: ${CLUSTER_SECRET}
+  #     CLUSTER_IPFSHTTP_NODEMULTIADDRESS: /dns4/ipfs6/tcp/5001
+  #     CLUSTER_CRDT_TRUSTEDPEERS: '*'
+  #     CLUSTER_MONITORPINGINTERVAL: 2s
+  #   volumes:
+  #     - ./compose/cluster6:/data/ipfs-cluster
 
-  ##################################################################################
-  ## Cluster PEER 7 ################################################################
-  ##################################################################################
+  # ##################################################################################
+  # ## Cluster PEER 7 ################################################################
+  # ##################################################################################
 
-  ipfs7:
-    container_name: ipfs7
-    image: ipfs/kubo:release
-    volumes:
-      - ./compose/ipfs7:/data/ipfs
+  # ipfs7:
+  #   container_name: ipfs7
+  #   image: ipfs/kubo:release
+  #   volumes:
+  #     - ./compose/ipfs7:/data/ipfs
 
-  cluster7:
-    container_name: cluster7
-    image: ipfs-cluster-erasure
-    depends_on:
-      - ipfs7
-    environment:
-      CLUSTER_PEERNAME: cluster7
-      CLUSTER_SECRET: ${CLUSTER_SECRET}
-      CLUSTER_IPFSHTTP_NODEMULTIADDRESS: /dns4/ipfs7/tcp/5001
-      CLUSTER_CRDT_TRUSTEDPEERS: '*'
-      CLUSTER_MONITORPINGINTERVAL: 2s
-    volumes:
-      - ./compose/cluster7:/data/ipfs-cluster
+  # cluster7:
+  #   container_name: cluster7
+  #   image: ipfs-cluster-erasure
+  #   depends_on:
+  #     - ipfs7
+  #   environment:
+  #     CLUSTER_PEERNAME: cluster7
+  #     CLUSTER_SECRET: ${CLUSTER_SECRET}
+  #     CLUSTER_IPFSHTTP_NODEMULTIADDRESS: /dns4/ipfs7/tcp/5001
+  #     CLUSTER_CRDT_TRUSTEDPEERS: '*'
+  #     CLUSTER_MONITORPINGINTERVAL: 2s
+  #   volumes:
+  #     - ./compose/cluster7:/data/ipfs-cluster
 
-  ##################################################################################
-  ## Cluster PEER 8 ################################################################
-  ##################################################################################
+  # ##################################################################################
+  # ## Cluster PEER 8 ################################################################
+  # ##################################################################################
 
-  ipfs8:
-    container_name: ipfs8
-    image: ipfs/kubo:release
-    volumes:
-      - ./compose/ipfs8:/data/ipfs
+  # ipfs8:
+  #   container_name: ipfs8
+  #   image: ipfs/kubo:release
+  #   volumes:
+  #     - ./compose/ipfs8:/data/ipfs
 
-  cluster8:
-    container_name: cluster8
-    image: ipfs-cluster-erasure
-    depends_on:
-      - ipfs8
-    environment:
-      CLUSTER_PEERNAME: cluster8
-      CLUSTER_SECRET: ${CLUSTER_SECRET}
-      CLUSTER_IPFSHTTP_NODEMULTIADDRESS: /dns4/ipfs8/tcp/5001
-      CLUSTER_CRDT_TRUSTEDPEERS: '*'
-      CLUSTER_MONITORPINGINTERVAL: 2s
-    volumes:
-      - ./compose/cluster8:/data/ipfs-cluster
+  # cluster8:
+  #   container_name: cluster8
+  #   image: ipfs-cluster-erasure
+  #   depends_on:
+  #     - ipfs8
+  #   environment:
+  #     CLUSTER_PEERNAME: cluster8
+  #     CLUSTER_SECRET: ${CLUSTER_SECRET}
+  #     CLUSTER_IPFSHTTP_NODEMULTIADDRESS: /dns4/ipfs8/tcp/5001
+  #     CLUSTER_CRDT_TRUSTEDPEERS: '*'
+  #     CLUSTER_MONITORPINGINTERVAL: 2s
+  #   volumes:
+  #     - ./compose/cluster8:/data/ipfs-cluster
 
-  ##################################################################################
-  ## Cluster PEER 9 ################################################################
-  ##################################################################################
+  # ##################################################################################
+  # ## Cluster PEER 9 ################################################################
+  # ##################################################################################
 
-  ipfs9:
-    container_name: ipfs9
-    image: ipfs/kubo:release
-    volumes:
-      - ./compose/ipfs9:/data/ipfs
+  # ipfs9:
+  #   container_name: ipfs9
+  #   image: ipfs/kubo:release
+  #   volumes:
+  #     - ./compose/ipfs9:/data/ipfs
 
-  cluster9:
-    container_name: cluster9
-    image: ipfs-cluster-erasure
-    depends_on:
-      - ipfs9
-    environment:
-      CLUSTER_PEERNAME: cluster9
-      CLUSTER_SECRET: ${CLUSTER_SECRET}
-      CLUSTER_IPFSHTTP_NODEMULTIADDRESS: /dns4/ipfs9/tcp/5001
-      CLUSTER_CRDT_TRUSTEDPEERS: '*'
-      CLUSTER_MONITORPINGINTERVAL: 2s
-    volumes:
-      - ./compose/cluster9:/data/ipfs-cluster
+  # cluster9:
+  #   container_name: cluster9
+  #   image: ipfs-cluster-erasure
+  #   depends_on:
+  #     - ipfs9
+  #   environment:
+  #     CLUSTER_PEERNAME: cluster9
+  #     CLUSTER_SECRET: ${CLUSTER_SECRET}
+  #     CLUSTER_IPFSHTTP_NODEMULTIADDRESS: /dns4/ipfs9/tcp/5001
+  #     CLUSTER_CRDT_TRUSTEDPEERS: '*'
+  #     CLUSTER_MONITORPINGINTERVAL: 2s
+  #   volumes:
+  #     - ./compose/cluster9:/data/ipfs-cluster
+
+  # ##################################################################################
+  # ## Cluster PEER 10 ###############################################################
+  # ##################################################################################
+
+  # ipfs10:
+  #   container_name: ipfs10
+  #   image: ipfs/kubo:release
+  #   volumes:
+  #     - ./compose/ipfs10:/data/ipfs
+
+  # cluster10:
+  #   container_name: cluster10
+  #   image: ipfs-cluster-erasure
+  #   depends_on:
+  #     - ipfs10
+  #   environment:
+  #     CLUSTER_PEERNAME: cluster10
+  #     CLUSTER_SECRET: ${CLUSTER_SECRET}
+  #     CLUSTER_IPFSHTTP_NODEMULTIADDRESS: /dns4/ipfs10/tcp/5001
+  #     CLUSTER_CRDT_TRUSTEDPEERS: '*'
+  #     CLUSTER_MONITORPINGINTERVAL: 2s
+  #   volumes:
+  #     - ./compose/cluster10:/data/ipfs-cluster
+
+  # ##################################################################################
+  # ## Cluster PEER 11 ###############################################################
+  # ##################################################################################
+
+  # ipfs11:
+  #   container_name: ipfs11
+  #   image: ipfs/kubo:release
+  #   volumes:
+  #     - ./compose/ipfs11:/data/ipfs
+
+  # cluster11:
+  #   container_name: cluster11
+  #   image: ipfs-cluster-erasure
+  #   depends_on:
+  #     - ipfs11
+  #   environment:
+  #     CLUSTER_PEERNAME: cluster11
+  #     CLUSTER_SECRET: ${CLUSTER_SECRET}
+  #     CLUSTER_IPFSHTTP_NODEMULTIADDRESS: /dns4/ipfs11/tcp/5001
+  #     CLUSTER_CRDT_TRUSTEDPEERS: '*'
+  #     CLUSTER_MONITORPINGINTERVAL: 2s
+  #   volumes:
+  #     - ./compose/cluster11:/data/ipfs-cluster
+
+  # ##################################################################################
+  # ## Cluster PEER 12 ###############################################################
+  # ##################################################################################
+
+  # ipfs12:
+  #   container_name: ipfs12
+  #   image: ipfs/kubo:release
+  #   volumes:
+  #     - ./compose/ipfs12:/data/ipfs
+
+  # cluster12:
+  #   container_name: cluster12
+  #   image: ipfs-cluster-erasure
+  #   depends_on:
+  #     - ipfs12
+  #   environment:
+  #     CLUSTER_PEERNAME: cluster12
+  #     CLUSTER_SECRET: ${CLUSTER_SECRET}
+  #     CLUSTER_IPFSHTTP_NODEMULTIADDRESS: /dns4/ipfs12/tcp/5001
+  #     CLUSTER_CRDT_TRUSTEDPEERS: '*'
+  #     CLUSTER_MONITORPINGINTERVAL: 2s
+  #   volumes:
+  #     - ./compose/cluster12:/data/ipfs-cluster
+
+  # ##################################################################################
+  # ## Cluster PEER 13 ###############################################################
+  # ##################################################################################
+
+  # ipfs13:
+  #   container_name: ipfs13
+  #   image: ipfs/kubo:release
+  #   volumes:
+  #     - ./compose/ipfs13:/data/ipfs
+
+  # cluster13:
+  #   container_name: cluster13
+  #   image: ipfs-cluster-erasure
+  #   depends_on:
+  #     - ipfs13
+  #   environment:
+  #     CLUSTER_PEERNAME: cluster13
+  #     CLUSTER_SECRET: ${CLUSTER_SECRET}
+  #     CLUSTER_IPFSHTTP_NODEMULTIADDRESS: /dns4/ipfs13/tcp/5001
+  #     CLUSTER_CRDT_TRUSTEDPEERS: '*'
+  #     CLUSTER_MONITORPINGINTERVAL: 2s
+  #   volumes:
+  #     - ./compose/cluster13:/data/ipfs-cluster
