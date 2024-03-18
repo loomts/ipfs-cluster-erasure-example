@@ -1,0 +1,187 @@
+#- name: create download folder for kubo
+#  become: yes
+#  file:
+#    state: directory
+#    owner: root
+#    group: root
+#    dest: /opt/kubo/{{ipfs_version}}
+#
+#- name: download and unpack IPFS
+#  when: not ansible_check_mode
+#  block:
+#    - name: download IPFS
+#      become: yes
+#      get_url:
+#        url: "{{ dist_url }}/kubo/{{ipfs_version}}/kubo_{{ipfs_version}}_linux-{{ipfs_arch}}.tar.gz"
+#        dest: /opt/kubo/{{ipfs_version}}/kubo.tar.gz
+#        timeout: 30
+#
+#    - name: unpack kubo
+#      become: yes
+#      unarchive:
+#        remote_src: yes
+#        src: /opt/kubo/{{ipfs_version}}/kubo.tar.gz
+#        dest: /opt/kubo/{{ipfs_version}}
+#        creates: /opt/kubo/{{ipfs_version}}/kubo
+#      notify: restart IPFS
+#
+#    - name: link kubo executable
+#      become: yes
+#      file:
+#        state: link
+#        owner: root
+#        group: root
+#        dest: /usr/local/bin/ipfs
+#        src: /opt/kubo/{{ipfs_version}}/kubo/ipfs
+
+- name: copy IPFS from local to remote
+  when: not ansible_check_mode
+  become: yes
+  copy:
+    src: "{{ipfs_executable_path}}"
+    dest: "/usr/local/bin/ipfs"
+
+- name: Set IPFS executable permissions for root
+  become: yes
+  file:
+    path: "/usr/local/bin/ipfs"
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: install ipfs systemd init service
+  become: yes
+  template:
+    src: etc/systemd/system/ipfs.service
+    dest: /etc/systemd/system/ipfs.service
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - reload systemd
+    - restart IPFS
+  when:
+    - not (ansible_distribution == "Amazon" and ansible_distribution_major_version == "NA")
+    - not (ansible_distribution == "Ubuntu" and ansible_distribution_version is version('15.04', '<'))
+    - not (ansible_distribution == "Debian" and ansible_distribution_version is version('8', '<'))
+  tags:
+    - init
+
+- name: install ipfs init service
+  become: yes
+  template:
+    src: etc/init.d/ipfs
+    dest: /etc/init.d/ipfs
+    owner: root
+    group: root
+    mode: 0744
+  notify:
+    - restart IPFS
+  when:
+    - (ansible_distribution == "Amazon" and ansible_distribution_major_version == "NA") or
+      (ansible_distribution == "Ubuntu" and ansible_distribution_version is version('15.04', '<')) or
+      (ansible_distribution == "Debian" and ansible_distribution_version is version('8', '<'))
+  tags:
+    - init
+
+
+- name: make ipfs group
+  become: yes
+  group:
+    state: present
+    name: ipfs
+
+- name: make ipfs user
+  become: yes
+  user:
+    state: present
+    name: ipfs
+    group: ipfs
+    shell: /bin/bash
+    home: "{{ ipfs_home }}"
+    comment: IPFS user
+    system: yes
+
+- name: copy default config
+  become: yes
+  template:
+    src: home/ipfs/ipfs_default_config
+    dest: "{{ ipfs_home }}/ipfs_default_config"
+    owner: ipfs
+    group: ipfs
+    mode: 0644
+  tags:
+    - config
+
+- name: init IPFS
+  become: yes
+  become_user: ipfs
+  command: ipfs init --empty-repo -- {{ ipfs_home }}/ipfs_default_config
+  args:
+    creates: "{{ ipfs_home }}/.ipfs/config"
+  notify: restart IPFS
+
+- name: set up ssh public key
+  become: yes
+  become_user: ipfs
+  authorized_key:
+    user: ipfs
+    state: present
+    key: "{{ lookup('file', '/home/loomt/.ssh/id_rsa.pub') }}"
+  tags:
+    - ssh
+
+# - name: download and unpack NOpfs
+#   when: not ansible_check_mode
+#   block:
+#     - name: create plugins folder
+#       become: yes
+#       file:
+#         state: directory
+#         owner: ipfs
+#         group: ipfs
+#         dest: "{{ ipfs_home }}/.ipfs/plugins"
+
+#     - name: download and unpack nopfs
+#       when: not ansible_check_mode
+#       become: yes
+#       unarchive:
+#         remote_src: yes
+#         src: "https://github.com/ipfs-shipyard/nopfs/releases/download/nopfs-kubo-plugin/{{nopfs_version}}/nopfs-kubo-plugin_{{nopfs_version}}_linux_{{ipfs_arch}}.tar.gz"
+#         dest: "{{ ipfs_home }}/.ipfs/plugins/"
+#         include:
+#           - nopfs-kubo-plugin/nopfs-kubo-plugin
+#         extra_opts:
+#           - "--strip-components=1"
+#         owner: ipfs
+#         group: ipfs
+#       notify: restart IPFS
+#   tags:
+#     - nopfs
+
+- name: set version file (to notify restart on upgrades)
+  become: yes
+  copy:
+    content: "{{ ipfs_version }}"
+    dest: "{{ ipfs_home }}/ipfs_deployed_version"
+    mode: 0644
+    owner: ipfs
+    group: ipfs
+  notify: restart IPFS
+
+- name: reload systemd
+  become: yes
+  systemd:
+    daemon_reload: yes
+    name: ipfs
+  when:
+    - not (ansible_distribution == "Amazon" and ansible_distribution_major_version == "NA")
+    - not (ansible_distribution == "Ubuntu" and ansible_distribution_version is version('15.04', '<'))
+    - not (ansible_distribution == "Debian" and ansible_distribution_version is version('8', '<'))
+
+- name: enable and start IPFS
+  become: yes
+  service:
+    name: ipfs
+    state: started
+    enabled: yes

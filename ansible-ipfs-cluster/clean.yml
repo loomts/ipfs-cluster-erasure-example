@@ -1,0 +1,31 @@
+- hosts: ipfs
+  become: yes
+  tasks:
+    - name: stop ipfs service
+      ansible.builtin.systemd:
+        name: ipfs
+        state: stopped
+      ignore_errors: true
+    - name: stop ipfs-cluster service
+      ansible.builtin.systemd:
+        name: ipfs-cluster
+        state: stopped
+      ignore_errors: true
+
+    - name: remove ~/.ipfs directory
+      ansible.builtin.file:
+        path: "/home/ipfs/.ipfs"
+        state: absent
+      ignore_errors: true
+
+    - name: remove ~/.ipfs-cluster directory
+      ansible.builtin.file:
+        path: "/home/ipfs/.ipfs-cluster"
+        state: absent
+      ignore_errors: true
+
+    - name: remove ~/ipfs_default_config
+      ansible.builtin.file:
+        path: "/home/ipfs/ipfs_default_config"
+        state: absent
+      ignore_errors: true
