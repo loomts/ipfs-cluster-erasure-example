@@ -5,7 +5,7 @@ Base on https://github.com/loomts/ipfs-cluster, provide some use cases and test 
 ## use ali cloud machines deployment
 
 Base on [ansible script](https://github.com/hsanjuan/ansible-ipfs-cluster) and make a little change to deploy
-IPFS Cluster(EC) and test it on remote server.
+IPFS Cluster(EC) and test it on cloud server.
 
 ### reference
 
