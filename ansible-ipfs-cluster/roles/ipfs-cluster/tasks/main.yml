@@ -164,11 +164,3 @@
     name: ipfs-cluster
     state: started
     enabled: yes
-
-- name: Add IPFS Cluster alias to .bashrc
-  become: yes
-  become_user: ipfs
-  lineinfile:
-    path: "~/.bashrc"
-    line: "alias dctl='ipfs-cluster-ctl' && alias dservice='ipfs-cluster-service'"
-    state: present

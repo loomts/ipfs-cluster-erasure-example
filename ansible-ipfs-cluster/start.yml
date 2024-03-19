@@ -5,9 +5,9 @@
       - ipfs
       - ipfs-cluster
   tasks:
-    - name: stop services
+    - name: start services
       ansible.builtin.systemd:
         name: "{{ item }}"
-        state: stopped
+        state: started
       ignore_errors: true
       with_items: "{{ services }}"

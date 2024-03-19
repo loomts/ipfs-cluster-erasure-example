@@ -107,6 +107,7 @@
   "Routing": {
     "AcceleratedDHTClient": {{ ipfs_accelerated_dht_client | default(False) | lower }},
     "Routers": null,
+    "Type": "dht",
     "Methods": null
   },
   "Ipns": {
@@ -115,12 +116,11 @@
     "ResolveCacheSize": 128
   },
   "Bootstrap": [
-    "/dnsaddr/bootstrap.libp2p.io/p2p/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb",
-    "/dnsaddr/bootstrap.libp2p.io/p2p/QmcZf59bWwK5XFi76CZX8cbJ4BhTzzA3gU1ZjYZcYW3dwt",
-    "/ip4/104.131.131.82/tcp/4001/p2p/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ",
-    "/ip4/104.131.131.82/udp/4001/quic/p2p/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ",
-    "/dnsaddr/bootstrap.libp2p.io/p2p/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN",
-    "/dnsaddr/bootstrap.libp2p.io/p2p/QmQCU2EcMqAqQPR2i9bChDtGNJchTbq5TbXJJ16u19uLTa"
+    {% for host in groups['ipfs'] %}
+    {% if hostvars[host]['ipfs_peer_addr'] is defined %}
+    "{{ hostvars[host]['ipfs_peer_addr'] }}"{% if not loop.last %},{% endif %}
+    {% endif %}
+    {% endfor %}
   ],
   "Gateway": {
     "HTTPHeaders": {

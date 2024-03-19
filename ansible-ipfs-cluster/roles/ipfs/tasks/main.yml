@@ -113,6 +113,14 @@
   tags:
     - config
 
+- name: Set environment variables
+  become: yes
+  become_user: ipfs
+  lineinfile:
+    path: "~/.bashrc"
+    line: "alias dctl='ipfs-cluster-ctl' && alias dservice='ipfs-cluster-service' && alias dfollow='ipfs-cluster-follow' && LIBP2P_FORCE_PNET=1"
+    state: present
+
 - name: init IPFS
   become: yes
   become_user: ipfs
@@ -120,6 +128,17 @@
   args:
     creates: "{{ ipfs_home }}/.ipfs/config"
   notify: restart IPFS
+
+- name: copy swarm key
+  become: yes
+  template:
+    src: home/ipfs/swarm.key
+    dest: "{{ ipfs_home }}/.ipfs/swarm.key"
+    owner: ipfs
+    group: ipfs
+    mode: 0644
+  tags:
+    - config
 
 - name: set up ssh public key
   become: yes
