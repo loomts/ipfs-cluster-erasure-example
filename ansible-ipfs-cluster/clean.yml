@@ -1,5 +1,6 @@
+- name: clean
 - hosts: ipfs
-  become: yes
+  become: true
   tasks:
     - name: stop ipfs service
       ansible.builtin.systemd:
@@ -24,8 +25,8 @@
         state: absent
       ignore_errors: true
 
-    - name: remove ~/ipfs_default_config
+    - name: remove ipfs-cluster-service
       ansible.builtin.file:
-        path: "/home/ipfs/ipfs_default_config"
+        path: "/usr/local/bin/ipfs-cluster-service"
         state: absent
       ignore_errors: true

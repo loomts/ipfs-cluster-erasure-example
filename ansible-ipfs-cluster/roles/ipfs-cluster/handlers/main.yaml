@@ -1,16 +1,15 @@
-- name: reload systemd
-  become: yes
-  systemd: daemon_reload=yes
-  notify: restart IPFS Cluster
+- name: Reload systemd
+  become: true
+  systemd: daemon_reload=true
+  notify: Restart IPFS Cluster
   when:
     - not (ansible_distribution == "Amazon" and ansible_distribution_major_version == "NA")
     - not (ansible_distribution == "Ubuntu" and ansible_distribution_version is version('15.04', '<'))
     - not (ansible_distribution == "Debian" and ansible_distribution_version is version('8', '<'))
 
-
-- name: restart IPFS Cluster
-  become: yes
+- name: Restart IPFS Cluster
+  become: true
   service:
     name: ipfs-cluster
-    enabled: yes
+    enabled: true
     state: restarted

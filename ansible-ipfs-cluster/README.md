@@ -1,3 +1,7 @@
+Default ansible script is download kubo and ipfs-cluster from https://dist.ipfs.io , see [ansible-ipfs-cluster](https://github.com/hsanjuan/ansible-ipfs-cluster), this version change it to send from local,set `Restart=no`, and use [ipgen.sh](host_vars/ipgen.sh) generate hosts' message.
+
+---
+
 # Ansible roles for `go-ipfs` and `ipfs-cluster`
 
 This repository contains Ansible roles to install and run
@@ -12,7 +16,7 @@ If you are familiar with Ansible, you can just re-use the modules in the way
 that fits you best. Otherwise follow these steps:
 
 0. Make sure you have ansible installed: `pip install ansible`.
-1. Fill in `inventory.yml` and place the hostnames of your nodes under the `[ipfs]` group.
+1. Fill in `inventory.ini` and place the hostnames of your nodes under the `[ipfs]` group.
 2. Edit the `group_vars/ipfs.yml` and `group_vars/ipfs_cluster.yml` file
    setting the right configuration values, including generating an
    [IPFS Cluster secret](https://cluster.ipfs.io/documentation/guides/security/#the-cluster-secret)

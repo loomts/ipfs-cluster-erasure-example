@@ -6,7 +6,7 @@ After=network.target
 LimitNOFILE={{ ipfs_cluster_fd_max }}
 Environment="IPFS_CLUSTER_FD_MAX={{ ipfs_cluster_fd_max}}"
 ExecStart=/usr/local/bin/ipfs-cluster-service daemon
-Restart=on-failure
+Restart=no
 User=ipfs
 
 [Install]

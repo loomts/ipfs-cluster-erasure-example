@@ -1,6 +1,4 @@
-- hosts: ipfs
+- name: IPFS
+  hosts: ipfs
   roles:
     - ipfs
-- hosts: ipfs_cluster
-  roles:
-    - ipfs-cluster
