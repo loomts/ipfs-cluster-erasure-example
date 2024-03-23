@@ -10,5 +10,5 @@
       ansible.builtin.systemd:
         name: "{{ item }}"
         state: stopped
-      failed_when: "'FAILED' in result.stderr"
+      ignore_errors: true
       with_items: "{{ services }}"

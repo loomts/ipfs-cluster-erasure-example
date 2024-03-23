@@ -1,0 +1,196 @@
+ipfs@cluster0:~/gopath/src/ipfs-cluster-erasure-example$ go run main.go
+get_diff
+add File0(bafkreibnbekro7bipochryt2bxtlz4w5um6dfqpz7jcpw2dsqppi5sn67a), size:1024, use 207.704296ms
+IPFS add replica use 207.742571ms
+stopping 120.27.139.150,39.100.112.145,47.93.135.126
+
+ecget File0
+IPFS get use 2.869451ms
+starting  120.27.139.150,39.100.112.145,47.93.135.126
+
+unpin File0
+add File1(bafkreid2svk2fdmonwgvw2lfdes2vfvxaslfsetnro4aw7rntmzhwjyyli), size:2048, use 368.589504ms
+IPFS add replica use 368.618657ms
+stopping 47.93.135.126,8.148.7.228
+
+ecget File1
+IPFS get use 1.482141ms
+starting  47.93.135.126,8.148.7.228
+
+unpin File1
+add File2(bafkreig4tumzqwvk2zhujbzijugxjwtxvvgk6bdjeu7cqapzkbilyqpzxm), size:4096, use 86.460743ms
+IPFS add replica use 86.485793ms
+stopping 120.27.139.150,47.120.36.142,47.122.25.179,8.148.6.18
+
+ecget File2
+IPFS get use 1.6335ms
+starting  120.27.139.150,47.120.36.142,47.122.25.179,8.148.6.18
+
+unpin File2
+add File3(bafkreibdms5zexfwxhzvxfzssl67xefdh4gbarc6ohfz35qfmqm5ak2ale), size:8192, use 162.034893ms
+IPFS add replica use 162.067754ms
+stopping 120.27.139.150,47.93.135.126
+
+ecget File3
+IPFS get use 1.598465ms
+starting  120.27.139.150,47.93.135.126
+
+unpin File3
+add File4(bafkreifiicjvq5vchgncd4oljw7ygefv7xw7tm2jqvduvossx243gs7nru), size:16384, use 388.686676ms
+IPFS add replica use 388.712737ms
+stopping 39.100.112.145,47.93.135.126
+
+ecget File4
+IPFS get use 1.558405ms
+starting  39.100.112.145,47.93.135.126
+
+unpin File4
+add File5(bafkreicaglr7w7vfnrqjjlpb3t53jvyaogqeebaxltfcy24dnvyuyhn7am), size:32768, use 325.728926ms
+IPFS add replica use 325.759218ms
+stopping 120.27.139.150,39.100.112.145,47.93.135.126
+
+ecget File5
+IPFS get use 1.675899ms
+starting  120.27.139.150,39.100.112.145,47.93.135.126
+
+unpin File5
+add File6(bafkreiajhf66voruq2izaljdas6gtb3b43x3lxw2yihwt4ry27a7ry37di), size:65536, use 404.944082ms
+IPFS add replica use 404.966641ms
+stopping 120.27.139.150,39.100.112.145,47.93.135.126
+
+ecget File6
+IPFS get use 1.828731ms
+starting  120.27.139.150,39.100.112.145,47.93.135.126
+
+unpin File6
+add File7(bafkreifqn244i5cyyj5bthnynru6jv6uftarbof75hlndkdh4xdpi7reji), size:131072, use 479.081302ms
+IPFS add replica use 479.109616ms
+stopping 120.27.139.150,47.93.135.126
+
+ecget File7
+IPFS get use 2.291142ms
+starting  120.27.139.150,47.93.135.126
+
+unpin File7
+add File8(bafkreibej54hebuzgapgahw2kqajmhu2ikerfu6ixuuxtdcl6zx5ri5bzu), size:262144, use 531.849093ms
+IPFS add replica use 531.881812ms
+stopping 39.100.112.145,47.93.135.126
+
+ecget File8
+IPFS get use 2.40902ms
+starting  39.100.112.145,47.93.135.126
+
+unpin File8
+add File9(QmaBpsRjrYubBBtH83NLn4kVHKSnVgszPC1WCYL91Qmpsa), size:524288, use 831.269615ms
+IPFS add replica use 831.299832ms
+stopping 47.93.135.126
+
+[WARNING]: Unable to parse /home/ipfs/gopath/src/ipfs-cluster-erasure-
+example/47.93.135.126  as an inventory source
+[WARNING]: No inventory was parsed, only implicit localhost is available
+[WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+ecget File9
+IPFS get use 3.630816ms
+starting  47.93.135.126
+
+[WARNING]: Unable to parse /home/ipfs/gopath/src/ipfs-cluster-erasure-
+example/47.93.135.126  as an inventory source
+[WARNING]: No inventory was parsed, only implicit localhost is available
+[WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+unpin File9
+add File10(QmTmrnkyjrT8iqR2vwty5jTzLvy7xefk86n6ZnAuJU7HhS), size:1048576, use 630.043432ms
+IPFS add replica use 630.069968ms
+stopping 47.93.135.126,8.148.7.228
+
+ecget File10
+IPFS get use 5.808963ms
+starting  47.93.135.126,8.148.7.228
+
+unpin File10
+add File11(QmTnwpuiAeB579JxPHdicZqzymxsfYCbHjYrx82v7FCpX2), size:2097152, use 1.531100905s
+IPFS add replica use 1.531136454s
+stopping 47.93.135.126,8.148.7.228
+
+ecget File11
+IPFS get use 7.530487ms
+starting  47.93.135.126,8.148.7.228
+
+unpin File11
+add File12(QmY2oW63skVY3ZNVUi8VPDSXw2isFJ5pc8YaCcrjeYfmJK), size:4194304, use 815.643331ms
+IPFS add replica use 815.69119ms
+stopping 47.122.25.179,8.148.7.228
+
+ecget File12
+IPFS get use 12.488119ms
+starting  47.122.25.179,8.148.7.228
+
+unpin File12
+add File13(QmYcsKwjkzC5o64BayR1u2Zq5CYSVjFrtDmg4fXQG1VJ6b), size:8388608, use 1.903244633s
+IPFS add replica use 1.903273024s
+stopping 47.122.25.179,8.148.7.228
+
+ecget File13
+IPFS get use 27.604842ms
+starting  47.122.25.179,8.148.7.228
+
+unpin File13
+add File14(QmPW7wX886mnBoPspan63rJhAUgDtzmM5U82QHpV2M3jhN), size:16777216, use 4.884269228s
+IPFS add replica use 4.884299355s
+stopping 47.122.25.179,8.148.7.228
+
+ecget File14
+IPFS get use 51.184317ms
+starting  47.122.25.179,8.148.7.228
+
+unpin File14
+add File15(QmSg38yFyFs2Lwoned9qjMpg6JNswLAmJPpPyV9hvZ3pF9), size:33554432, use 9.972770221s
+IPFS add replica use 9.972800787s
+stopping 47.122.25.179,8.148.7.228
+
+ecget File15
+IPFS get use 83.882168ms
+starting  47.122.25.179,8.148.7.228
+
+unpin File15
+add File16(QmPAE848bD3xkcZ44UecmwhK4puPs24uzvNUQJNoWTcnVT), size:67108864, use 20.355538957s
+IPFS add replica use 20.355578758s
+stopping 47.122.25.179,8.148.7.228
+
+ecget File16
+IPFS get use 157.039496ms
+starting  47.122.25.179,8.148.7.228
+
+unpin File16
+add File17(QmQRV5upVyT2fK2bam57HdF2ATyP7ecmM7tWmeZnpUnsSa), size:134217728, use 40.724543303s
+IPFS add replica use 40.724577344s
+stopping 47.108.76.166,47.93.135.126,8.138.81.105,8.148.6.90
+
+ecget File17
+IPFS get use 394.330931ms
+starting  47.108.76.166,47.93.135.126,8.138.81.105,8.148.6.90
+
+unpin File17
+add File18(QmQe3RoMnZXWsQx9Pmvc1Vh6yGrtnB1xGn2Zghx7PNNKjT), size:268435456, use 1m22.058142415s
+IPFS add replica use 1m22.058182814s
+stopping 118.31.116.162,120.27.139.150,39.100.112.145,47.115.219.46
+
+ecget File18
+IPFS get use 689.46288ms
+starting  118.31.116.162,120.27.139.150,39.100.112.145,47.115.219.46
+
+unpin File18
+add File19(QmeB2MAikyWBqKP323ErreCLbXEB36Xbg7nKg78gfuPKUA), size:536870912, use 2m58.030913509s
+IPFS add replica use 2m58.030942065s
+stopping 39.104.89.165,47.105.111.219,47.108.76.166,47.115.219.46
+
+ecget File19
+IPFS get use 1.329059891s
+starting  39.104.89.165,47.105.111.219,47.108.76.166,47.115.219.46
+
+unpin File19
+2024-03-22T02:39:42.513+0800    ERROR   apiclient       client/request.go:149   context deadline exceeded
+2024-03-22T02:39:42.513+0800    ERROR   apiclient       client/lbclient.go:97   could not cast error into api.Error
+IPFS add replica use 3m0.004086044s
+2024-03-22T02:39:42.513+0800    ERROR   cluster ipfs-cluster-erasure-example/main.go:101        context deadline exceeded

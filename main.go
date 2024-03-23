@@ -22,14 +22,14 @@ func main() {
 	// fmt.Println("get_same")
 	// TestGetFileLargeSameSize()
 
-	fmt.Println("ecget_diff")
-	TestECGetFileDiffSize()
+	// fmt.Println("ecget_diff")
+	// TestECGetFileDiffSize()
 	// fmt.Println("ecget_same")
 	// TestECGetFileLargeSameSize()
 
 	//fmt.Println("ecget_recovery")
 	//TestECRecovery()
-	// utils.Draw()
+	utils.Draw()
 }
 
 func AddFaultTolerantAndRetrieve(add func(f utils.ECFile) (api.Cid, error), c *client.Client, f utils.ECFile) error {

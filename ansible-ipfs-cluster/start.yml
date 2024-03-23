@@ -1,14 +1,12 @@
 - name: Start
   hosts: ipfs
   become: true
-  vars:
-    services:
-      - ipfs
-      - ipfs-cluster
   tasks:
     - name: Start services
       ansible.builtin.systemd:
         name: "{{ item }}"
         state: started
-      failed_when: "'FAILED' in result.stderr"
-      with_items: "{{ services }}"
+      ignore_errors: true
+      with_items:
+        - ipfs
+        - ipfs-cluster

@@ -20,6 +20,6 @@
 
     - name: Restart services
       ansible.builtin.systemd:
-        name: "ipfs-cluster-service"
+        name: "ipfs-cluster"
         state: restarted
-      failed_when: "'FAILED' in result.stderr"
+      ignore_errors: true
