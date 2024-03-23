@@ -133,10 +133,10 @@ func parseECTEST(logs *LogEntries, filename string) {
 	*logs = make([]LogEntry, 0)
 	file, err := os.Open(filename)
 	if err != nil {
-		panic(err)
+		fmt.Println("Error opening file:", err)
+		return
 	}
 	defer file.Close()
-
 	scanner := bufio.NewScanner(file)
 	var l LogEntry
 	for scanner.Scan() {
@@ -345,7 +345,7 @@ func DrawAddDiff() {
 
 func DrawAddSame() {
 	p := plot.New()
-	p.Title.Text = "add vs add --erasure (same size 512MB)"
+	p.Title.Text = "add vs add --erasure (same size 1GB)"
 	p.X.Label.Text = "Sequence"
 	p.Y.Label.Text = "Time (Second)"
 	p.Title.TextStyle.Font.Size = vg.Points(30)

@@ -11,3 +11,4 @@
         name: ipfs-cluster
         state: stopped
       ignore_errors: true
+      with_items: "{{ services }}"
