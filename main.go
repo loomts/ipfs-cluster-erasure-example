@@ -7,6 +7,8 @@ import (
 	"path"
 	"time"
 
+	"github.com/apenella/go-ansible/v2/pkg/adhoc"
+	"github.com/apenella/go-ansible/v2/pkg/execute"
 	"github.com/ipfs-cluster/ipfs-cluster/api"
 	logging "github.com/ipfs/go-log/v2"
 	"github.com/loomts/ipfs-cluster-erasure-example/client"
@@ -24,12 +26,12 @@ func main() {
 
 	// fmt.Println("ecget_diff")
 	// TestECGetFileDiffSize()
-	// fmt.Println("ecget_same")
-	// TestECGetFileLargeSameSize()
+	fmt.Println("ecget_same")
+	TestECGetFileLargeSameSize()
 
 	//fmt.Println("ecget_recovery")
 	//TestECRecovery()
-	utils.Draw()
+	// utils.Draw()
 }
 
 func AddFaultTolerantAndRetrieve(add func(f utils.ECFile) (api.Cid, error), c *client.Client, f utils.ECFile) error {
@@ -37,7 +39,8 @@ func AddFaultTolerantAndRetrieve(add func(f utils.ECFile) (api.Cid, error), c *c
 	if err != nil {
 		return err
 	}
-	nodes, err := checkStatusAndStop()
+
+	nodes, err := checkStatusAndStop(f.Name)
 	if err != nil {
 		return err
 	}
@@ -46,11 +49,18 @@ func AddFaultTolerantAndRetrieve(add func(f utils.ECFile) (api.Cid, error), c *c
 		if err != nil {
 			log.Error(err)
 		}
-		_, err = c.RepoGC(context.Background(), false)
+		fmt.Println("unpin", f.Name)
+		_, err = c.Unpin(context.Background(), ci)
+		if err != nil {
+			log.Error(err)
+		}
+		_, err := c.RepoGC(context.Background(), true)
 		if err != nil {
 			log.Error(err)
 		}
 	}()
+
+	fmt.Println("ecget", f.Name)
 	err = c.ECGet(context.Background(), ci, utils.RetrieveDir)
 	if err != nil {
 		return err
@@ -59,7 +69,7 @@ func AddFaultTolerantAndRetrieve(add func(f utils.ECFile) (api.Cid, error), c *c
 	if err != nil {
 		return err
 	}
-	return nil
+	return err
 }
 
 func TestGetFileDiffSize() {
@@ -142,7 +152,7 @@ func TestECRecovery() {
 			log.Error(err)
 		}
 	}
-	err = stopNodes([]string{})
+	_, err = checkStatusAndStop("")
 	if err != nil {
 		log.Error(err)
 	}
@@ -158,35 +168,67 @@ func TestECRecovery() {
 	}
 }
 
-func checkStatusAndStop() ([]string, error) {
-	cmd := exec.Command("bash", "-c", "dctl status --filter pinned --sort name")
-	output, err := cmd.Output()
+func checkStatusAndStop(name string) (string, error) {
+	cmd := fmt.Sprintf(`ipfs-cluster-ctl status --filter pinned --sort name | grep -A1 "%s" | grep -v "\[guangzhou-00\]" | grep ">" | awk '{print$2}' | awk -F']' '{print $2}' | sort -u | head -n 4 | xargs | tr ' ' ','`, name)
+	out, err := exec.Command("sh", "-c", cmd).Output()
 	if err != nil {
-		return nil, err
+		return "", err
 	}
-	nodes := []string{string(output)}
-	fmt.Printf("status output: %s\n", output)
-	err = stopNodes(nodes)
+	nodes := string(out)
+	fmt.Printf("stopping %s\n", out)
+
+	adhoc := &adhoc.AnsibleAdhocCmd{
+		Pattern: "all",
+		AdhocOptions: &adhoc.AnsibleAdhocOptions{
+			Args:       "systemctl stop ipfs; systemctl stop ipfs-cluster",
+			Connection: "ssh",
+			Inventory:  nodes,
+			ModuleName: "shell",
+			Become:     true,
+		},
+	}
+
+	e := execute.NewDefaultExecute(
+		execute.WithCmd(adhoc),
+		execute.WithWrite(NullWriter(0)),
+	)
+	err = e.Execute(context.TODO())
 	if err != nil {
-		return nil, err
+		panic(err)
 	}
+
+	time.Sleep(5 * time.Second)
 	return nodes, nil
 }
 
-func stopNodes(nodes []string) error {
-	cmd := exec.Command("bash", "-c", fmt.Sprintf("for node in %s; do ansible $node -m ansible.builtin.systemd -a \"name=ipfs state=stopped\" -b; ansible $node -m ansible.builtin.systemd -a \"name=ipfs-cluster state=stopped\" -b; done", nodes))
-	err := cmd.Run()
-	if err != nil {
-		return err
+func restartNodes(nodes string) error {
+	fmt.Println("starting ", nodes)
+
+	adhoc := &adhoc.AnsibleAdhocCmd{
+		Pattern: "all",
+		AdhocOptions: &adhoc.AnsibleAdhocOptions{
+			Args:       "systemctl start ipfs; systemctl start ipfs-cluster",
+			Connection: "ssh",
+			Inventory:  nodes,
+			ModuleName: "shell",
+			Become:     true,
+		},
 	}
+
+	e := execute.NewDefaultExecute(
+		execute.WithCmd(adhoc),
+		execute.WithWrite(NullWriter(0)),
+	)
+	err := e.Execute(context.TODO())
+	if err != nil {
+		panic(err)
+	}
+	time.Sleep(5 * time.Second)
 	return nil
 }
 
-func restartNodes(nodes []string) error {
-	cmd := exec.Command("bash", "-c", fmt.Sprintf("for node in %s; do ansible $node -m ansible.builtin.systemd -a \"name=ipfs state=started\" -b; ansible $node -m ansible.builtin.systemd -a \"name=ipfs-cluster state=started\" -b; done", nodes))
-	err := cmd.Run()
-	if err != nil {
-		return err
-	}
-	return nil
+type NullWriter int
+
+func (NullWriter) Write([]byte) (int, error) {
+	return 0, nil
 }
