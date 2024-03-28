@@ -1,0 +1,32 @@
+2024-03-21T21:23:58.056+0800        INFO        cluster        ipfs-cluster/getter.go:362        archiving file File20
+2024/03/21 21:24:22 http: superfluous response.WriteHeader call from github.com/gorilla/handlers.(*responseLogger).WriteHeader (handlers.go:61)
+2024-03-21T22:01:41.299+0800        INFO        cluster        ipfs-cluster/getter.go:362        archiving file File0
+2024/03/21 22:02:22 http: superfluous response.WriteHeader call from github.com/gorilla/handlers.(*responseLogger).WriteHeader (handlers.go:61)
+2024-03-21T22:07:30.040+0800        INFO        cluster        ipfs-cluster/getter.go:362        archiving file File1
+2024/03/21 22:08:11 http: superfluous response.WriteHeader call from github.com/gorilla/handlers.(*responseLogger).WriteHeader (handlers.go:61)
+2024-03-21T22:12:57.060+0800        INFO        cluster        ipfs-cluster/getter.go:362        archiving file File2
+2024/03/21 22:13:02 http: superfluous response.WriteHeader call from github.com/gorilla/handlers.(*responseLogger).WriteHeader (handlers.go:61)
+2024-03-21T22:17:47.050+0800        INFO        cluster        ipfs-cluster/getter.go:362        archiving file File3
+2024/03/21 22:17:51 http: superfluous response.WriteHeader call from github.com/gorilla/handlers.(*responseLogger).WriteHeader (handlers.go:61)
+2024-03-21T23:44:09.026+0800        INFO        cluster        ipfs-cluster/getter.go:362        archiving file File0
+2024/03/21 23:44:42 http: superfluous response.WriteHeader call from github.com/gorilla/handlers.(*responseLogger).WriteHeader (handlers.go:61)
+2024-03-21T23:49:39.134+0800        INFO        cluster        ipfs-cluster/getter.go:362        archiving file File1
+2024/03/21 23:50:15 http: superfluous response.WriteHeader call from github.com/gorilla/handlers.(*responseLogger).WriteHeader (handlers.go:61)
+2024-03-21T23:55:09.687+0800        INFO        cluster        ipfs-cluster/getter.go:362        archiving file File2
+2024/03/21 23:55:30 http: superfluous response.WriteHeader call from github.com/gorilla/handlers.(*responseLogger).WriteHeader (handlers.go:61)
+2024-03-22T00:00:27.118+0800        INFO        cluster        ipfs-cluster/getter.go:362        archiving file File3
+2024/03/22 00:00:56 http: superfluous response.WriteHeader call from github.com/gorilla/handlers.(*responseLogger).WriteHeader (handlers.go:61)
+2024-03-22T00:05:34.140+0800        INFO        cluster        ipfs-cluster/getter.go:362        archiving file File4
+2024/03/22 00:06:02 http: superfluous response.WriteHeader call from github.com/gorilla/handlers.(*responseLogger).WriteHeader (handlers.go:61)
+2024-03-22T00:10:55.927+0800        INFO        cluster        ipfs-cluster/getter.go:362        archiving file File5
+2024/03/22 00:11:31 http: superfluous response.WriteHeader call from github.com/gorilla/handlers.(*responseLogger).WriteHeader (handlers.go:61)
+2024-03-22T00:16:23.937+0800        INFO        cluster        ipfs-cluster/getter.go:362        archiving file File6
+2024/03/22 00:17:02 http: superfluous response.WriteHeader call from github.com/gorilla/handlers.(*responseLogger).WriteHeader (handlers.go:61)
+2024-03-22T00:21:48.257+0800        INFO        cluster        ipfs-cluster/getter.go:362        archiving file File7
+2024/03/22 00:22:16 http: superfluous response.WriteHeader call from github.com/gorilla/handlers.(*responseLogger).WriteHeader (handlers.go:61)
+2024-03-22T00:27:10.401+0800        INFO        cluster        ipfs-cluster/getter.go:362        archiving file File8
+2024/03/22 00:27:36 http: superfluous response.WriteHeader call from github.com/gorilla/handlers.(*responseLogger).WriteHeader (handlers.go:61)
+2024-03-22T00:32:36.427+0800        INFO        cluster        ipfs-cluster/getter.go:362        archiving file File9
+2024/03/22 00:33:05 http: superfluous response.WriteHeader call from github.com/gorilla/handlers.(*responseLogger).WriteHeader (handlers.go:61)
+2024-03-22T00:37:51.431+0800        INFO        cluster        ipfs-cluster/getter.go:362        archiving file File10
+2024/03/22 00:38:21 http: superfluous response.WriteHeader call from github.com/gorilla/handlers.(*responseLogger).WriteHeader (handlers.go:61)

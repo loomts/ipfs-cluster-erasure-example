@@ -1,0 +1,226 @@
+ADD File0 bafkreifwsdh2qffp22ha5ljs2h7hodo3zjdlm7bjb47j2236p2tmh5zq7q ShardSize:393216, DataShards:1, ParityShards:4, RSTime:12.851µs, OtherTime:347.513611ms, TotalDataSize:1132, TotalDataAndParitySize:5660, RSRate:8.808653023111042e+07, ToTalDataRate:3257.304545728481
+BatchRecon File0-0 rs_recon_time_diff:93.968µs, rs_recon_size_diff:1132, rs_recon_rate_diff:12026560.424967
+ECReConstruct File0 recon_total_time_diff:0.097300428s, recon_getdata_time_diff:0.021380392s, recon_repin_time_diff:0.075920036s, recon_total_size_diff:5660, recon_data_size_diff:4528, recon_repin_size_diff:1132, recon_total_rate_diff:58170.35049424449, recon_data_rate_diff:211782.8335420604, recon_repin_rate_diff:14910.424963444433
+Unpin File0 use 69.717057ms
+
+ADD File1 bafkreihxjov6earwwbtyqeicxzdchxodbjg75mrzuxtv5r7lbyw226dwz4 ShardSize:393216, DataShards:1, ParityShards:4, RSTime:14.3µs, OtherTime:584.82934ms, TotalDataSize:2156, TotalDataAndParitySize:10780, RSRate:1.5076923076923075e+08, ToTalDataRate:3686.4549739048316
+BatchRecon File1-0 rs_recon_time_diff:70.529µs, rs_recon_size_diff:2156, rs_recon_rate_diff:30544300.569518
+ECReConstruct File1 recon_total_time_diff:0.155819406s, recon_getdata_time_diff:0.077373199s, recon_repin_time_diff:0.07844620699999999s, recon_total_size_diff:10780, recon_data_size_diff:8624, recon_repin_size_diff:2156, recon_total_rate_diff:69182.65366766961, recon_data_rate_diff:111459.78338054757, recon_repin_rate_diff:27483.80173435282
+Unpin File1 use 87.157417ms
+
+ADD File2 bafkreib6rwr2x34b74atyqzo4imp74oi4ge4z6oac3w43vqg7clswexr7y ShardSize:393216, DataShards:1, ParityShards:4, RSTime:6.249µs, OtherTime:1.205975617s, TotalDataSize:4204, TotalDataAndParitySize:21020, RSRate:6.727476396223396e+08, ToTalDataRate:3485.9558607970393
+BatchRecon File2-0 rs_recon_time_diff:98.147µs, rs_recon_size_diff:4204, rs_recon_rate_diff:42749644.091926
+ECReConstruct File2 recon_total_time_diff:0.182420576s, recon_getdata_time_diff:0.108030983s, recon_repin_time_diff:0.074389593s, recon_total_size_diff:21020, recon_data_size_diff:16816, recon_repin_size_diff:4204, recon_total_rate_diff:115228.22951726674, recon_data_rate_diff:155659.04829358074, recon_repin_rate_diff:56513.28136719339
+Unpin File2 use 50.097781ms
+
+ADD File3 bafkreihy2znllst4ts3pm6pcvzbjjmjf7bbhdm53weyjp7yao2ws2aclgy ShardSize:393216, DataShards:1, ParityShards:4, RSTime:7.905µs, OtherTime:848.401178ms, TotalDataSize:8300, TotalDataAndParitySize:41500, RSRate:1.0499683744465529e+09, ToTalDataRate:9783.01591304897
+BatchRecon File3-0 rs_recon_time_diff:108.6µs, rs_recon_size_diff:8300, rs_recon_rate_diff:76357648.184436
+ECReConstruct File3 recon_total_time_diff:0.745955612s, recon_getdata_time_diff:0.492933543s, recon_repin_time_diff:0.25302206900000007s, recon_total_size_diff:41500, recon_data_size_diff:33200, recon_repin_size_diff:8300, recon_total_rate_diff:55633.33706778252, recon_data_rate_diff:67351.87830380617, recon_repin_rate_diff:32803.46268925656
+Unpin File3 use 75.917214ms
+
+ADD File4 bafkreiewjk6om2rplu6pdbn7bjxcvam7msxjoyq2cynfts5qe6noqi5twq ShardSize:393216, DataShards:1, ParityShards:4, RSTime:6.712µs, OtherTime:890.933169ms, TotalDataSize:16493, TotalDataAndParitySize:82465, RSRate:2.4572407628128724e+09, ToTalDataRate:18511.909310738818
+BatchRecon File4-0 rs_recon_time_diff:128.16µs, rs_recon_size_diff:16493, rs_recon_rate_diff:128623456.838263
+ECReConstruct File4 recon_total_time_diff:0.820338247s, recon_getdata_time_diff:0.749383558s, recon_repin_time_diff:0.07095468900000002s, recon_total_size_diff:82465, recon_data_size_diff:82465, recon_repin_size_diff:0, recon_total_rate_diff:100525.60672573395, recon_data_rate_diff:110043.78081110767, recon_repin_rate_diff:0
+Unpin File4 use 55.70058ms
+
+ADD File5 bafkreicy2gbzgx7jrel3oet56akeq7h6jwcqs46z5hqhnlhpxzvoiv636e ShardSize:393216, DataShards:1, ParityShards:4, RSTime:10.142µs, OtherTime:416.900335ms, TotalDataSize:32877, TotalDataAndParitySize:164385, RSRate:3.241668309998028e+09, ToTalDataRate:78858.62732739629
+BatchRecon File5-0 rs_recon_time_diff:293.042µs, rs_recon_size_diff:32877, rs_recon_rate_diff:112132415.637214
+ECReConstruct File5 recon_total_time_diff:0.255712637s, recon_getdata_time_diff:0.010655117s, recon_repin_time_diff:0.24505752000000003s, recon_total_size_diff:164385, recon_data_size_diff:131508, recon_repin_size_diff:32877, recon_total_rate_diff:642850.513484791, recon_data_rate_diff:1.2342238944912571e+07, recon_repin_rate_diff:134160.33917261547
+Unpin File5 use 79.814748ms
+
+ADD File6 bafkreieipceafekrcrlvnigpt6mtlq7hz5e6t5u3ykh5be6qzxsav4gdym ShardSize:393216, DataShards:1, ParityShards:4, RSTime:15.046µs, OtherTime:1.62564469s, TotalDataSize:65645, TotalDataAndParitySize:328225, RSRate:4.362953608932607e+09, ToTalDataRate:40380.52383798021
+BatchRecon File6-0 rs_recon_time_diff:324.715µs, rs_recon_size_diff:65645, rs_recon_rate_diff:202109612.406442
+ECReConstruct File6 recon_total_time_diff:0.962716169s, recon_getdata_time_diff:0.721830927s, recon_repin_time_diff:0.24088524200000005s, recon_total_size_diff:328225, recon_data_size_diff:262580, recon_repin_size_diff:65645, recon_total_rate_diff:340936.4157048867, recon_data_rate_diff:363769.39554433915, recon_repin_rate_diff:272515.65706129884
+Unpin File6 use 65.102822ms
+
+ADD File7 bafkreiabypo2pducto464dbhezt76xmebyetvc6tpzxnxl2mhoxmpufgpq ShardSize:393216, DataShards:1, ParityShards:4, RSTime:22.684µs, OtherTime:482.644908ms, TotalDataSize:131181, TotalDataAndParitySize:655905, RSRate:5.782974783988714e+09, ToTalDataRate:271783.26974738244
+BatchRecon File7-0 rs_recon_time_diff:686.545µs, rs_recon_size_diff:131181, rs_recon_rate_diff:191034634.411311
+ECReConstruct File7 recon_total_time_diff:0.203145933s, recon_getdata_time_diff:0.077161005s, recon_repin_time_diff:0.125984928s, recon_total_size_diff:655905, recon_data_size_diff:524724, recon_repin_size_diff:131181, recon_total_rate_diff:3.228738032377936e+06, recon_data_rate_diff:6.800377988855899e+06, recon_repin_rate_diff:1.0412436001868414e+06
+Unpin File7 use 54.242571ms
+
+ADD File8 bafkreidkldjmjxvjyeakazpkwifnqrtqhin5jlzemsxjktwff4q6m3o6uu ShardSize:393216, DataShards:1, ParityShards:4, RSTime:53.764µs, OtherTime:1.761132303s, TotalDataSize:262253, TotalDataAndParitySize:1311265, RSRate:4.877855070307268e+09, ToTalDataRate:148907.03140049294
+BatchRecon File8-0 rs_recon_time_diff:1.49169ms, rs_recon_size_diff:262253, rs_recon_rate_diff:175796117.715354
+ECReConstruct File8 recon_total_time_diff:0.277660961s, recon_getdata_time_diff:0.030799014s, recon_repin_time_diff:0.24686194699999997s, recon_total_size_diff:1311265, recon_data_size_diff:1049012, recon_repin_size_diff:262253, recon_total_rate_diff:4.722540018868552e+06, recon_data_rate_diff:3.405992152865673e+07, recon_repin_rate_diff:1.0623468022797375e+06
+Unpin File8 use 57.073915ms
+
+ADD File9 QmNW54pYNBehpRnpPKQGhrmx2eZXVotPz7mJzqbmYfwBbf ShardSize:393216, DataShards:2, ParityShards:4, RSTime:110.711µs, OtherTime:1.573018896s, TotalDataSize:524490, TotalDataAndParitySize:1573874, RSRate:4.737469628130899e+09, ToTalDataRate:333405.4284670243
+BatchRecon File9-0 rs_recon_time_diff:2.330817ms, rs_recon_size_diff:524490, rs_recon_rate_diff:222834397.109938
+ECReConstruct File9 recon_total_time_diff:0.410234409s, recon_getdata_time_diff:0.28342769s, recon_repin_time_diff:0.126806719s, recon_total_size_diff:1573874, recon_data_size_diff:1049384, recon_repin_size_diff:524490, recon_total_rate_diff:3.8365236203284934e+06, recon_data_rate_diff:3.7024752239274858e+06, recon_repin_rate_diff:4.136137297267347e+06
+Unpin File9 use 57.583411ms
+
+ADD File10 Qmf39fBnoiyMMfWULaxDoBogdbqmAgXXuh4BoSPAtLhHEG ShardSize:393216, DataShards:4, ParityShards:4, RSTime:817.555µs, OtherTime:2.451666182s, TotalDataSize:1048878, TotalDataAndParitySize:2098662, RSRate:1.2829448783262289e+09, ToTalDataRate:427679.8774033771
+BatchRecon File10-0 rs_recon_time_diff:904.161µs, rs_recon_size_diff:1048878, rs_recon_rate_diff:1159945059.320010
+ECReConstruct File10 recon_total_time_diff:0.373732236s, recon_getdata_time_diff:0.231164293s, recon_repin_time_diff:0.142567943s, recon_total_size_diff:2098662, recon_data_size_diff:1574374, recon_repin_size_diff:524288, recon_total_rate_diff:5.615416059534132e+06, recon_data_rate_diff:6.810627971855498e+06, recon_repin_rate_diff:3.6774606476576575e+06
+Unpin File10 use 74.042495ms
+
+ADD File11 QmZyBDgdvvfdxFa2J1DYJPvC6j7gPst8nqW9TB3psLmHZk ShardSize:393216, DataShards:8, ParityShards:4, RSTime:652.335µs, OtherTime:1.955789365s, TotalDataSize:2097656, TotalDataAndParitySize:3148248, RSRate:3.215611610598849e+09, ToTalDataRate:1.0721791017723964e+06
+BatchRecon File11-0 rs_recon_time_diff:2.211796ms, rs_recon_size_diff:2097656, rs_recon_rate_diff:948343427.146420
+ECReConstruct File11 recon_total_time_diff:1.285003241s, recon_getdata_time_diff:0.337552424s, recon_repin_time_diff:0.947450817s, recon_total_size_diff:3148248, recon_data_size_diff:2098664, recon_repin_size_diff:1049584, recon_total_rate_diff:2.449992264260756e+06, recon_data_rate_diff:6.2172979685075525e+06, recon_repin_rate_diff:1.1077978731639006e+06
+Unpin File11 use 128.587322ms
+
+ADD File12 QmXfFtf2rFVhhgorRutsNXghquBkZS5J9sSF86hjaeaK8g ShardSize:655360, DataShards:8, ParityShards:4, RSTime:724.852µs, OtherTime:2.914289269s, TotalDataSize:4195208, TotalDataAndParitySize:6295976, RSRate:5.7876752771600275e+09, ToTalDataRate:1.4391724154703177e+06
+BatchRecon File12-0 rs_recon_time_diff:2.420497ms, rs_recon_size_diff:4195208, rs_recon_rate_diff:1733117299.990829
+ECReConstruct File12 recon_total_time_diff:1.036510805s, recon_getdata_time_diff:0.312186608s, recon_repin_time_diff:0.7243241970000001s, recon_total_size_diff:6295976, recon_data_size_diff:4722208, recon_repin_size_diff:1573768, recon_total_rate_diff:6.074201995414799e+06, recon_data_rate_diff:1.5126235011336554e+07, recon_repin_rate_diff:2.1727397849170566e+06
+Unpin File12 use 120.412204ms
+
+ADD File13 QmSdNFH4srknLUK8RE3kVN9aMzHUbi2vyFrQhcfKj8AAMG ShardSize:1179648, DataShards:8, ParityShards:4, RSTime:2.571545ms, OtherTime:5.0870301s, TotalDataSize:8390313, TotalDataAndParitySize:12591437, RSRate:3.2627517698504205e+09, ToTalDataRate:1.648520502964003e+06
+BatchRecon File13-0 rs_recon_time_diff:5.622248ms, rs_recon_size_diff:8390313, rs_recon_rate_diff:1492299647.570746
+ECReConstruct File13 recon_total_time_diff:2.874185729s, recon_getdata_time_diff:1.921137781s, recon_repin_time_diff:0.953047948s, recon_total_size_diff:12591437, recon_data_size_diff:9445709, recon_repin_size_diff:3145728, recon_total_rate_diff:4.38087103173422e+06, recon_data_rate_diff:4.916726480223232e+06, recon_repin_rate_diff:3.300702767999664e+06
+Unpin File13 use 164.351208ms
+
+ADD File14 QmR3keDJgymnTiNtnmavQupdutpo5AC7y16n7WkB3LBjdk ShardSize:1966080, DataShards:10, ParityShards:4, RSTime:24.035301ms, OtherTime:5.315381982s, TotalDataSize:16780521, TotalDataAndParitySize:24120553, RSRate:6.981614667525903e+08, ToTalDataRate:3.142762507118663e+06
+BatchRecon File14-0 rs_recon_time_diff:6.020086ms, rs_recon_size_diff:16780521, rs_recon_rate_diff:2787340650.622847
+ECReConstruct File14 recon_total_time_diff:1.454437813s, recon_getdata_time_diff:1.148351973s, recon_repin_time_diff:0.30608583999999994s, recon_total_size_diff:24120553, recon_data_size_diff:16780521, recon_repin_size_diff:7340032, recon_total_rate_diff:1.6584107470533703e+07, recon_data_rate_diff:1.4612698366478968e+07, recon_repin_rate_diff:2.3980305655433133e+07
+Unpin File14 use 213.230706ms
+
+ADD File15 QmZTJXotnH42nU3Gg14W9rxJv3rg1MPhQEteNyA8phdbAq ShardSize:3538944, DataShards:10, ParityShards:4, RSTime:42.948011ms, OtherTime:6.872801937s, TotalDataSize:33560937, TotalDataAndParitySize:47192425, RSRate:7.814316942407414e+08, ToTalDataRate:4.85282672486912e+06
+BatchRecon File15-0 rs_recon_time_diff:9.517885ms, rs_recon_size_diff:33560937, rs_recon_rate_diff:3526022602.056383
+ECReConstruct File15 recon_total_time_diff:4.178872765s, recon_getdata_time_diff:2.757986809s, recon_repin_time_diff:1.4208859560000002s, recon_total_size_diff:47192425, recon_data_size_diff:33560937, recon_repin_size_diff:13631488, recon_total_rate_diff:1.129309927673761e+07, recon_data_rate_diff:1.2168635792775469e+07, recon_repin_rate_diff:9.593653834382748e+06
+Unpin File15 use 151.643768ms
+
+ADD File16 QmXrjnwNx5ihQzBjCLEGE76qExgQpCHaXUK5xXAYquAYpU ShardSize:6946816, DataShards:10, ParityShards:4, RSTime:95.91458ms, OtherTime:9.08191883s, TotalDataSize:67121888, TotalDataAndParitySize:94419704, RSRate:6.998090175654212e+08, ToTalDataRate:7.313478471229004e+06
+BatchRecon File16-0 rs_recon_time_diff:37.298371ms, rs_recon_size_diff:67121888, rs_recon_rate_diff:1799585345.588686
+ECReConstruct File16 recon_total_time_diff:11.36432801s, recon_getdata_time_diff:7.452136772s, recon_repin_time_diff:3.9121912379999992s, recon_total_size_diff:94419704, recon_data_size_diff:67148018, recon_repin_size_diff:27271686, recon_total_rate_diff:8.308428260510935e+06, recon_data_rate_diff:9.01057241089509e+06, recon_repin_rate_diff:6.970949102667564e+06
+Unpin File16 use 139.597941ms
+
+ADD File17 QmeTdEKQ9xjQcLAMAF6KTB9s4MG2uUPMoS21wvHFqo8Woj ShardSize:13762560, DataShards:10, ParityShards:4, RSTime:208.808697ms, OtherTime:15.87718026s, TotalDataSize:134243612, TotalDataAndParitySize:188804404, RSRate:6.429023978824024e+08, ToTalDataRate:8.3453750963027505e+06
+BatchRecon File17-0 rs_recon_time_diff:148.849701ms, rs_recon_size_diff:134243612, rs_recon_rate_diff:901872611.771351
+ECReConstruct File17 recon_total_time_diff:20.156378931s, recon_getdata_time_diff:16.579260598s, recon_repin_time_diff:3.577118332999998s, recon_total_size_diff:188804404, recon_data_size_diff:134269742, recon_repin_size_diff:54534662, recon_total_rate_diff:9.366980281841379e+06, recon_data_rate_diff:8.098656825274663e+06, recon_repin_rate_diff:1.5245417378816145e+07
+Unpin File17 use 134.984732ms
+
+ADD File18 QmSehNRqYmGpCkvmGPXoGUtAZZ62hvnKsVmA66mQw2Dbkx ShardSize:27131904, DataShards:10, ParityShards:4, RSTime:255.190856ms, OtherTime:39.981291213s, TotalDataSize:268487122, TotalDataAndParitySize:376525290, RSRate:1.0521032226954087e+09, ToTalDataRate:6.672728511539257e+06
+BatchRecon File18-0 rs_recon_time_diff:242.6552ms, rs_recon_size_diff:268487122, rs_recon_rate_diff:1106453831.114894
+ECReConstruct File18 recon_total_time_diff:42.000163948s, recon_getdata_time_diff:30.503785872999998s, recon_repin_time_diff:11.496378075000003s, recon_total_size_diff:376525290, recon_data_size_diff:268504542, recon_repin_size_diff:108020748, recon_total_rate_diff:8.964852862626258e+06, recon_data_rate_diff:8.802334999265224e+06, recon_repin_rate_diff:9.396067813296925e+06
+Unpin File18 use 153.039866ms
+
+ADD File19 QmfQLHXkyfZNmGvu8tgBkXZJXz9tfqwn6AskCVpGEG1cEw ShardSize:53870592, DataShards:10, ParityShards:4, RSTime:459.05672ms, OtherTime:1m10.501998462s, TotalDataSize:536974138, TotalDataAndParitySize:752001898, RSRate:1.1697337488055942e+09, ToTalDataRate:7.567166742653362e+06
+BatchRecon File19-0 rs_recon_time_diff:12m10.084510446s, rs_recon_size_diff:536974138, rs_recon_rate_diff:735495.864157
+ADD File20 QmP39m2Ex3Cy199kTRU8688KcjqzpFdMxjNzm2WQdz3UQG ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:1.932320454s, OtherTime:2m11.554339042s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:5.557816089856491e+08, ToTalDataRate:8.045359546632232e+06
+ADD File0 bafkreifwsdh2qffp22ha5ljs2h7hodo3zjdlm7bjb47j2236p2tmh5zq7q ShardSize:393216, DataShards:1, ParityShards:4, RSTime:5.076µs, OtherTime:347.712084ms, TotalDataSize:1132, TotalDataAndParitySize:5660, RSRate:2.2301024428684002e+08, ToTalDataRate:3255.5183350878906
+BatchRecon File0-0 rs_recon_time_diff:54.468µs, rs_recon_size_diff:1132, rs_recon_rate_diff:20755408.874221
+ECReConstruct File0 recon_total_time_diff:0.087837154s, recon_getdata_time_diff:0.013506147s, recon_repin_time_diff:0.074331007s, recon_total_size_diff:5660, recon_data_size_diff:4528, recon_repin_size_diff:1132, recon_total_rate_diff:64437.42473714483, recon_data_rate_diff:335254.7547424147, recon_repin_rate_diff:15229.176163320375
+Unpin File0 use 56.186064ms
+
+ADD File1 bafkreihxjov6earwwbtyqeicxzdchxodbjg75mrzuxtv5r7lbyw226dwz4 ShardSize:393216, DataShards:1, ParityShards:4, RSTime:13.126µs, OtherTime:1.933148005s, TotalDataSize:2156, TotalDataAndParitySize:10780, RSRate:1.642541520646046e+08, ToTalDataRate:1115.271708548486
+BatchRecon File1-0 rs_recon_time_diff:80.858µs, rs_recon_size_diff:2156, rs_recon_rate_diff:26613012.726353
+ECReConstruct File1 recon_total_time_diff:0.326303686s, recon_getdata_time_diff:0.078623735s, recon_repin_time_diff:0.24767995099999998s, recon_total_size_diff:10780, recon_data_size_diff:8624, recon_repin_size_diff:2156, recon_total_rate_diff:33036.70924514166, recon_data_rate_diff:109686.97938351567, recon_repin_rate_diff:8704.782083875654
+Unpin File1 use 64.938615ms
+
+Unpin File1-parity-shard-1 use 7.773735ms
+
+ADD File0 bafkreifwsdh2qffp22ha5ljs2h7hodo3zjdlm7bjb47j2236p2tmh5zq7q ShardSize:393216, DataShards:1, ParityShards:4, RSTime:5.643µs, OtherTime:390.615217ms, TotalDataSize:1132, TotalDataAndParitySize:5660, RSRate:2.0060251639199007e+08, ToTalDataRate:2897.9503723745906
+BatchRecon File0-0 rs_recon_time_diff:80.309µs, rs_recon_size_diff:1132, rs_recon_rate_diff:14059666.641826
+ECReConstruct File0 recon_total_time_diff:0.089779796s, recon_getdata_time_diff:0.020864483s, recon_repin_time_diff:0.06891531299999999s, recon_total_size_diff:5660, recon_data_size_diff:4528, recon_repin_size_diff:1132, recon_total_rate_diff:63043.137233236754, recon_data_rate_diff:217019.51589215032, recon_repin_rate_diff:16425.957464634892
+Unpin File0 use 62.514551ms
+
+ADD File1 bafkreihxjov6earwwbtyqeicxzdchxodbjg75mrzuxtv5r7lbyw226dwz4 ShardSize:393216, DataShards:1, ParityShards:4, RSTime:4.09µs, OtherTime:910.471384ms, TotalDataSize:2156, TotalDataAndParitySize:10780, RSRate:5.271393643031785e+08, ToTalDataRate:2367.9932871651818
+BatchRecon File1-0 rs_recon_time_diff:52.673µs, rs_recon_size_diff:2156, rs_recon_rate_diff:40866614.856796
+ECReConstruct File1 recon_total_time_diff:0.247543371s, recon_getdata_time_diff:0.161839034s, recon_repin_time_diff:0.08570433700000002s, recon_total_size_diff:10780, recon_data_size_diff:10780, recon_repin_size_diff:0, recon_total_rate_diff:43547.924375644056, recon_data_rate_diff:66609.39412181613, recon_repin_rate_diff:0
+Unpin File1 use 53.421076ms
+
+Unpin File1-parity-shard-3 use 7.537787ms
+
+ADD File0 bafkreifwsdh2qffp22ha5ljs2h7hodo3zjdlm7bjb47j2236p2tmh5zq7q ShardSize:393216, DataShards:1, ParityShards:4, RSTime:5.114µs, OtherTime:361.473662ms, TotalDataSize:1132, TotalDataAndParitySize:5660, RSRate:2.21353148220571e+08, ToTalDataRate:3131.5779909179923
+BatchRecon File0-0 rs_recon_time_diff:68.089µs, rs_recon_size_diff:1132, rs_recon_rate_diff:16594347.367187
+ECReConstruct File0 recon_total_time_diff:0.095181985s, recon_getdata_time_diff:0.012664812s, recon_repin_time_diff:0.082517173s, recon_total_size_diff:5660, recon_data_size_diff:4528, recon_repin_size_diff:1132, recon_total_rate_diff:59465.034270928474, recon_data_rate_diff:357526.03354870173, recon_repin_rate_diff:13718.356541371091
+Unpin File0 use 53.845683ms
+
+ADD File1 bafkreihxjov6earwwbtyqeicxzdchxodbjg75mrzuxtv5r7lbyw226dwz4 ShardSize:393216, DataShards:1, ParityShards:4, RSTime:6.101µs, OtherTime:620.193342ms, TotalDataSize:2156, TotalDataAndParitySize:10780, RSRate:3.533846910342567e+08, ToTalDataRate:3476.30073172567
+BatchRecon File1-0 rs_recon_time_diff:248.113µs, rs_recon_size_diff:2156, rs_recon_rate_diff:8683359.445167
+ECReConstruct File1 recon_total_time_diff:0.136659477s, recon_getdata_time_diff:0.039314635s, recon_repin_time_diff:0.097344842s, recon_total_size_diff:10780, recon_data_size_diff:8624, recon_repin_size_diff:2156, recon_total_rate_diff:78882.19856131895, recon_data_rate_diff:219358.51623701962, recon_repin_rate_diff:22148.066150233208
+Unpin File1 use 68.3823ms
+
+ADD File2 bafkreib6rwr2x34b74atyqzo4imp74oi4ge4z6oac3w43vqg7clswexr7y ShardSize:393216, DataShards:1, ParityShards:4, RSTime:5.609µs, OtherTime:1.125186927s, TotalDataSize:4204, TotalDataAndParitySize:21020, RSRate:7.495097165270102e+08, ToTalDataRate:3736.2490437859774
+BatchRecon File2-0 rs_recon_time_diff:60.01µs, rs_recon_size_diff:4204, rs_recon_rate_diff:69983852.441278
+ECReConstruct File2 recon_total_time_diff:0.087909641s, recon_getdata_time_diff:0.001800021s, recon_repin_time_diff:0.08610962s, recon_total_size_diff:21020, recon_data_size_diff:16816, recon_repin_size_diff:4204, recon_total_rate_diff:239109.15527456198, recon_data_rate_diff:9.342113230901195e+06, recon_repin_rate_diff:48821.49056052042
+Unpin File2 use 49.619081ms
+
+ADD File3 bafkreihy2znllst4ts3pm6pcvzbjjmjf7bbhdm53weyjp7yao2ws2aclgy ShardSize:393216, DataShards:1, ParityShards:4, RSTime:5.468µs, OtherTime:439.939729ms, TotalDataSize:8300, TotalDataAndParitySize:41500, RSRate:1.5179224579370885e+09, ToTalDataRate:18865.981619537826
+BatchRecon File3-0 rs_recon_time_diff:96.471µs, rs_recon_size_diff:8300, rs_recon_rate_diff:85945347.043169
+ECReConstruct File3 recon_total_time_diff:0.262606439s, recon_getdata_time_diff:0.01261826s, recon_repin_time_diff:0.24998817900000003s, recon_total_size_diff:41500, recon_data_size_diff:33200, recon_repin_size_diff:8300, recon_total_rate_diff:158031.15931974538, recon_data_rate_diff:2.6311076170565514e+06, recon_repin_rate_diff:33201.56990303129
+Unpin File3 use 49.305897ms
+
+ADD File4 bafkreiewjk6om2rplu6pdbn7bjxcvam7msxjoyq2cynfts5qe6noqi5twq ShardSize:393216, DataShards:1, ParityShards:4, RSTime:15.512µs, OtherTime:410.466283ms, TotalDataSize:16493, TotalDataAndParitySize:82465, RSRate:1.0632413615265601e+09, ToTalDataRate:40179.60852636873
+BatchRecon File4-0 rs_recon_time_diff:126.184µs, rs_recon_size_diff:16493, rs_recon_rate_diff:130599349.101649
+ECReConstruct File4 recon_total_time_diff:0.258766311s, recon_getdata_time_diff:0.013455678s, recon_repin_time_diff:0.24531063300000003s, recon_total_size_diff:82465, recon_data_size_diff:65972, recon_repin_size_diff:16493, recon_total_rate_diff:318685.2248320686, recon_data_rate_diff:4.902911618426065e+06, recon_repin_rate_diff:67233.12315614137
+Unpin File4 use 51.888171ms
+
+ADD File5 bafkreicy2gbzgx7jrel3oet56akeq7h6jwcqs46z5hqhnlhpxzvoiv636e ShardSize:393216, DataShards:1, ParityShards:4, RSTime:23.112µs, OtherTime:473.272834ms, TotalDataSize:32877, TotalDataAndParitySize:164385, RSRate:1.4225077881619937e+09, ToTalDataRate:69463.91208418085
+BatchRecon File5-0 rs_recon_time_diff:314µs, rs_recon_size_diff:32877, rs_recon_rate_diff:104673153.088904
+ECReConstruct File5 recon_total_time_diff:0.079448307s, recon_getdata_time_diff:0.003037537s, recon_repin_time_diff:0.07641076999999999s, recon_total_size_diff:164385, recon_data_size_diff:131508, recon_repin_size_diff:32877, recon_total_rate_diff:2.0690812203210322e+06, recon_data_rate_diff:4.3294287444070645e+07, recon_repin_rate_diff:430266.57106059795
+Unpin File5 use 51.553799ms
+
+ADD File6 bafkreieipceafekrcrlvnigpt6mtlq7hz5e6t5u3ykh5be6qzxsav4gdym ShardSize:393216, DataShards:1, ParityShards:4, RSTime:14.685µs, OtherTime:1.224783062s, TotalDataSize:65645, TotalDataAndParitySize:328225, RSRate:4.470207694926796e+09, ToTalDataRate:53596.60125389202
+BatchRecon File6-0 rs_recon_time_diff:471.976µs, rs_recon_size_diff:65645, rs_recon_rate_diff:139068961.426344
+ECReConstruct File6 recon_total_time_diff:0.459609783s, recon_getdata_time_diff:0.21256644s, recon_repin_time_diff:0.247043343s, recon_total_size_diff:328225, recon_data_size_diff:328225, recon_repin_size_diff:0, recon_total_rate_diff:714138.4107570226, recon_data_rate_diff:1.544105457098496e+06, recon_repin_rate_diff:0
+Unpin File6 use 53.908553ms
+
+ADD File7 bafkreiabypo2pducto464dbhezt76xmebyetvc6tpzxnxl2mhoxmpufgpq ShardSize:393216, DataShards:1, ParityShards:4, RSTime:27.507µs, OtherTime:730.920124ms, TotalDataSize:131181, TotalDataAndParitySize:655905, RSRate:4.769004253462755e+09, ToTalDataRate:179466.99210386688
+BatchRecon File7-0 rs_recon_time_diff:731.599µs, rs_recon_size_diff:131181, rs_recon_rate_diff:179266322.840908
+ECReConstruct File7 recon_total_time_diff:0.28056757s, recon_getdata_time_diff:0.202783522s, recon_repin_time_diff:0.077784048s, recon_total_size_diff:655905, recon_data_size_diff:655905, recon_repin_size_diff:0, recon_total_rate_diff:2.3377790954243215e+06, recon_data_rate_diff:3.234508373910184e+06, recon_repin_rate_diff:0
+Unpin File7 use 52.160177ms
+
+ADD File8 bafkreidkldjmjxvjyeakazpkwifnqrtqhin5jlzemsxjktwff4q6m3o6uu ShardSize:393216, DataShards:1, ParityShards:4, RSTime:39.442µs, OtherTime:1.881088578s, TotalDataSize:262253, TotalDataAndParitySize:1311265, RSRate:6.649079661274783e+09, ToTalDataRate:139412.6207919924
+BatchRecon File8-0 rs_recon_time_diff:2.890025ms, rs_recon_size_diff:262253, rs_recon_rate_diff:90739864.844993
+ECReConstruct File8 recon_total_time_diff:0.276695462s, recon_getdata_time_diff:0.033351797s, recon_repin_time_diff:0.243343665s, recon_total_size_diff:1311265, recon_data_size_diff:1049012, recon_repin_size_diff:262253, recon_total_rate_diff:4.739018813398537e+06, recon_data_rate_diff:3.1452937903166056e+07, recon_repin_rate_diff:1.0777062965662165e+06
+Unpin File8 use 51.83438ms
+
+ADD File9 QmNW54pYNBehpRnpPKQGhrmx2eZXVotPz7mJzqbmYfwBbf ShardSize:393216, DataShards:2, ParityShards:4, RSTime:91.117µs, OtherTime:1.365283043s, TotalDataSize:524490, TotalDataAndParitySize:1573874, RSRate:5.756225512253476e+09, ToTalDataRate:384136.4435069738
+BatchRecon File9-0 rs_recon_time_diff:1.416615ms, rs_recon_size_diff:524490, rs_recon_rate_diff:370217956.301449
+ECReConstruct File9 recon_total_time_diff:0.429762375s, recon_getdata_time_diff:0.283342795s, recon_repin_time_diff:0.14641958s, recon_total_size_diff:1573874, recon_data_size_diff:1049384, recon_repin_size_diff:524490, recon_total_rate_diff:3.6621958820848386e+06, recon_data_rate_diff:3.7035845573556935e+06, recon_repin_rate_diff:3.582102885420106e+06
+Unpin File9 use 58.087893ms
+
+ADD File10 Qmf39fBnoiyMMfWULaxDoBogdbqmAgXXuh4BoSPAtLhHEG ShardSize:393216, DataShards:4, ParityShards:4, RSTime:220.728µs, OtherTime:1.30356561s, TotalDataSize:1048878, TotalDataAndParitySize:2098662, RSRate:4.751902794389475e+09, ToTalDataRate:804486.0710243854
+BatchRecon File10-0 rs_recon_time_diff:1.417559ms, rs_recon_size_diff:1048878, rs_recon_rate_diff:739856822.111102
+ECReConstruct File10 recon_total_time_diff:1.126966246s, recon_getdata_time_diff:0.193382814s, recon_repin_time_diff:0.933583432s, recon_total_size_diff:2098662, recon_data_size_diff:1312230, recon_repin_size_diff:786432, recon_total_rate_diff:1.862222588696769e+06, recon_data_rate_diff:6.785659867375806e+06, recon_repin_rate_diff:842379.9877374001
+Unpin File10 use 75.400812ms
+
+ADD File11 QmZyBDgdvvfdxFa2J1DYJPvC6j7gPst8nqW9TB3psLmHZk ShardSize:393216, DataShards:8, ParityShards:4, RSTime:490.102µs, OtherTime:2.882716589s, TotalDataSize:2097656, TotalDataAndParitySize:3148248, RSRate:4.280039665212548e+09, ToTalDataRate:727542.6572605852
+BatchRecon File11-0 rs_recon_time_diff:1.366775ms, rs_recon_size_diff:2097656, rs_recon_rate_diff:1534595888.100981
+ECReConstruct File11 recon_total_time_diff:2.301974406s, recon_getdata_time_diff:1.361568893s, recon_repin_time_diff:0.9404055129999997s, recon_total_size_diff:3148248, recon_data_size_diff:2361816, recon_repin_size_diff:786432, recon_total_rate_diff:1.3676294540001068e+06, recon_data_rate_diff:1.7346283483284602e+06, recon_repin_rate_diff:836269.0234462718
+Unpin File11 use 119.268453ms
+
+ADD File12 QmXfFtf2rFVhhgorRutsNXghquBkZS5J9sSF86hjaeaK8g ShardSize:655360, DataShards:8, ParityShards:4, RSTime:3.098702ms, OtherTime:3.01622719s, TotalDataSize:4195208, TotalDataAndParitySize:6295976, RSRate:1.3538597774164796e+09, ToTalDataRate:1.3894518198955022e+06
+BatchRecon File12-0 rs_recon_time_diff:1.93237ms, rs_recon_size_diff:4195208, rs_recon_rate_diff:2170877632.737799
+ECReConstruct File12 recon_total_time_diff:1.5584533569999999s, recon_getdata_time_diff:1.156082217s, recon_repin_time_diff:0.40237113999999985s, recon_total_size_diff:6295976, recon_data_size_diff:4722208, recon_repin_size_diff:1573768, recon_total_rate_diff:4.0398873483898565e+06, recon_data_rate_diff:4.084664507904977e+06, recon_repin_rate_diff:3.911234786868662e+06
+Unpin File12 use 101.083925ms
+
+ADD File13 QmSdNFH4srknLUK8RE3kVN9aMzHUbi2vyFrQhcfKj8AAMG ShardSize:1179648, DataShards:8, ParityShards:4, RSTime:7.36706ms, OtherTime:4.305917586s, TotalDataSize:8390313, TotalDataAndParitySize:12591437, RSRate:1.1388957060211265e+09, ToTalDataRate:1.945225863090971e+06
+BatchRecon File13-0 rs_recon_time_diff:18.827498ms, rs_recon_size_diff:8390313, rs_recon_rate_diff:445636949.456404
+ECReConstruct File13 recon_total_time_diff:2.166318502s, recon_getdata_time_diff:1.187977712s, recon_repin_time_diff:0.9783407900000003s, recon_total_size_diff:12591437, recon_data_size_diff:9445709, recon_repin_size_diff:3145728, recon_total_rate_diff:5.81236645875261e+06, recon_data_rate_diff:7.95108267149039e+06, recon_repin_rate_diff:3.215370382338857e+06
+Unpin File13 use 102.978542ms
+
+ADD File14 QmR3keDJgymnTiNtnmavQupdutpo5AC7y16n7WkB3LBjdk ShardSize:1966080, DataShards:10, ParityShards:4, RSTime:29.229382ms, OtherTime:5.444059205s, TotalDataSize:16780521, TotalDataAndParitySize:24120553, RSRate:5.740977007314079e+08, ToTalDataRate:3.065888758272319e+06
+BatchRecon File14-0 rs_recon_time_diff:15.792085ms, rs_recon_size_diff:16780521, rs_recon_rate_diff:1062578820.257519
+ECReConstruct File14 recon_total_time_diff:1.5847065599999999s, recon_getdata_time_diff:1.32854292s, recon_repin_time_diff:0.2561636399999998s, recon_total_size_diff:24120553, recon_data_size_diff:16780521, recon_repin_size_diff:7340032, recon_total_rate_diff:1.5220832429696007e+07, recon_data_rate_diff:1.2630770709312122e+07, recon_repin_rate_diff:2.8653684027912803e+07
+Unpin File14 use 114.33677ms
+
+ADD File15 QmZTJXotnH42nU3Gg14W9rxJv3rg1MPhQEteNyA8phdbAq ShardSize:3538944, DataShards:10, ParityShards:4, RSTime:57.337714ms, OtherTime:5.216570015s, TotalDataSize:33560937, TotalDataAndParitySize:47192425, RSRate:5.853204576659614e+08, ToTalDataRate:6.363580357556578e+06
+BatchRecon File15-0 rs_recon_time_diff:10.590238ms, rs_recon_size_diff:33560937, rs_recon_rate_diff:3168999158.671210
+ECReConstruct File15 recon_total_time_diff:3.23979794s, recon_getdata_time_diff:2.742792278s, recon_repin_time_diff:0.49700566199999985s, recon_total_size_diff:47192425, recon_data_size_diff:33560937, recon_repin_size_diff:13631488, recon_total_rate_diff:1.4566471697923236e+07, recon_data_rate_diff:1.2236047647207208e+07, recon_repin_rate_diff:2.742722878678192e+07
+Unpin File15 use 118.882483ms
+
+ADD File16 QmXrjnwNx5ihQzBjCLEGE76qExgQpCHaXUK5xXAYquAYpU ShardSize:6946816, DataShards:10, ParityShards:4, RSTime:88.62485ms, OtherTime:9.676731097s, TotalDataSize:67121888, TotalDataAndParitySize:94419704, RSRate:7.573709631102337e+08, ToTalDataRate:6.873470620026333e+06
+BatchRecon File16-0 rs_recon_time_diff:47.947143ms, rs_recon_size_diff:67121888, rs_recon_rate_diff:1399909154.458006
+ECReConstruct File16 recon_total_time_diff:7.799322798s, recon_getdata_time_diff:6.30342931s, recon_repin_time_diff:1.495893488s, recon_total_size_diff:94419704, recon_data_size_diff:68192280, recon_repin_size_diff:26227424, recon_total_rate_diff:1.2106141320912154e+07, recon_data_rate_diff:1.0818282659538543e+07, recon_repin_rate_diff:1.753294884321336e+07
+Unpin File16 use 120.801024ms
+
+ADD File17 QmeTdEKQ9xjQcLAMAF6KTB9s4MG2uUPMoS21wvHFqo8Woj ShardSize:13762560, DataShards:10, ParityShards:4, RSTime:181.91196ms, OtherTime:13.632964662s, TotalDataSize:134243612, TotalDataAndParitySize:188804404, RSRate:7.379592413824797e+08, ToTalDataRate:9.717322461509462e+06
+BatchRecon File17-0 rs_recon_time_diff:116.509108ms, rs_recon_size_diff:134243612, rs_recon_rate_diff:1152213673.443742
+ECReConstruct File17 recon_total_time_diff:24.346196082s, recon_getdata_time_diff:17.826524106s, recon_repin_time_diff:6.519671975999998s, recon_total_size_diff:188804404, recon_data_size_diff:134269742, recon_repin_size_diff:54534662, recon_total_rate_diff:7.754985763036294e+06, recon_data_rate_diff:7.532020331142843e+06, recon_repin_rate_diff:8.364632791458098e+06
+Unpin File17 use 125.76396ms
+
+ADD File18 QmSehNRqYmGpCkvmGPXoGUtAZZ62hvnKsVmA66mQw2Dbkx ShardSize:27131904, DataShards:10, ParityShards:4, RSTime:276.14431ms, OtherTime:42.78345355s, TotalDataSize:268487122, TotalDataAndParitySize:376525290, RSRate:9.72271063633359e+08, ToTalDataRate:6.235244521702943e+06
+BatchRecon File18-0 rs_recon_time_diff:207.463818ms, rs_recon_size_diff:268487122, rs_recon_rate_diff:1294138547.073313
+ECReConstruct File18 recon_total_time_diff:33.194894637s, recon_getdata_time_diff:23.526130176s, recon_repin_time_diff:9.668764460999999s, recon_total_size_diff:376525290, recon_data_size_diff:268513252, recon_repin_size_diff:108012038, recon_total_rate_diff:1.1342867453488283e+07, recon_data_rate_diff:1.1413405009291401e+07, recon_repin_rate_diff:1.1171234797959778e+07
+Unpin File18 use 120.194273ms
+
+ADD File19 QmfQLHXkyfZNmGvu8tgBkXZJXz9tfqwn6AskCVpGEG1cEw ShardSize:53870592, DataShards:10, ParityShards:4, RSTime:386.169835ms, OtherTime:1m16.658084626s, TotalDataSize:536974138, TotalDataAndParitySize:752001898, RSRate:1.3905129021794257e+09, ToTalDataRate:6.969684389760616e+06
+Unpin File19 use 125.682718ms
+
+ADD File20 QmP39m2Ex3Cy199kTRU8688KcjqzpFdMxjNzm2WQdz3UQG ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:1.310527461s, OtherTime:2m24.039185903s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:8.194778079510995e+08, ToTalDataRate:7.388718870373901e+06
+BatchRecon File20-0 rs_recon_time_diff:158.345162ms, rs_recon_size_diff:537491010, rs_recon_rate_diff:3394423344.706873
+BatchRecon File20-1 rs_recon_time_diff:377.295249ms, rs_recon_size_diff:536457161, rs_recon_rate_diff:1421849048.644344
+ECReConstruct File20 recon_total_time_diff:137.109051806s, recon_getdata_time_diff:98.09143947000001s, recon_repin_time_diff:39.017612335999985s, recon_total_size_diff:1504003691, recon_data_size_diff:1073974301, recon_repin_size_diff:430029390, recon_total_rate_diff:1.096939750650499e+07, recon_data_rate_diff:1.0948705685254635e+07, recon_repin_rate_diff:1.1021417361390645e+07
+Unpin File20 use 249.061288ms
+
