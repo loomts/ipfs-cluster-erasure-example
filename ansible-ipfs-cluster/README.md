@@ -1,4 +1,9 @@
-Default ansible script is download kubo and ipfs-cluster from https://dist.ipfs.io , see [ansible-ipfs-cluster](https://github.com/hsanjuan/ansible-ipfs-cluster), this version change it to send from local,set `Restart=no`, and use [ipgen.sh](host_vars/ipgen.sh) generate hosts' message.
+Base on [ansible-ipfs-cluster](https://github.com/hsanjuan/ansible-ipfs-cluster).
+
+This version has somthing change:
+- Send executable file from local, you should download [kubo](https://dist.ipfs.tech/#kubo) and make [ipfs-cluster(EC)](https://github.com/loomts/ipfs-cluster) executable, then fill your path in [ipfs.yml](group_vars/ipfs.yml) and [ipfs-cluster.yml](group_vars/ipfs-cluster.yml).
+- Set both `ipfs` and `ipfs-cluster` Systemd service `Restart=no`.
+- Use [ipgen.sh](host_vars/ipgen.sh) generate hosts' message, and you should copy inventory.ini out.
 
 ---
 

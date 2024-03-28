@@ -1,0 +1,84 @@
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:830.591666ms, OtherTime:2m11.367139811s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.2929917490888958e+09, ToTalDataRate:8.1238018071873095e+06
+rs_recon_time_diff:293.52913ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:3658744776.0295544
+archiving:25.944s, recon_total_time_diff:128.466127974s, recon_getdata_time_diff:86.02008418700001s, recon_repin_time_diff:42.44604378699998s, recon_total_size_diff:1504003691, recon_data_size_diff:1073974301, recon_repin_size_diff:430029390, recon_total_rate_diff:1.1707394896376051e+07, recon_data_rate_diff:1.2485157520484116e+07, recon_repin_rate_diff:1.0131200734700883e+07
+Unpin File0:185.553245ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:918.869434ms, OtherTime:2m25.2081113s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.1687712435105333e+09, ToTalDataRate:7.349417366895275e+06
+rs_recon_time_diff:392.606679ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:2735430211.568052
+archiving:29.876, recon_total_time_diff:130.855270496s, recon_getdata_time_diff:90.887433198s, recon_repin_time_diff:39.967837298000006s, recon_total_size_diff:1504003691, recon_data_size_diff:1073983011, recon_repin_size_diff:430020680, recon_total_rate_diff:1.1493642444046414e+07, recon_data_rate_diff:1.1816628253328573e+07, recon_repin_rate_diff:1.0759168097932542e+07
+Unpin File1:188.960158ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:908.949504ms, OtherTime:2m12.403905343s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.181526769390261e+09, ToTalDataRate:8.055848561168009e+06
+rs_recon_time_diff:335.35612100000003ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:3202411119.8495164
+archiving:25.480, recon_total_time_diff:139.626547228s, recon_getdata_time_diff:100.426172993s, recon_repin_time_diff:39.200374235s, recon_total_size_diff:1504003691, recon_data_size_diff:1073974301, recon_repin_size_diff:430029390, recon_total_rate_diff:1.0771617008791827e+07, recon_data_rate_diff:1.0694167356898677e+07, recon_repin_rate_diff:1.0970032771168008e+07
+Unpin File2:176.746304ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:1.087019821s, OtherTime:2m2.064892507s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:9.879747822924013e+08, ToTalDataRate:8.720515574686836e+06
+rs_recon_time_diff:353.840711ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:3035117604.0905027
+archiving:35.807, recon_total_time_diff:153.591230491s, recon_getdata_time_diff:111.13630648200001s, recon_repin_time_diff:42.454924008999996s, recon_total_size_diff:1504003691, recon_data_size_diff:1073974301, recon_repin_size_diff:430029390, recon_total_rate_diff:9.792249767073324e+06, recon_data_rate_diff:9.663577412246864e+06, recon_repin_rate_diff:1.0129081609210707e+07
+Unpin File3:179.758038ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:847.435677ms, OtherTime:2m0.993114059s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.2672916660788639e+09, ToTalDataRate:8.81437397014318e+06
+rs_recon_time_diff:342.375984ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:3136750885.541084
+archiving:39.349, recon_total_time_diff:136.705396917s, recon_getdata_time_diff:90.88093086s, recon_repin_time_diff:45.824466056999995s, recon_total_size_diff:1504003691, recon_data_size_diff:1073965591, recon_repin_size_diff:430038100, recon_total_rate_diff:1.1001787236777114e+07, recon_data_rate_diff:1.181728202866253e+07, recon_repin_rate_diff:9.384465046795866e+06
+Unpin File4:185.711557ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:898.138401ms, OtherTime:2m20.828345201s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.1957490847783048e+09, ToTalDataRate:7.577611064641745e+06
+rs_recon_time_diff:351.867833ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:3052135120.859428
+archiving:25.791, recon_total_time_diff:132.716192554s, recon_getdata_time_diff:87.757415767s, recon_repin_time_diff:44.958776787000005s, recon_total_size_diff:1504003691, recon_data_size_diff:1073983011, recon_repin_size_diff:430020680, recon_total_rate_diff:1.1332480702292947e+07, recon_data_rate_diff:1.2238088389606578e+07, recon_repin_rate_diff:9.564777129887173e+06
+Unpin File5:184.960958ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:834.143231ms, OtherTime:2m15.091786012s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.287486526399685e+09, ToTalDataRate:7.900980893833201e+06
+rs_recon_time_diff:315.787263ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:3400859682.5515413
+archiving:32.703, recon_total_time_diff:136.689944918s, recon_getdata_time_diff:99.81512407700001s, recon_repin_time_diff:36.874820841s, recon_total_size_diff:1504003691, recon_data_size_diff:1073974301, recon_repin_size_diff:430029390, recon_total_rate_diff:1.1003030924493007e+07, recon_data_rate_diff:1.0759634984489005e+07, recon_repin_rate_diff:1.166187062587334e+07
+Unpin File6:183.594056ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:838.54133ms, OtherTime:2m7.661921772s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.2807337367616692e+09, ToTalDataRate:8.35754319094724e+06
+rs_recon_time_diff:317.025603ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:3387575517.0474358
+archiving:33.880, recon_total_time_diff:137.063964153s, recon_getdata_time_diff:101.018384717s, recon_repin_time_diff:36.045579436s, recon_total_size_diff:1504003691, recon_data_size_diff:1073991721, recon_repin_size_diff:430011970, recon_total_rate_diff:1.0973005926788533e+07, recon_data_rate_diff:1.0631646150438417e+07, recon_repin_rate_diff:1.1929672840007998e+07
+Unpin File7:184.936808ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:844.453066ms, OtherTime:2m19.053528407s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.271767744401795e+09, ToTalDataRate:7.676652356265863e+06
+rs_recon_time_diff:361.22299799999996ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:2973089135.92484
+archiving:40.667, recon_total_time_diff:133.937666987s, recon_getdata_time_diff:86.055922719s, recon_repin_time_diff:47.881744268000006s, recon_total_size_diff:1504003691, recon_data_size_diff:1073983011, recon_repin_size_diff:430020680, recon_total_rate_diff:1.122913161647036e+07, recon_data_rate_diff:1.248005921111202e+07, recon_repin_rate_diff:8.980890035941912e+06
+Unpin File8:937.678573ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:842.263877ms, OtherTime:2m18.465228325s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.2750732879881063e+09, ToTalDataRate:7.709191757028672e+06
+rs_recon_time_diff:338.77575ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:3170085730.7525697
+archiving:33.826, recon_total_time_diff:138.888479859s, recon_getdata_time_diff:98.013269137s, recon_repin_time_diff:40.875210722000006s, recon_total_size_diff:1504003691, recon_data_size_diff:1073974301, recon_repin_size_diff:430029390, recon_total_rate_diff:1.0828858466352781e+07, recon_data_rate_diff:1.0957437808740275e+07, recon_repin_rate_diff:1.0520542460923584e+07
+Unpin File9:190.835919ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:914.355051ms, OtherTime:2m12.190184276s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.1745417382727401e+09, ToTalDataRate:8.068456385029108e+06
+rs_recon_time_diff:255.303338ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:4206557499.0641136
+archiving:32.876, recon_total_time_diff:131.241605126s, recon_getdata_time_diff:90.622177802s, recon_repin_time_diff:40.619427324s, recon_total_size_diff:1504003691, recon_data_size_diff:1073974301, recon_repin_size_diff:430029390, recon_total_rate_diff:1.1459808721144976e+07, recon_data_rate_diff:1.1851119969181515e+07, recon_repin_rate_diff:1.0586791058620293e+07
+Unpin File10:194.125402ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:838.54133ms, OtherTime:2m7.661921772s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.2807337367616692e+09, ToTalDataRate:8.35754319094724e+06
+rs_recon_time_diff:317.025603ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:3387575517.0474358
+archiving:24.113, recon_total_time_diff:137.063964153s, recon_getdata_time_diff:101.018384717s, recon_repin_time_diff:36.045579436s, recon_total_size_diff:1504003691, recon_data_size_diff:1073991721, recon_repin_size_diff:430011970, recon_total_rate_diff:1.0973005926788533e+07, recon_data_rate_diff:1.0631646150438417e+07, recon_repin_rate_diff:1.1929672840007998e+07
+Unpin File11:184.936808ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:844.453066ms, OtherTime:2m19.053528407s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.271767744401795e+09, ToTalDataRate:7.676652356265863e+06
+rs_recon_time_diff:361.22299799999996ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:2973089135.92484
+archiving:32.211, recon_total_time_diff:133.937666987s, recon_getdata_time_diff:86.055922719s, recon_repin_time_diff:47.881744268000006s, recon_total_size_diff:1504003691, recon_data_size_diff:1073983011, recon_repin_size_diff:430020680, recon_total_rate_diff:1.122913161647036e+07, recon_data_rate_diff:1.248005921111202e+07, recon_repin_rate_diff:8.980890035941912e+06
+Unpin File12:937.678573ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:848.921421ms, OtherTime:2m22.786280415s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.265380282964916e+09, TotalDataRate:7.514117965349099e+06
+rs_recon_time_diff:325.597911ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:3295983713.770704
+archiving:26.912, recon_total_time_diff:140.294577926s, recon_getdata_time_diff:100.370679405s, recon_repin_time_diff:39.923898521s, recon_total_size_diff:1504003691, recon_data_size_diff:1073964081, recon_repin_size_diff:429889610, recon_total_rate_diff:1.0715788086260987e+07, recon_data_rate_diff:1.0696648552477389e+07, recon_repin_rate_diff:1.0763430728619078e+07
+Unpin File13:193.105254ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:852.376932ms, OtherTime:2m23.908242316s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.2598961766609985e+09, TotalDataRate:7.397748524182309e+06
+rs_recon_time_diff:348.667032ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:3080976477.894328
+archiving:27.085, recon_total_time_diff:138.227756436s, recon_getdata_time_diff:95.703054873s, recon_repin_time_diff:42.524701563s, recon_total_size_diff:1504003691, recon_data_size_diff:1073989541, recon_repin_size_diff:429976150, recon_total_rate_diff:1.08741248198038e+07, recon_data_rate_diff:1.1198089809596128e+07, recon_repin_rate_diff:1.0112635019645455e+07
+Unpin File14:198.673244ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:846.019702ms, OtherTime:2m20.930162011s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.2723124300843626e+09, TotalDataRate:7.59704419846136e+06
+rs_recon_time_diff:333.881233ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:3209533132.590012
+archiving:30.123, recon_total_time_diff:135.604179379s, recon_getdata_time_diff:95.040215342s, recon_repin_time_diff:40.563964037s, recon_total_size_diff:1504003691, recon_data_size_diff:1073970071, recon_repin_size_diff:429933620, recon_total_rate_diff:1.108783262432303e+07, recon_data_rate_diff:1.1294612329814803e+07, recon_repin_rate_diff:1.0589082343929147e+07
+Unpin File15:187.294217ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:838.54133ms, OtherTime:2m7.661921772s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.2807337367616692e+09, TotalDataRate:8.35754319094724e+06
+rs_recon_time_diff:317.025603ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:3387575517.0474358
+archiving:35.095, recon_total_time_diff:137.063964153s, recon_getdata_time_diff:101.018384717s, recon_repin_time_diff:36.045579436s, recon_total_size_diff:1504003691, recon_data_size_diff:1073991721, recon_repin_size_diff:430011970, recon_total_rate_diff:1.0973005926788533e+07, recon_data_rate_diff:1.0631646150438417e+07, recon_repin_rate_diff:1.1929672840007998e+07
+Unpin File16:184.936808ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:844.453066ms, OtherTime:2m19.053528407s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.271767744401795e+09, TotalDataRate:7.676652356265863e+06
+rs_recon_time_diff:361.22299799999996ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:2973089135.92484
+archiving:26.072, recon_total_time_diff:133.937666987s, recon_getdata_time_diff:86.055922719s, recon_repin_time_diff:47.881744268000006s, recon_total_size_diff:1504003691, recon_data_size_diff:1073983011, recon_repin_size_diff:430020680, recon_total_rate_diff:1.122913161647036e+07, recon_data_rate_diff:1.248005921111202e+07, recon_repin_rate_diff:8.980890035941912e+06
+Unpin File17:937.678573ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:864.782312ms, OtherTime:2m18.912764213s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.2401238343272623e+09, TotalDataRate:7.755617016743481e+06
+rs_recon_time_diff:371.910329ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:2889024069.482419
+archiving:35.135, recon_total_time_diff:136.801638328s, recon_getdata_time_diff:93.533650376s, recon_repin_time_diff:43.267987952s, recon_total_size_diff:1504003691, recon_data_size_diff:1073980511, recon_repin_size_diff:429923180, recon_total_rate_diff:1.0996175879631219e+07, recon_data_rate_diff:1.14827000695368e+07, recon_repin_rate_diff:9.872875167562786e+06
+Unpin File18:196.532109ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:858.245432ms, OtherTime:2m17.827287166s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.2498910814790127e+09, TotalDataRate:7.824362037235764e+06
+rs_recon_time_diff:364.912431ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:2943029138.838151
+archiving:29.072, recon_total_time_diff:139.107165644s, recon_getdata_time_diff:94.347552714s, recon_repin_time_diff:44.75961293s, recon_total_size_diff:1504003691, recon_data_size_diff:1073969421, recon_repin_size_diff:429935270, recon_total_rate_diff:1.0816130290348586e+07, recon_data_rate_diff:1.1370716353214966e+07, recon_repin_rate_diff:9.532132864766032e+06
+Unpin File19:189.673243ms
+ShardSize:53870592, DataShards:20, ParityShards:8, RSTime:872.938521ms, OtherTime:2m18.762537827s, TotalDataSize:1073948171, TotalDataAndParitySize:1504003691, RSRate:1.229786340118001e+09, TotalDataRate:7.828482880839056e+06
+rs_recon_time_diff:385.583442ms, rs_recon_size_diff:1073948171, re_recon_rate_diff:2781659311.1916
+archiving:32.036, recon_total_time_diff:137.220852652s, recon_getdata_time_diff:95.92024706s, recon_repin_time_diff:41.300605592s, recon_total_size_diff:1504003691, recon_data_size_diff:1073970511, recon_repin_size_diff:429932180, recon_total_rate_diff:1.0979579936298079e+07, recon_data_rate_diff:1.1189171563281096e+07, recon_repin_rate_diff:1.0390890388556493e+07
+Unpin File20:202.123454ms

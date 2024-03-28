@@ -35,8 +35,8 @@ func init() {
 	DefaultAddParams = api.DefaultAddParams()
 	DefaultAddParams.Shard = true
 	DefaultAddParams.RawLeaves = true
-	DefaultAddParams.ReplicationFactorMin = 4
-	DefaultAddParams.ReplicationFactorMax = 4
+	DefaultAddParams.ReplicationFactorMin = 5
+	DefaultAddParams.ReplicationFactorMax = 5
 }
 
 func NewClient() (*Client, error) {

@@ -12,4 +12,4 @@ ipfs_disk_sync: true
 ipfs_routing: dht
 ipfs_disable_bandthwidth_metrics: false
 ipfs_reprovider_strategy: all
-ipfs_executable_path: /usr/local/bin/ipfs
+ipfs_executable_path: /usr/local/bin/ipfs # your path to ipfs executable

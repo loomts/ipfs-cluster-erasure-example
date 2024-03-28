@@ -126,7 +126,7 @@ func Analysis() {
 	DrawGetSame()
 	DrawECRecoveryTime()
 	Cal()
-	PredictClusterIO()
+	// PredictClusterIO()
 }
 
 func parseECTEST(logs *LogEntries, filename string) {
@@ -338,7 +338,7 @@ func DrawAddDiff() {
 	p.X.Tick.Marker = logXTicks{}
 	p.Y.Tick.Marker = logYTicks{}
 	plotutil.AddLinePoints(p, "add", pointsFromXYs(diffSize, diff.Get("OtherTime")), "add --erasure", pointsFromXYs(diffSize, ecDiff.Get("OtherTime")))
-	if err := p.Save(12*vg.Inch, 8*vg.Inch, "test_add_diff.png"); err != nil {
+	if err := p.Save(12*vg.Inch, 8*vg.Inch, "result/test_add_diff.png"); err != nil {
 		panic(err)
 	}
 }
@@ -355,7 +355,7 @@ func DrawAddSame() {
 	p.Y.Tick.Marker = seqY10Ticks{}
 	p.Y.Max = 105
 	plotutil.AddLinePoints(p, "add", pointsFromXYs(sameSize, ecSame.Get("OtherTime")), "add --erasure", pointsFromXYs(sameSize, same.Get("OtherTime")))
-	if err := p.Save(12*vg.Inch, 8*vg.Inch, "test_add_same.png"); err != nil {
+	if err := p.Save(12*vg.Inch, 8*vg.Inch, "result/test_add_same.png"); err != nil {
 		panic(err)
 	}
 }
@@ -373,7 +373,7 @@ func DrawGetDiff() {
 	p.Y.Tick.Marker = logYTicks{}
 	p.Y.Max = 40
 	plotutil.AddLinePoints(p, "get", pointsFromXYs(diffSize, diff.Get("ipfsget")), "ecget", pointsFromXYs(diffSize, ecDiff.Get("ecget")))
-	if err := p.Save(12*vg.Inch, 8*vg.Inch, "test_get_diff.png"); err != nil {
+	if err := p.Save(12*vg.Inch, 8*vg.Inch, "result/test_get_diff.png"); err != nil {
 		panic(err)
 	}
 }
@@ -390,7 +390,7 @@ func DrawGetSame() {
 	p.Y.Tick.Marker = logYTicks{}
 	p.Y.Max = 40
 	plotutil.AddLinePoints(p, "get", pointsFromXYs(diffSize, same.Get("ipfsget")), "ecget", pointsFromXYs(diffSize, ecSame.Get("ecget")))
-	if err := p.Save(12*vg.Inch, 8*vg.Inch, "test_get_same.png"); err != nil {
+	if err := p.Save(12*vg.Inch, 8*vg.Inch, "result/test_get_same.png"); err != nil {
 		panic(err)
 	}
 }
@@ -456,7 +456,7 @@ func DrawECRecoveryTime() {
 	}
 	p.NominalX(str...)
 
-	if err := p.Save(12*vg.Inch, 8*vg.Inch, "test_ecrecovery_time.png"); err != nil {
+	if err := p.Save(12*vg.Inch, 8*vg.Inch, "result/test_ecrecovery_time.png"); err != nil {
 		panic(err)
 	}
 }
@@ -517,7 +517,7 @@ func DrawWriteAmplification() {
 	}
 	p.NominalX(str...)
 
-	if err := p.Save(12*vg.Inch, 8*vg.Inch, "test_write_amplification.png"); err != nil {
+	if err := p.Save(12*vg.Inch, 8*vg.Inch, "result/test_write_amplification.png"); err != nil {
 		panic(err)
 	}
 }
