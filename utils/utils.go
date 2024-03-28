@@ -99,10 +99,10 @@ func (sth *fileHelper) GetRandFileMultiReader() []ECFile {
 	return fs
 }
 
-func (sth *fileHelper) Get512MBRandFileMultiReader() []ECFile {
+func (sth *fileHelper) Get1GBRandFileMultiReader() []ECFile {
 	fs := make([]ECFile, 21)
 	for i := 0; i <= 20; i++ {
-		kbs := 1 << 19
+		kbs := 1 << 20
 		slf, sf := sth.GetRandFileReader(kbs, GetFileName(i))
 		fs[i] = ECFile{slf, sf, GetFileName(i), SourceDir, uint64(kbs * 1024)}
 	}

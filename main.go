@@ -26,12 +26,12 @@ func main() {
 
 	// fmt.Println("ecget_diff")
 	// TestECGetFileDiffSize()
-	fmt.Println("ecget_same")
-	TestECGetFileLargeSameSize()
+	// fmt.Println("ecget_same")
+	// TestECGetFileLargeSameSize()
 
 	//fmt.Println("ecget_recovery")
 	//TestECRecovery()
-	// utils.Draw()
+	utils.Analysis()
 }
 
 func AddFaultTolerantAndRetrieve(add func(f utils.ECFile) (api.Cid, error), c *client.Client, f utils.ECFile) error {
@@ -54,6 +54,7 @@ func AddFaultTolerantAndRetrieve(add func(f utils.ECFile) (api.Cid, error), c *c
 		if err != nil {
 			log.Error(err)
 		}
+		// local gc
 		_, err := c.RepoGC(context.Background(), true)
 		if err != nil {
 			log.Error(err)
@@ -90,7 +91,7 @@ func TestGetFileDiffSize() {
 
 func TestGetFileLargeSameSize() {
 	sth := utils.NewFileHelper()
-	files := sth.Get512MBRandFileMultiReader()
+	files := sth.Get1GBRandFileMultiReader()
 	defer sth.Clean()
 	c, err := client.NewClient()
 	if err != nil {
@@ -122,7 +123,7 @@ func TestECGetFileDiffSize() {
 
 func TestECGetFileLargeSameSize() {
 	sth := utils.NewFileHelper()
-	files := sth.Get512MBRandFileMultiReader()
+	files := sth.Get1GBRandFileMultiReader()
 	defer sth.Clean()
 	c, err := client.NewClient()
 	if err != nil {
