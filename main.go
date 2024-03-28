@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"os"
 	"os/exec"
 	"path"
 	"time"
@@ -62,6 +63,13 @@ func AddFaultTolerantAndRetrieve(add func(f utils.ECFile) (api.Cid, error), c *c
 	}()
 
 	fmt.Println("ecget", f.Name)
+	_, err = os.Stat(utils.RetrieveDir)
+	if os.IsNotExist(err) {
+		err = os.Mkdir(utils.RetrieveDir, os.ModePerm)
+		if err != nil {
+			return err
+		}
+	}
 	err = c.ECGet(context.Background(), ci, utils.RetrieveDir)
 	if err != nil {
 		return err
