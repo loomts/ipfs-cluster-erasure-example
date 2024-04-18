@@ -3,49 +3,109 @@ package main
 import (
 	"context"
 	"fmt"
+	"io"
 	"math/rand"
+	"net/http"
+	"net/url"
 	"os"
 	"os/exec"
 	"path"
 	"time"
 
+	"github.com/docker/docker/api/types/container"
+	dockercli "github.com/docker/docker/client"
+	"github.com/gin-gonic/gin"
 	"github.com/ipfs-cluster/ipfs-cluster/api"
+	"github.com/ipfs/go-cid"
 	logging "github.com/ipfs/go-log/v2"
 	"github.com/loomts/ipfs-cluster-erasure-example/client"
 	"github.com/loomts/ipfs-cluster-erasure-example/utils"
-
-	"github.com/docker/docker/api/types/container"
-	dockercli "github.com/docker/docker/client"
 )
 
 var log = logging.Logger("cluster")
 
 func main() {
-	TestAllAndFaultToler()
+	// TestAllAndFaultToler()
 
-	fmt.Println("ecadd_diff")
-	TestAddECFile_DiffSize()
-	fmt.Println("ecadd_same")
-	TestAddECFile_LargeSameSize()
+	// fmt.Println("ecadd_diff")
+	// TestAddECFile_DiffSize()
+	// fmt.Println("ecadd_same")
+	// TestAddECFile_LargeSameSize()
 
-	fmt.Println("add_diff")
-	TestAddFile_DiffSize()
+	// fmt.Println("add_diff")
+	// TestAddFile_DiffSize()
 
-	fmt.Println("add_same")
-	TestAddFile_LargeSameSize()
+	// fmt.Println("add_same")
+	// TestAddFile_LargeSameSize()
 
-	fmt.Println("get_diff")
-	TestGetFile_DiffSize()
-	fmt.Println("get_same")
-	TestGetFile_LargeSameSize()
-	fmt.Println("ecget_diff")
-	TestECGetFile_DiffSize()
-	fmt.Println("ecget_same")
-	TestECGetFile_LargeSameSize()
+	// fmt.Println("get_diff")
+	// TestGetFile_DiffSize()
+	// fmt.Println("get_same")
+	// TestGetFile_LargeSameSize()
+	// fmt.Println("ecget_diff")
+	// TestECGetFile_DiffSize()
+	// fmt.Println("ecget_same")
+	// TestECGetFile_LargeSameSize()
 
-	fmt.Println("ecget_recovery")
-	TestECRecovery()
+	// fmt.Println("ecget_recovery")
+	// TestECRecovery()
 	// utils.Draw()
+
+	httpserver()
+}
+
+func httpserver() {
+	r := gin.Default()
+
+	r.GET("/ecget", func(c *gin.Context) {
+		ci := c.Query("cid")
+		client, err := client.NewClient()
+		if err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		}
+		decodedCid, err := cid.Decode(ci)
+		if err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		}
+		_, err = os.Stat(utils.RetrieveDir)
+		if os.IsNotExist(err) {
+			err = os.Mkdir(utils.RetrieveDir, os.ModePerm)
+			if err != nil {
+				c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+			}
+		}
+		err = client.ECGet(context.Background(), api.NewCid(decodedCid), utils.RetrieveDir)
+		out := make(chan api.GlobalPinInfo, 1024)
+		client.StatusCids(context.Background(), []api.Cid{api.NewCid(decodedCid)}, false, out)
+		name := ""
+		for r := range out {
+			name = r.Name
+		}
+		if err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		}
+		encodedFilename := url.QueryEscape(name)
+		c.Writer.Header().Set("Content-Disposition", "attachment; filename="+encodedFilename)
+		c.Writer.Header().Set("Access-Control-Expose-Headers", "Content-Disposition")
+		c.Writer.Header().Set("Access-Control-Allow-Origin", c.Request.Header.Get("Origin"))
+		c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
+		c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
+		c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET, PUT")
+
+		file, err := os.Open(utils.RetrieveDir + "/" + ci)
+		if err != nil {
+			log.Error("Error opening file: %v\n", err)
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Internal server error"})
+			return
+		}
+		defer file.Close()
+
+		if _, err := io.Copy(c.Writer, file); err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Internal server error"})
+			return
+		}
+	})
+	r.Run(":8888")
 }
 
 func start() {
